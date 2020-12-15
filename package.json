@@ -1,0 +1,60 @@
+{
+  "name": "react-spring-elements",
+  "version": "0.1.0",
+  "private": false,
+  "description": "",
+  "author": "candycode-dev",
+  "license": "MIT",
+  "repository": "candycode-dev/react-spring-elements",
+  "exports": {
+    "accordion": {
+      "import": "./src/library/accordion/index.js"
+    },
+    "carousel": {
+      "import": "./src/library/carousel/index.js"
+    }
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build"
+  },
+  "peerDependencies": {
+    "classnames": "^2.2.0",
+    "prop-types": "^15.7.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-intersection-observer": "^8.30.0",
+    "react-spring": "^9.0.0-rc.0",
+    "react-use-gesture": "^9.0.0-beta.0",
+    "react-use-measure": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-pipeline-operator": "^7.12.1",
+    "@babel/preset-react": "^7.12.10",
+    "@craco/craco": "^6.0.0",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9.0.0",
+    "classnames": "^2.2.6",
+    "postcss": "^7.0.0",
+    "postcss-import": "^12.0.0",
+    "prettier": "^2.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-intersection-observer": "^8.31.0",
+    "react-scripts": "^4.0.1",
+    "react-spring": "^9.0.0-rc.3",
+    "react-use-gesture": "^9.0.0-beta.10",
+    "react-use-measure": "^2.0.3",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "browserslist": [
+    "last 3 firefox major versions",
+    "last 3 and_ff major versions",
+    "last 3 chrome major versions",
+    "last 3 and_chr major versions",
+    "last 3 edge major versions",
+    "last 2 safari major versions",
+    "last 2 ios_saf major versions"
+  ]
+}

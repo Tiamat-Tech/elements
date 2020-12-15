@@ -1,0 +1,12 @@
+/* Scale base font-size starting starting from 0.875em at 640px and reaching 1.125em at 1280px */
+:root {
+  font-size: max(0.875em, calc(0.625em + 0.625vw));
+}
+
+/* Prevent shrinking the viewport below Apple iPhone SE dimensions */
+body {
+  min-width: 375px;
+  background: #000000;
+  font-family: 'Inter';
+  color: #ffffff;
+}
