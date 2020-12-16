@@ -6,14 +6,14 @@
   "author": "candycode-dev",
   "license": "MIT",
   "repository": "candycode-dev/react-spring-elements",
+  "type": "module",
   "exports": {
-    "accordion": {
-      "import": "./src/library/accordion/index.js"
-    },
-    "carousel": {
-      "import": "./src/library/carousel/index.js"
-    }
+    "accordion": "./src/library/accordion/index.js",
+    "carousel": "./src/library/carousel/index.js"
   },
+  "files": [
+    "**"
+  ],
   "scripts": {
     "start": "craco start",
     "build": "craco build"
@@ -34,7 +34,10 @@
     "@craco/craco": "^6.0.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^10.0.0",
     "classnames": "^2.2.6",
+    "microbundle": "^0.12.4",
     "postcss": "^7.0.0",
     "postcss-import": "^12.0.0",
     "prettier": "^2.2.1",
