@@ -19,7 +19,7 @@ module.exports = {
   },
   webpack: {
     alias: {
-      'react-spring-elements': path.resolve(__dirname, 'src/library'),
+      '@cndycd/core': path.resolve(__dirname, 'src/library'),
       '~atoms': path.resolve(__dirname, 'src/atoms'),
       '~components': path.resolve(__dirname, 'src/components'),
       '~context': path.resolve(__dirname, 'src/context'),

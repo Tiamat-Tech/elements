@@ -11,7 +11,7 @@ import {
   Forward,
   End,
   Expand,
-} from 'react-spring-elements/carousel';
+} from '@cndycd/core/carousel';
 
 import { getAspectRatioClassName } from '~utilities';
 
