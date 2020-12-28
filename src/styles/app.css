@@ -7,8 +7,5 @@
 /* Single-use styles */
 @import './css/layout.css';
 
-/* Component classes */
-@import './css/components.css';
-
-/* Utility classes */
-@import './css/utilities.css';
+/* Minimal styles required for @cndycd/core package */
+@import './css/library.css';

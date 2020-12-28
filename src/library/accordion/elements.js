@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import PropTypes from 'prop-types';
 import { useSpring, animated, config } from 'react-spring';
 import useMeasure from 'react-use-measure';
 
@@ -6,7 +7,15 @@ import { Provider, AccordionContext } from './provider';
 
 export const Accordion = ({ children, ...rest }) => <Provider {...rest}>{children}</Provider>;
 
+Accordion.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
+};
+
 export const Panel = ({ children }) => children;
+
+Panel.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
+};
 
 export const Button = ({ uid, children, ...rest }) => {
   const { currentPanel, setCurrentPanel, mode } = useContext(AccordionContext);
@@ -32,6 +41,11 @@ export const Button = ({ uid, children, ...rest }) => {
       {children}
     </button>
   );
+};
+
+Button.propTypes = {
+  uid: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };
 
 export const Content = ({ uid, children }) => {
@@ -63,6 +77,11 @@ export const Content = ({ uid, children }) => {
       <div ref={ref}>{children}</div>
     </animated.div>
   );
+};
+
+Content.propTypes = {
+  uid: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };
 
 Accordion.Panel = Panel;

@@ -21,9 +21,17 @@ Wrapper.propTypes = {
 };
 
 export const Track = ({ className, children, ...rest }) => {
-  const { currentSlide, setCurrentSlide, gestures, lastSlide, threshold, totalSlides } = useContext(
-    CarouselContext,
-  );
+  const {
+    currentSlide,
+    setCurrentSlide,
+    gestures,
+    isExpanded,
+    setIsExpanded,
+    keys,
+    lastSlide,
+    threshold,
+    totalSlides,
+  } = useContext(CarouselContext);
 
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {
     if (!gestures) return;
@@ -63,7 +71,42 @@ export const Track = ({ className, children, ...rest }) => {
         clamp: true,
       },
     });
-  }, [currentSlide]);
+  }, [currentSlide]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    const onKeyUp = (event) => {
+      console.info('event.keyCode:', event.keyCode);
+
+      switch (event.keyCode) {
+        case 70: // F
+          setIsExpanded(!isExpanded);
+          break;
+        case 36: // Home
+          if (currentSlide === 0) return;
+          setCurrentSlide(0);
+          break;
+        case 33: // Page up
+        case 37: // Back arrow
+          if (currentSlide === 0) return;
+          setCurrentSlide(currentSlide - 1);
+          break;
+        case 34: // Page down
+        case 39: // Forward arrow
+          if (currentSlide === lastSlide) return;
+          setCurrentSlide(currentSlide + 1);
+          break;
+        case 35: // End
+          if (currentSlide === lastSlide) return;
+          setCurrentSlide(lastSlide);
+          break;
+      }
+    };
+
+    if (keys) {
+      document.addEventListener('keyup', onKeyUp);
+      return () => document.removeEventListener('keyup', onKeyUp);
+    }
+  }, [keys, currentSlide, lastSlide, isExpanded]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <animated.div

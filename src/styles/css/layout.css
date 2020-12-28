@@ -6,7 +6,7 @@
 /* Prevent shrinking the viewport below Apple iPhone SE dimensions */
 body {
   min-width: 375px;
-  background: #000000;
+  background: #18181b;
   font-family: 'Inter';
-  color: #ffffff;
+  color: #fafafa;
 }

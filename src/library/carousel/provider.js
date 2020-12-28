@@ -5,6 +5,7 @@ const defaultValues = {
   currentSlide: 0,
   setCurrentSlide: () => null,
   gestures: true,
+  keyboard: true,
   expanding: false,
   isExpanded: false,
   setIsExpanded: () => null,
@@ -15,7 +16,15 @@ const defaultValues = {
 
 export const CarouselContext = createContext(defaultValues);
 
-export const Provider = ({ gestures, expanding, lastSlide, threshold, totalSlides, children }) => {
+export const Provider = ({
+  gestures,
+  keys,
+  expanding,
+  lastSlide,
+  threshold,
+  totalSlides,
+  children,
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -26,6 +35,7 @@ export const Provider = ({ gestures, expanding, lastSlide, threshold, totalSlide
         currentSlide,
         setCurrentSlide,
         gestures,
+        keys,
         expanding,
         isExpanded,
         setIsExpanded,
@@ -41,12 +51,14 @@ export const Provider = ({ gestures, expanding, lastSlide, threshold, totalSlide
 
 Provider.defaultProps = {
   gestures: true,
+  keys: true,
   expanding: false,
   threshold: 50,
 };
 
 Provider.propTypes = {
   gestures: PropTypes.bool,
+  keys: PropTypes.bool,
   expanding: PropTypes.bool,
   lastSlide: PropTypes.number.isRequired,
   threshold: PropTypes.number,

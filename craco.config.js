@@ -6,6 +6,9 @@ module.exports = {
       plugins: [require('postcss-import'), require('tailwindcss'), require('autoprefixer')],
     },
   },
+  eslint: {
+    enable: false,
+  },
   babel: {
     presets: ['@babel/preset-react'],
     plugins: [
