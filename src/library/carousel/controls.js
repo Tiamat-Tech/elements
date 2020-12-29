@@ -121,11 +121,17 @@ End.propTypes = {
 };
 
 export const Expand = ({ className, children, ...rest }) => {
-  const { isExpanded, setIsExpanded } = useContext(CarouselContext);
+  const { allowExpansion, isExpanded, setIsExpanded } = useContext(CarouselContext);
+
+  const handleExpandClick = () => {
+    if (!allowExpansion) return;
+
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <button
-      onClick={() => setIsExpanded(!isExpanded)}
+      onClick={handleExpandClick}
       className={cx('carousel-expand-button', className)}
       {...rest}
     >
@@ -140,6 +146,36 @@ Expand.defaultProps = {
 };
 
 Expand.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
+};
+
+export const Fullscreen = ({ className, children, ...rest }) => {
+  const { allowFullscreen, isFullscreen, setIsFullscreen } = useContext(CarouselContext);
+
+  const handleFullscreenClick = () => {
+    if (!allowFullscreen) return;
+
+    setIsFullscreen(!isFullscreen);
+  };
+
+  return (
+    <button
+      onClick={handleFullscreenClick}
+      className={cx('carousel-fullscreen-button', className)}
+      {...rest}
+    >
+      {children}
+    </button>
+  );
+};
+
+Fullscreen.defaultProps = {
+  className: '',
+  children: 'Fullscreen',
+};
+
+Fullscreen.propTypes = {
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
 };

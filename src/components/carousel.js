@@ -11,6 +11,7 @@ import {
   Forward,
   End,
   Expand,
+  Fullscreen,
 } from '@cndycd/core/carousel';
 
 import { getAspectRatioClassName } from '~utilities';
@@ -32,6 +33,7 @@ export const Carousel = ({ aspectRatio, slides, ...rest }) => {
               <Start className="p-4" />
               <Back className="p-4" />
               <Expand className="p-4" />
+              <Fullscreen className="p-4" />
               <Forward className="p-4" />
               <End className="p-4" />
             </Drawer>

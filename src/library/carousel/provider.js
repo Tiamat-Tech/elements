@@ -4,29 +4,34 @@ import PropTypes from 'prop-types';
 const defaultValues = {
   currentSlide: 0,
   setCurrentSlide: () => null,
-  gestures: true,
-  keyboard: true,
-  expanding: false,
+  lastSlide: 0,
+  totalSlides: 1,
+  allowGestures: true,
+  dragThreshold: 50,
+  allowKeyboard: true,
+  allowExpansion: true,
   isExpanded: false,
   setIsExpanded: () => null,
-  lastSlide: 0,
-  threshold: 50,
-  totalSlides: 1,
+  allowFullscreen: true,
+  isFullscreen: false,
+  setIsFullscreen: () => null,
 };
 
 export const CarouselContext = createContext(defaultValues);
 
 export const Provider = ({
-  gestures,
-  keys,
-  expanding,
   lastSlide,
-  threshold,
   totalSlides,
+  allowGestures,
+  dragThreshold,
+  allowKeyboard,
+  allowExpansion,
+  allowFullscreen,
   children,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   return (
     <CarouselContext.Provider
@@ -34,14 +39,17 @@ export const Provider = ({
         ...defaultValues,
         currentSlide,
         setCurrentSlide,
-        gestures,
-        keys,
-        expanding,
+        lastSlide,
+        totalSlides,
+        allowGestures,
+        dragThreshold,
+        allowKeyboard,
+        allowExpansion,
         isExpanded,
         setIsExpanded,
-        lastSlide,
-        threshold,
-        totalSlides,
+        allowFullscreen,
+        isFullscreen,
+        setIsFullscreen,
       }}
     >
       {children}
@@ -50,18 +58,20 @@ export const Provider = ({
 };
 
 Provider.defaultProps = {
-  gestures: true,
-  keys: true,
-  expanding: false,
-  threshold: 50,
+  allowGestures: true,
+  dragThreshold: 50,
+  allowKeyboard: true,
+  allowExpansion: true,
+  allowFullscreen: true,
 };
 
 Provider.propTypes = {
-  gestures: PropTypes.bool,
-  keys: PropTypes.bool,
-  expanding: PropTypes.bool,
   lastSlide: PropTypes.number.isRequired,
-  threshold: PropTypes.number,
   totalSlides: PropTypes.number.isRequired,
+  allowGestures: PropTypes.bool,
+  dragThreshold: PropTypes.number,
+  allowKeyboard: PropTypes.bool,
+  allowExpansion: PropTypes.bool,
+  allowFullscreen: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };
