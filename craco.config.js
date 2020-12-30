@@ -32,5 +32,8 @@ module.exports = {
       '~styles': path.resolve(__dirname, 'src/styles'),
       '~utilities': path.resolve(__dirname, 'src/utilities'),
     },
+    configure: {
+      devtool: false,
+    },
   },
 };
