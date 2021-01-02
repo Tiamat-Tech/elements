@@ -48,7 +48,7 @@ The `<Track>` component is placed within the `<Wrapper>` component and must cont
 
 The optional `<Drawer>` component may be placed placed within the `<Wrapper>` and can be used to contain one or more control elements or other React nodes.
 
-The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the `<Provider>` component and can accept a `children` prop wrap it's behavior around any React node.
+The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the `<Provider>` component and can accept a `children` prop to wrap its behavior around any React node.
 
 - `<Start/>` moves to the first slide
 - `<Backward>` moves to the previous slide
