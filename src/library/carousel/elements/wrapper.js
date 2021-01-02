@@ -1,14 +1,18 @@
 import React, { useEffect, useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useHover } from 'react-use-gesture';
 import { useInView } from 'react-intersection-observer';
 
 import { CarouselContext } from '../provider';
+import { useOnClickOutside } from '../../hooks/use-on-click-outside';
 
 export const Wrapper = ({ children }) => {
   const {
+    orientation,
     setIsFocused,
     focusMode,
+    allowGestures,
     allowExpansion,
     isExpanded,
     allowFullscreen,
@@ -17,6 +21,20 @@ export const Wrapper = ({ children }) => {
   } = useContext(CarouselContext);
 
   const ref = useRef();
+
+  useOnClickOutside(ref, () => {
+    if (focusMode !== 'manual') return;
+
+    setIsFocused(false);
+  });
+
+  const bind = useHover(({ hovering }) => {
+    if (focusMode !== 'manual') return;
+
+    if (hovering) {
+      setIsFocused(true);
+    }
+  });
 
   const { ref: inViewRef, inView } = useInView({
     threshold: 0,
@@ -55,9 +73,12 @@ export const Wrapper = ({ children }) => {
     <div
       ref={ref}
       className={cx(
-        'carousel-wrapper',
-        allowExpansion && isExpanded && 'carousel-wrapper--expanded',
+        'carousel',
+        orientation === 'horizontal' ? 'carousel--horizontal' : 'carousel--vertical',
+        allowGestures && 'carousel--gestures',
+        allowExpansion ? (isExpanded ? 'carousel--expanded' : 'carousel--collapsed') : null,
       )}
+      {...bind()}
     >
       <div ref={inViewRef} className="carousel-intersection-observer">
         {children}

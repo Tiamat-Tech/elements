@@ -27,6 +27,11 @@ export const Track = ({ className, children, ...rest }) => {
     setIsFullscreen,
   } = useContext(CarouselContext);
 
+  // @TODO remove useEffect and console.info for isFocused
+  useEffect(() => {
+    console.info('isFocused:', isFocused);
+  }, [isFocused]);
+
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {
     if (!allowGestures) return;
     if (currentSlide === 0 && mx > 0) return;
@@ -177,7 +182,7 @@ export const Track = ({ className, children, ...rest }) => {
 
   return (
     <animated.div
-      className={cx('carousel-track', allowGestures && 'carousel-track--gestures', className)}
+      className={cx('carousel-track', className)}
       style={animation}
       {...bind()}
       {...rest}

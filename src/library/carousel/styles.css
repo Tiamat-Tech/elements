@@ -1,5 +1,5 @@
 /* Carousel */
-.carousel-wrapper {
+.carousel {
   position: relative;
   display: flex;
   width: 100%;
@@ -7,7 +7,20 @@
   overflow: hidden;
 }
 
-.carousel-wrapper--expanded {
+.carousel--gestures,
+.carousel--gestures * {
+  user-select: none !important;
+}
+
+.carousel--horizontal {
+  touch-action: pan-x;
+}
+
+.carousel--vertical {
+  touch-action: pan-y;
+}
+
+.carousel--expanded {
   position: fixed;
   left: 0;
   right: 0;
@@ -27,12 +40,6 @@
   z-index: 0;
   display: flex;
   height: 100%;
-}
-
-.carousel-track--gestures,
-.carousel-track--gestures .carousel-slide,
-.carousel-track--gestures .carousel-slide > * {
-  user-select: none;
 }
 
 .carousel-slide {
@@ -55,7 +62,6 @@
 
 .carousel-slide img {
   pointer-events: none !important;
-  touch-action: none !important;
   user-select: none !important;
 }
 
