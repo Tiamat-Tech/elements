@@ -136,7 +136,6 @@ Use of the carousel components in a project requires the following styles.
   display: flex;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .carousel-track {
