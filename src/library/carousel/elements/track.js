@@ -27,11 +27,6 @@ export const Track = ({ className, children, ...rest }) => {
     setIsFullscreen,
   } = useContext(CarouselContext);
 
-  // @TODO remove useEffect and console.info for isFocused
-  useEffect(() => {
-    console.info('isFocused:', isFocused);
-  }, [isFocused]);
-
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {
     if (!allowGestures) return;
     if (currentSlide === 0 && mx > 0) return;

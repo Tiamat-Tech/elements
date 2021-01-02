@@ -7,18 +7,21 @@
   overflow: hidden;
 }
 
-.carousel--gestures,
+.carousel--gestures {
+  touch-action: none;
+}
+
 .carousel--gestures * {
   user-select: none;
 }
 
-// .carousel--horizontal {
-//   touch-action: pan-x;
-// }
+.carousel--horizontal {
+  touch-action: pan-x;
+}
 
-// .carousel--vertical {
-//   touch-action: pan-y;
-// }
+.carousel--vertical {
+  touch-action: pan-y;
+}
 
 .carousel--expanded {
   position: fixed;
