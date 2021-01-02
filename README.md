@@ -40,7 +40,7 @@ The **&lt;Provider&gt;** component must be the parent of all other carousel comp
 | **allowGestures**                 | `true`         | `bool`                              | enable/disable mouse and touch support                       |
 | **dragThreshold**                 | `50`           | `number`                            | the number of pixels the track must be panned to initiate an automatic slide change |
 | **allowKeyboard**                 | `true`         | `bool`                              | enable/disable keyboard support                              |
-| **keyboardMode**                  | `'standard'`   | `'standard ` or `'gaming'`          | `'standard'` listens to `↑`, `←`, `↓`, and `→` keyboard codes for moving through slides<br /><br />`'gaming'` listens to `W`, `A`, `S`, and `D` in addition to all `'standard'` keys |
+| **keyboardMode**                  | `'standard'`   | `'standard ` or `'gaming'`          | `'standard'` listens to `↑`, `←`, `↓`,  `→` keyboard codes for moving through slides<br /><br />`'gaming'` listens to `W`, `A`, `S`, `D` in addition to all `'standard'` keys |
 | **allowExpansion**                | `true`         | `bool`                              | enable/disable expanded-mode support                         |
 | **allowFullscreen**               | `true`         | `bool`                              | enable/disable fullscreen-mode support                       |
 
