@@ -34,11 +34,11 @@ The `<Provider />` component must be the parent of all other carousel components
 | totalSlides     |                | number                        | **required**: must match the value of the `children` prop passed to the `<Track>` component<br /><br />effectively `children.length` of the `<Track>` component |
 | orientation     | `'horizontal'` | 'horizontal' or 'vertical'    | determines the orientation of the carousel track             |
 | focusMode       | `'auto'`       | 'auto', 'manual', or 'always' | `'auto'`toggles keyboard, mouse, and touch interactivity based on whether or not the carousel is visible in the viewport<br /><br />`'manual'` enables interactivity when the carousel is hovered, clicked, or touched and disables it when something outside the carousel is clicked or touched<br />`'always'` always enables interactivity; best when used for carousels that are permanently visible within in the viewport |
-| inViewThreshold | `50`           | number                        | number of pixels of the carousel that must be visible in the viewport before automatically gaining focus when `focusMode` is set to `'auto'` |
+| inViewThreshold | `50`           | number                        | the number of pixels of the carousel that must be visible in the viewport before automatically gaining focus when `focusMode` is set to `'auto'` |
 | allowGestures   | `true`         | bool                          | enable or disable mouse and touch gestures                   |
-| dragThreshold   | `50`           | number                        | determines the number of pixels must be passed to initiate a slide change |
+| dragThreshold   | `50`           | number                        | the number of pixels the track must be panned to initiate an automatic slide change |
 | allowKeyboard   | `true`         | bool                          | enable or disable keyboard interactivity                     |
-| keyboardMode    | `'standard'`   | 'standard' or 'gaming'        | `'standard'` listens to `ArrowUp`, `ArrowLeft`, `ArrowDown`, `ArrowRight` keyboard codes for advancing through slides<br /><br />`'gaming'` listens to `KeyW`, `KeyA`, `KeyS`, and `KeyD` in addition to all 'standard' keys |
+| keyboardMode    | `'standard'`   | 'standard' or 'gaming'        | `'standard'` listens to `ArrowUp`, `ArrowLeft`, `ArrowDown`, `ArrowRight` keyboard codes for advancing through slides<br /><br />`'gaming'` listens to `KeyW`, `KeyA`, `KeyS`, and `KeyD` in addition to all `'standard'` keys |
 | allowExpansion  | `true`         | bool                          | enable or disable expanded-mode support                      |
 | allowFullscreen | `true`         | bool                          | enable or disable fullscreen-mode support                    |
 
