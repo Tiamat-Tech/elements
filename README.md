@@ -24,6 +24,7 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 
 The following components can be used to create a custom `<Carousel>` component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
 
+<details><summary>📃 Instructions</summary>
 
 ### API
 
@@ -210,7 +211,7 @@ Use of the carousel components in a project requires that the following peer dep
 - `react-spring`
 - `react-use-gesture`
 - `react-use-measure`
-
+</details>
 
 ## Hooks
 The package includes several general-purpose custom hooks.
