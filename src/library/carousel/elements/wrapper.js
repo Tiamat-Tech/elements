@@ -12,6 +12,7 @@ export const Wrapper = ({ children }) => {
     orientation,
     setIsFocused,
     focusMode,
+    inViewThreshold,
     allowGestures,
     allowExpansion,
     isExpanded,
@@ -37,7 +38,7 @@ export const Wrapper = ({ children }) => {
   });
 
   const { ref: inViewRef, inView } = useInView({
-    threshold: 0,
+    threshold: inViewThreshold,
   });
 
   useEffect(() => {
