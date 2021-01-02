@@ -30,7 +30,7 @@ The &lt;Provider&gt; component must be the parent of all other carousel componen
 
 | **prop**        | **default**    | type                          | **details**                                                  |
 | --------------- | -------------- | ----------------------------- | ------------------------------------------------------------ |
-| totalSlides     |                | number                        | **required**<br /><br />the value must match the length of the `children` prop passed to the `<Track>` component |
+| totalSlides     |                | number                        | **required**<br /><br />the value must match the length of the `children` prop passed to the &lt;Track&gt; component |
 | orientation     | `'horizontal'` | 'horizontal' or 'vertical'    | determines the orientation of the carousel track             |
 | focusMode       | `'auto'`       | 'auto', 'manual', or 'always' | `'auto'`toggles keyboard, mouse, and touch interactivity based on whether or not the carousel is visible in the viewport<br /><br />`'manual'` enables interactivity when the carousel is hovered, clicked, or touched and disables it when something outside the carousel is clicked or touched<br /><br />`'always'` always enables interactivity; best when used for carousels that are permanently visible within in the viewport |
 | inViewThreshold | `50`           | number                        | the number of pixels of the carousel that must be visible in the viewport before automatically gaining focus when `focusMode` is set to `'auto'` |
