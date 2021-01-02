@@ -22,7 +22,7 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 
 ## Carousel
 
-<details><summary>📃 Carousel components</summary>
+<details><summary>📃 Components</summary>
 These components can be used to create a custom `<Carousel>` component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
 
 The `<Provider>` component must be the parent of all other carousel components and accepts the following props.
@@ -56,9 +56,9 @@ The following control components include built-in interactivity on click and tou
 - `<Fullscreen>` toggles fullscreen mode
 </details>
 
-<details><summary>📃 Carousel styles</summary>
+<details><summary>📃 Styles</summary>
 
-#### Basic carousel functionality *(required)*
+### Basic carousel functionality *(required)*
 
 ```css
 .carousel {
@@ -112,7 +112,7 @@ The following control components include built-in interactivity on click and tou
 }
 ```
 
-#### Gesture functionality *(optional)*
+### Gesture functionality *(optional)*
 
 ```css
 .carousel--gestures {
@@ -124,7 +124,7 @@ The following control components include built-in interactivity on click and tou
 }
 ```
 
-#### Expansion functionality *(optional)*
+### Expansion functionality *(optional)*
 
 ```css
 .carousel--expanded {
@@ -138,7 +138,7 @@ The following control components include built-in interactivity on click and tou
 }
 ```
 
-#### <Drawer> component *(optional)*
+### <Drawer> component *(optional)*
 
 ```css
 .carousel-drawer {
@@ -154,7 +154,7 @@ The following control components include built-in interactivity on click and tou
 ```
 </details>
 
-<details><summary>📃 Carousel Node dependencies</summary>
+<details><summary>📃 Node dependencies</summary>
 
 Use of the carousel components in a project requires that the following peer dependencies also be installed.
 
@@ -168,7 +168,7 @@ Use of the carousel components in a project requires that the following peer dep
 - `react-use-measure`
 </details>
 
-<details><summary>📃 Carousel example</summary>
+<details><summary>📃 Example `<Carousel>`</summary>
 
 ```javascript
 import React from "react";
