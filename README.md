@@ -24,13 +24,13 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 
 <details><summary>📃 <b>Components</b></summary>
 
-These atomic components can be used to assemble a custom &lt;Carousel&gt; component. Every rendered component accepts `className` and `style` props (as well as all other props accepted by a React DOM node). These props may be used to supplement the basic styles provided in the `styles.css` file, which must be manually added to the project and contain only the minimal CSS necessary for the carousel to function.
+These atomic components can be used to assemble a custom **&lt;Carousel&gt;** component. Every rendered component accepts `className` and `style` props (as well as all other props accepted by a React DOM node). These props may be used to supplement the basic styles provided in the `styles.css` file, which must be manually added to the project and contain only the minimal CSS necessary for the carousel to function.
 
-The &lt;Provider&gt; component must be the parent of all other carousel components and accepts the following props.
+The **&lt;Provider&gt;** component must be the parent of all other carousel components and accepts the following props.
 
 | **prop**        | **default**    | type                          | **details**                                                  |
 | --------------- | -------------- | ----------------------------- | ------------------------------------------------------------ |
-| totalSlides     |                | number                        | **required**<br /><br />the value must match the length of the `children` prop passed to the &lt;Track&gt; component |
+| totalSlides     |                | number                        | **required**<br /><br />the value must match the length of the `children` prop passed to the **&lt;Track&gt;** component |
 | orientation     | `'horizontal'` | 'horizontal' or 'vertical'    | determines the orientation of the carousel track             |
 | focusMode       | `'auto'`       | 'auto', 'manual', or 'always' | `'auto'`toggles keyboard, mouse, and touch interactivity based on whether or not the carousel is visible in the viewport<br /><br />`'manual'` enables interactivity when the carousel is hovered, clicked, or touched and disables it when something outside the carousel is clicked or touched<br /><br />`'always'` always enables interactivity; best when used for carousels that are permanently visible within in the viewport |
 | inViewThreshold | `50`           | number                        | the number of pixels of the carousel that must be visible in the viewport before automatically gaining focus when `focusMode` is set to `'auto'` |
@@ -42,20 +42,20 @@ The &lt;Provider&gt; component must be the parent of all other carousel componen
 | allowFullscreen | `true`         | bool                          | enable or disable fullscreen-mode support                    |
 
 
-The &lt;Wrapper&gt; component is placed within the &lt;Provider&gt; component and must contain a &lt;Track&gt; component and may optionally include a &lt;Drawer&gt; component or any other React nodes.
+The **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** component and must contain a **&lt;Track&gt;** component and may optionally include a **&lt;Drawer&gt;** component or any other React nodes.
 
-The &lt;Track&gt; component is placed within the &lt;Wrapper&gt; component and must contain one or more &lt;Slide&gt; components as direct children. Each &lt;Slide&gt; component contains the contents of one panel of the carousel.
+The **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component and must contain one or more **&lt;Slide&gt;** components as direct children. Each **&lt;Slide&gt;** component contains the contents of one panel of the carousel.
 
-The optional &lt;Drawer&gt; component may be placed placed within the &lt;Wrapper&gt; and can be used to contain one or more control elements or other React nodes.
+The optional **&lt;Drawer&gt;** component may be placed placed within the **&lt;Wrapper&gt;** and can be used to contain one or more control elements or other React nodes.
 
-The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the &lt;Provider&gt; component and can accept a `children` prop to wrap its behavior around any React node.
+The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the **&lt;Provider&gt;** component and can accept a `children` prop to wrap its behavior around any React node.
 
-- &lt;Start&gt; moves to the first slide
-- &lt;Backward&gt; moves to the previous slide
-- &lt;Forward&gt; moves to the next slide
-- &lt;End&gt; moves to the last slide
-- &lt;Expand&gt; toggles expanded mode
-- &lt;Fullscreen&gt; toggles fullscreen mode
+- **&lt;Start&gt;** moves to the first slide
+- **&lt;Backward&gt;** moves to the previous slide
+- **&lt;Forward&gt;** moves to the next slide
+- **&lt;End&gt;** moves to the last slide
+- **&lt;Expand&gt;** toggles expanded mode
+- **&lt;Fullscreen&gt;** toggles fullscreen mode
 </details>
 
 <details><summary>📃 <b>Styles</b></summary>
@@ -140,7 +140,7 @@ The following control components include built-in interactivity on click and tou
 }
 ```
 
-### &lt;Drawer&gt; component *(optional)*
+### **&lt;Drawer&gt;** component *(optional)*
 
 ```css
 .carousel-drawer {
@@ -158,7 +158,7 @@ The following control components include built-in interactivity on click and tou
 
 <details><summary>📃 <b>Node dependencies</b></summary>
 
-Use of the assembled &lt;Carousel&gt; component requires the following peer dependencies.
+Use of the assembled **&lt;Carousel&gt;** component requires the following peer dependencies.
 
 - `classnames`
 - `prop-types`
@@ -170,7 +170,7 @@ Use of the assembled &lt;Carousel&gt; component requires the following peer depe
 - `react-use-measure`
 </details>
 
-<details><summary>📃 <b>Example &lt;Carousel&gt;</b></summary>
+<details><summary>📃 <b>Example **&lt;Carousel&gt;**</b></summary>
 
 ```javascript
 import React from "react";
