@@ -139,7 +139,7 @@ The following control components include built-in interactivity on click and tou
 }
 ```
 
-### <Drawer> component *(optional)*
+### &lt;Drawer&gt; component *(optional)*
 
 ```css
 .carousel-drawer {
