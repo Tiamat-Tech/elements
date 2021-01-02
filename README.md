@@ -25,7 +25,7 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 The following components can be used to create a custom `<Carousel />` component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
 
 
-### Carousel State
+### Carousel components
 
 The `<Provider />` component must be the parent of all other carousel components and accepts the props below.
 
@@ -42,16 +42,12 @@ The `<Provider />` component must be the parent of all other carousel components
 | allowExpansion  | `true`         | bool                          | enable or disable expanded-mode support                      |
 | allowFullscreen | `true`         | bool                          | enable or disable fullscreen-mode support                    |
 
-
-### Carousel Elements
 The `<Wrapper />` component is placed within the `<Provider />` component and must contain a `<Track />` component and may optionally include a `<Drawer />` component or any other React nodes.
 
 The `<Track />` component is placed within the `<Wrapper />` component and must contain one or more `<Slide />` components as direct children. Each `<Slide />` component contains the contents of one panel of the carousel.
 
 The optional `<Drawer />` component may be placed placed within the `<Wrapper />` and can be used to contain one or more control elements or other React nodes.
 
-
-### Carousel Controls
 The following components include built-in interactivity on click and touch. They may be placed anywhere within the `<Provider />` component.
 
 - `<Start/>` moves to the first slide
