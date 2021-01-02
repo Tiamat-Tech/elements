@@ -8,7 +8,7 @@
   </a>
 </div>
 <div align="center">
-  Basic ingredients for baking custom components with interactive elements spiced with spring physics. 🧁
+  Basic ingredients for baking custom React components spiced with spring physics. 🧁
 </div>
 
 &nbsp;
@@ -17,7 +17,7 @@
 
 ## Overview
 
-The `@cndycd/core` package consists of atomic components used to assemble custom React components with animations and interactivity powered by `react-spring` and `react-use-gesture`.
+The `@cndycd/core` package consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
 
 
 ## Carousel component
