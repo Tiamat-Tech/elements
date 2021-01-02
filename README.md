@@ -26,6 +26,9 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 
 These atomic components can be used to assemble a custom **&lt;Carousel&gt;** component. Every rendered component accepts `className` and `style` props (as well as all other props accepted by a React DOM node). These props may be used to supplement the basic styles provided in the `styles.css` file, which must be manually added to the project and contain only the minimal CSS necessary for the carousel to function.
 
+
+### Carousel state
+
 The **&lt;Provider&gt;** component must be the parent of all other carousel components and accepts the following props.
 
 | **prop**                          | **default**    | type                                | **details**                                                  |
@@ -42,11 +45,16 @@ The **&lt;Provider&gt;** component must be the parent of all other carousel comp
 | **allowFullscreen**               | `true`         | `bool`                              | enable or disable fullscreen-mode support                    |
 
 
+### Carousel elements
+
 The **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** component and must contain a **&lt;Track&gt;** component and may optionally include a **&lt;Drawer&gt;** component or any other React nodes.
 
 The **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component and must contain one or more **&lt;Slide&gt;** components as direct children. Each **&lt;Slide&gt;** component contains the contents of one panel of the carousel.
 
 The optional **&lt;Drawer&gt;** component may be placed placed within the **&lt;Wrapper&gt;** and can be used to contain one or more control elements or other React nodes.
+
+
+### Carousel controls
 
 The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the **&lt;Provider&gt;** component and can accept a `children` prop to wrap its behavior around any React node.
 
