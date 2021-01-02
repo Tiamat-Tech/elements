@@ -26,7 +26,6 @@ const defaultValues = {
 export const CarouselContext = createContext(defaultValues);
 
 export const Provider = ({
-  lastSlide,
   totalSlides,
   orientation,
   focusMode,
@@ -43,6 +42,8 @@ export const Provider = ({
   const [isFocused, setIsFocused] = useState(() => focusMode === 'always');
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const lastSlide = totalSlides - 1;
 
   return (
     <CarouselContext.Provider
@@ -87,7 +88,6 @@ Provider.defaultProps = {
 };
 
 Provider.propTypes = {
-  lastSlide: PropTypes.number.isRequired,
   totalSlides: PropTypes.number.isRequired,
   orientation: PropTypes.oneOf(['horizontal', 'vertical']),
   focusMode: PropTypes.oneOf(['auto', 'manual', 'always']),

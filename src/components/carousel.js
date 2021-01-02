@@ -7,7 +7,7 @@ import {
   Slide,
   Drawer,
   Start,
-  Back,
+  Backward,
   Forward,
   End,
   Expand,
@@ -20,11 +20,7 @@ export const Carousel = ({ aspectRatio, children, ...rest }) => {
   const aspectRatioClassName = aspectRatio |> getAspectRatioClassName;
 
   return (
-    <Provider
-      lastSlide={children.length ? children.length - 1 : 0}
-      totalSlides={children.length ? children.length : 1}
-      {...rest}
-    >
+    <Provider totalSlides={children.length ? children.length : 1} {...rest}>
       <div className={aspectRatioClassName}>
         <div>
           <Wrapper>
@@ -37,7 +33,7 @@ export const Carousel = ({ aspectRatio, children, ...rest }) => {
             </Track>
             <Drawer className="bg-black bg-opacity-75 text-pink">
               <Start className="p-4" />
-              <Back className="p-4" />
+              <Backward className="p-4" />
               <Expand className="p-4" />
               <Fullscreen className="p-4" />
               <Forward className="p-4" />
@@ -56,5 +52,5 @@ Carousel.defaultProps = {
 
 Carousel.propTypes = {
   aspectRatio: PropTypes.oneOf(['square', 'wide', 'wider', 'widest', 'tall', 'taller', 'tallest']),
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };

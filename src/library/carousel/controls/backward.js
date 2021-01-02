@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import { CarouselContext } from '../provider';
 
-export const Back = ({ className, children, ...rest }) => {
+export const Backward = ({ className, children, ...rest }) => {
   const { currentSlide, setCurrentSlide } = useContext(CarouselContext);
 
   return (
@@ -23,12 +23,12 @@ export const Back = ({ className, children, ...rest }) => {
   );
 };
 
-Back.defaultProps = {
+Backward.defaultProps = {
   className: '',
-  children: 'Back',
+  children: 'Backward',
 };
 
-Back.propTypes = {
+Backward.propTypes = {
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
 };
