@@ -48,18 +48,18 @@ The `<Wrapper />` component is placed within the `<Provider />` component and mu
 
 The `<Track />` component is placed within the `<Wrapper />` component and must contain one or more `<Slide />` components as direct children. Each `<Slide />` component contains the contents of one panel of the carousel.
 
-The optional `<Drawer />` component may be placed placed within the `<Wrapper />` and be used to contain one or more control elements or other React nodes.
+The optional `<Drawer />` component may be placed placed within the `<Wrapper />` and can be used to contain one or more control elements or other React nodes.
 
 
 ### Carousel Controls
-The control components may be placed anywhere else within the `<Provider />` component and will have the same behavior:
+The following components include built-in interactivity on click and touch. They may be placed anywhere within the `<Provider />` component.
 
-- `<Start/>` to move to the first slide
-- `<Backward />` to move to the previous slide
-- `<Forward />` to move to the next slide
-- `<End/>` to move to the last slide
-- `<Expand />` to toggle expanded mode
-- `<Fullscreen />` to toggle fullscreen mode
+- `<Start/>` moves to the first slide
+- `<Backward />` moves to the previous slide
+- `<Forward />` moves to the next slide
+- `<End/>` moves to the last slide
+- `<Expand />` toggles expanded mode
+- `<Fullscreen />` toggles fullscreen mode
 
 
 ### Example `<Carousel />` component
