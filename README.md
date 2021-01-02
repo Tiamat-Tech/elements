@@ -20,9 +20,9 @@
 The `@cndycd/core` package consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
 
 
-## Carousel component
+## Carousel
 
-The following components can be used to easily assemble a custom `<Carousel />` component powered with spring physics. Each component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic styles required in the included `styles.css` file, which must be manually added to the project's CSS for the carousel to function.
+The following components can be used to create a custom `<Carousel />` component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
 
 
 ### Carousel State
