@@ -22,11 +22,8 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 
 ## Carousel
 
-The following components can be used to create a custom `<Carousel>` component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
-
-<details><summary>📃 Instructions</summary>
-
-### API
+<details><summary>📃 Carousel components</summary>
+These components can be used to create a custom `<Carousel>` component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
 
 The `<Provider>` component must be the parent of all other carousel components and accepts the following props.
 
@@ -57,52 +54,9 @@ The following control components include built-in interactivity on click and tou
 - `<End>` moves to the last slide
 - `<Expand>` toggles expanded mode
 - `<Fullscreen>` toggles fullscreen mode
+</details>
 
-
-### Example
-
-```javascript
-import React from "react";
-import {
-  Provider,
-  Wrapper,
-  Track,
-  Slide,
-  Drawer,
-  Start,
-  Backward,
-  Forward,
-  End,
-  Expand,
-  Fullscreen,
-} from "@cndycd/core/carousel";
-
-export const Carousel = ({ children, ...rest }) => {
-  return (
-    <Provider totalSlides={children.length ? children.length : 1} {...rest}>
-      <Wrapper>
-        <Track>
-          {children.length ? (
-            children.map((child, index) => <Slide key={index}>{child}</Slide>)
-          ) : (
-            <Slide>{children}</Slide>
-          )}
-        </Track>
-        <Drawer>
-          <Start />
-          <Backward />
-          <Expand />
-          <Fullscreen />
-          <Forward />
-          <End />
-        </Drawer>
-      </Wrapper>
-    </Provider>
-  );
-};
-```
-
-### Styles
+<details><summary>📃 Carousel styles</summary>
 
 #### Basic carousel functionality *(required)*
 
@@ -198,9 +152,10 @@ export const Carousel = ({ children, ...rest }) => {
   align-items: center;
 }
 ```
+</details>
 
+<details><summary>📃 Carousel Node dependencies</summary>
 
-### Node dependencies
 Use of the carousel components in a project requires that the following peer dependencies also be installed.
 
 - `classnames`
@@ -211,6 +166,50 @@ Use of the carousel components in a project requires that the following peer dep
 - `react-spring`
 - `react-use-gesture`
 - `react-use-measure`
+</details>
+
+<details><summary>📃 Carousel example</summary>
+
+```javascript
+import React from "react";
+import {
+  Provider,
+  Wrapper,
+  Track,
+  Slide,
+  Drawer,
+  Start,
+  Backward,
+  Forward,
+  End,
+  Expand,
+  Fullscreen,
+} from "@cndycd/core/carousel";
+
+export const Carousel = ({ children, ...rest }) => {
+  return (
+    <Provider totalSlides={children.length ? children.length : 1} {...rest}>
+      <Wrapper>
+        <Track>
+          {children.length ? (
+            children.map((child, index) => <Slide key={index}>{child}</Slide>)
+          ) : (
+            <Slide>{children}</Slide>
+          )}
+        </Track>
+        <Drawer>
+          <Start />
+          <Backward />
+          <Expand />
+          <Fullscreen />
+          <Forward />
+          <End />
+        </Drawer>
+      </Wrapper>
+    </Provider>
+  );
+};
+```
 </details>
 
 ## Hooks
