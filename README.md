@@ -37,12 +37,12 @@ The **&lt;Provider&gt;** component must be the parent of all other carousel comp
 | **orientation**<br />             | `'horizontal'` | `'horizontal'` or `'vertical'`      | determines the orientation of the carousel track (experimental) |
 | **focusMode**                     | `'auto'`       | `'auto'`, `'manual'`, or `'always'` | `'auto'` toggles keyboard, mouse, and touch interactivity based on whether or not the carousel is visible in the viewport<br /><br />`'manual'` enables interactivity when the carousel is hovered, clicked, or touched and disables it when something outside the carousel is clicked or touched<br /><br />`'always'` always enables interactivity; best when used for carousels that are permanently visible within in the viewport |
 | **inViewThreshold**               | `50`           | `number`                            | the number of pixels of the carousel that must be visible in the viewport before automatically gaining focus when `focusMode` is set to `'auto'` |
-| **allowGestures**                 | `true`         | `bool`                              | enable or disable mouse and touch support                    |
+| **allowGestures**                 | `true`         | `bool`                              | enable/disable mouse and touch support                       |
 | **dragThreshold**                 | `50`           | `number`                            | the number of pixels the track must be panned to initiate an automatic slide change |
-| **allowKeyboard**                 | `true`         | `bool`                              | enable or disable keyboard support                           |
-| **keyboardMode**                  | `'standard'`   | `'standard ` or `'gaming'`          | `'standard'` listens to `ArrowUp`, `ArrowLeft`, `ArrowDown`, `ArrowRight` keyboard codes for advancing through slides<br /><br />`'gaming'` listens to `KeyW`, `KeyA`, `KeyS`, and `KeyD` in addition to all `'standard'` keys |
-| **allowExpansion**                | `true`         | `bool`                              | enable or disable expanded-mode support                      |
-| **allowFullscreen**               | `true`         | `bool`                              | enable or disable fullscreen-mode support                    |
+| **allowKeyboard**                 | `true`         | `bool`                              | enable/disable keyboard support                              |
+| **keyboardMode**                  | `'standard'`   | `'standard ` or `'gaming'`          | `'standard'` listens to `↑`, `←`, `↓`, and `→` keyboard codes for moving through slides<br /><br />`'gaming'` listens to `W`, `A`, `S`, and `D` in addition to all `'standard'` keys |
+| **allowExpansion**                | `true`         | `bool`                              | enable/disable expanded-mode support                         |
+| **allowFullscreen**               | `true`         | `bool`                              | enable/disable fullscreen-mode support                       |
 
 
 ### Carousel elements
