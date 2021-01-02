@@ -23,37 +23,37 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 ## Carousel
 
 <details><summary>📃 Components</summary>
-These components can be used to create a custom `<Carousel>` component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
+These components can be used to create a custom &lt;Carousel&gt; component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
 
-The `<Provider>` component must be the parent of all other carousel components and accepts the following props.
+The &lt;Provider&gt; component must be the parent of all other carousel components and accepts the following props.
 
 | **prop**        | **default**    | type                          | **details**                                                  |
 | --------------- | -------------- | ----------------------------- | ------------------------------------------------------------ |
-| totalSlides     |                | number                        | **required**<br><br>the value must match the length of the `children` prop passed to the `<Track>` component |
+| totalSlides     |                | number                        | **required**<br><br>the value must match the length of the `children` prop passed to the &lt;Track&gt; component |
 | orientation     | `'horizontal'` | 'horizontal' or 'vertical'    | determines the orientation of the carousel track             |
-| focusMode       | `'auto'`       | 'auto', 'manual', or 'always' | `'auto'`toggles keyboard, mouse, and touch interactivity based on whether or not the carousel is visible in the viewport<br><br>`'manual'` enables interactivity when the carousel is hovered, clicked, or touched and disables it when something outside the carousel is clicked or touched<br><br>`'always'` always enables interactivity; best when used for carousels that are permanently visible within in the viewport |
+| focusMode       | `'auto'`       | 'auto', 'manual', or 'always' | `'auto'`toggles keyboard, mouse, and touch interactivity based on whether or not the carousel is visible in the viewport<br><br&gt;'manual'` enables interactivity when the carousel is hovered, clicked, or touched and disables it when something outside the carousel is clicked or touched<br><br&gt;'always'` always enables interactivity; best when used for carousels that are permanently visible within in the viewport |
 | inViewThreshold | `50`           | number                        | the number of pixels of the carousel that must be visible in the viewport before automatically gaining focus when `focusMode` is set to `'auto'` |
 | allowGestures   | `true`         | bool                          | enable or disable mouse and touch gestures                   |
 | dragThreshold   | `50`           | number                        | the number of pixels the track must be panned to initiate an automatic slide change |
 | allowKeyboard   | `true`         | bool                          | enable or disable keyboard interactivity                     |
-| keyboardMode    | `'standard'`   | 'standard' or 'gaming'        | `'standard'` listens to `ArrowUp`, `ArrowLeft`, `ArrowDown`, `ArrowRight` keyboard codes for advancing through slides<br><br>`'gaming'` listens to `KeyW`, `KeyA`, `KeyS`, and `KeyD` in addition to all `'standard'` keys |
+| keyboardMode    | `'standard'`   | 'standard' or 'gaming'        | `'standard'` listens to `ArrowUp`, `ArrowLeft`, `ArrowDown`, `ArrowRight` keyboard codes for advancing through slides<br><br&gt;'gaming'` listens to `KeyW`, `KeyA`, `KeyS`, and `KeyD` in addition to all `'standard'` keys |
 | allowExpansion  | `true`         | bool                          | enable or disable expanded-mode support                      |
 | allowFullscreen | `true`         | bool                          | enable or disable fullscreen-mode support                    |
 
-The `<Wrapper>` component is placed within the `<Provider>` component and must contain a `<Track>` component and may optionally include a `<Drawer>` component or any other React nodes.
+The &lt;Wrapper&gt; component is placed within the &lt;Provider&gt; component and must contain a &lt;Track&gt; component and may optionally include a &lt;Drawer&gt; component or any other React nodes.
 
-The `<Track>` component is placed within the `<Wrapper>` component and must contain one or more `<Slide>` components as direct children. Each `<Slide>` component contains the contents of one panel of the carousel.
+The &lt;Track&gt; component is placed within the &lt;Wrapper&gt; component and must contain one or more &lt;Slide&gt; components as direct children. Each &lt;Slide&gt; component contains the contents of one panel of the carousel.
 
-The optional `<Drawer>` component may be placed placed within the `<Wrapper>` and can be used to contain one or more control elements or other React nodes.
+The optional &lt;Drawer&gt; component may be placed placed within the &lt;Wrapper&gt; and can be used to contain one or more control elements or other React nodes.
 
-The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the `<Provider>` component and can accept a `children` prop to wrap its behavior around any React node.
+The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the &lt;Provider&gt; component and can accept a `children` prop to wrap its behavior around any React node.
 
-- `<Start>` moves to the first slide
-- `<Backward>` moves to the previous slide
-- `<Forward>` moves to the next slide
-- `<End>` moves to the last slide
-- `<Expand>` toggles expanded mode
-- `<Fullscreen>` toggles fullscreen mode
+- &lt;Start&gt; moves to the first slide
+- &lt;Backward&gt; moves to the previous slide
+- &lt;Forward&gt; moves to the next slide
+- &lt;End&gt; moves to the last slide
+- &lt;Expand&gt; toggles expanded mode
+- &lt;Fullscreen&gt; toggles fullscreen mode
 </details>
 
 <details><summary>📃 Styles</summary>
