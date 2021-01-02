@@ -168,7 +168,7 @@ Use of the carousel components in a project requires that the following peer dep
 - `react-use-measure`
 </details>
 
-<details><summary>📃 Example `&lt;Carousel&gt;`</summary>
+<details><summary>📃 Example &lt;Carousel&gt;</summary>
 
 ```javascript
 import React from "react";
