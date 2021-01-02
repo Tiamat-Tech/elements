@@ -175,6 +175,20 @@ Use of the carousel components in a project requires the following styles.
 ```
 
 ### Optional styles
+Support of the expansion functionality requires the following styles.
+
+```css
+.carousel--expanded {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+}
+```
+
 Use of the optional `<Drawer>` compoment requires the following styles.
 
 ```css
