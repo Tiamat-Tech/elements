@@ -16,18 +16,24 @@ import {
 
 import { getAspectRatioClassName } from '~utilities';
 
-export const Carousel = ({ aspectRatio, slides, ...rest }) => {
+export const Carousel = ({ aspectRatio, children, ...rest }) => {
   const aspectRatioClassName = aspectRatio |> getAspectRatioClassName;
 
   return (
-    <Provider lastSlide={slides.length - 1} totalSlides={slides.length} {...rest}>
+    <Provider
+      lastSlide={children.length ? children.length - 1 : 0}
+      totalSlides={children.length ? children.length : 1}
+      {...rest}
+    >
       <div className={aspectRatioClassName}>
         <div>
           <Wrapper>
             <Track>
-              {slides.map((node, index) => (
-                <Slide key={index}>{node}</Slide>
-              ))}
+              {children.length ? (
+                children.map((child, index) => <Slide key={index}>{child}</Slide>)
+              ) : (
+                <Slide>{children}</Slide>
+              )}
             </Track>
             <Drawer className="bg-black bg-opacity-75 text-pink">
               <Start className="p-4" />
@@ -50,5 +56,5 @@ Carousel.defaultProps = {
 
 Carousel.propTypes = {
   aspectRatio: PropTypes.oneOf(['square', 'wide', 'wider', 'widest', 'tall', 'taller', 'tallest']),
-  slides: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
 };

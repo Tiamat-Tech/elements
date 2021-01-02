@@ -8,9 +8,12 @@ const Experiments = () => {
     <>
       <div className="p-16">
         <h1 className="font-bold text-3xl">@candycode/core</h1>
-        <h2 className="mt-16 font-bold text-xl">Carousel</h2>
+        <h2 className="mt-16 font-bold text-xl">Carousel Demo</h2>
+        <div style={{ height: '900px' }} />
         <div className="max-w-2xl mt-4">
-          <Carousel slides={SLIDES} />
+          <Carousel focusMode="auto" keyboardMode="gaming">
+            {SLIDES}
+          </Carousel>
         </div>
       </div>
       <Credits />
