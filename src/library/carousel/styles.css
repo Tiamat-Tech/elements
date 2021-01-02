@@ -9,16 +9,16 @@
 
 .carousel--gestures,
 .carousel--gestures * {
-  user-select: none !important;
+  user-select: none;
 }
 
-.carousel--horizontal {
-  touch-action: pan-x;
-}
+// .carousel--horizontal {
+//   touch-action: pan-x;
+// }
 
-.carousel--vertical {
-  touch-action: pan-y;
-}
+// .carousel--vertical {
+//   touch-action: pan-y;
+// }
 
 .carousel--expanded {
   position: fixed;
