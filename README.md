@@ -120,7 +120,7 @@ Use of the carousel components in a project requires that the following peer dep
 
 
 ## Hooks
-The library includes several general-purpose custom hooks:
+The package includes several general-purpose custom hooks:
 
 - `useEffectOnce`
 - `useCallbackOnce`
@@ -129,7 +129,7 @@ The library includes several general-purpose custom hooks:
 
 
 ## Utilities
-The library includes several general-purpose utility functions:
+The package includes several general-purpose utility functions:
 
 - `capitalize`
 - `getFirst`
