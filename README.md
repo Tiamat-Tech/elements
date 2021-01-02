@@ -22,7 +22,7 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 
 ## Carousel
 
-<details><summary>📃 **Components**</summary>
+<details><summary>📃 <b>Components</b></summary>
 
 These components can be used to create a custom &lt;Carousel&gt; component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
 
@@ -58,7 +58,7 @@ The following control components include built-in interactivity on click and tou
 - &lt;Fullscreen&gt; toggles fullscreen mode
 </details>
 
-<details><summary>📃 **Styles**</summary>
+<details><summary>📃 <b>Styles</b></summary>
 
 ### Basic carousel functionality *(required)*
 
@@ -156,7 +156,7 @@ The following control components include built-in interactivity on click and tou
 ```
 </details>
 
-<details><summary>📃 **Node dependencies**</summary>
+<details><summary>📃 <b>Node dependencies</b></summary>
 
 Use of the carousel components in a project requires that the following peer dependencies also be installed.
 
@@ -170,7 +170,7 @@ Use of the carousel components in a project requires that the following peer dep
 - `react-use-measure`
 </details>
 
-<details><summary>📃 **Example &lt;Carousel&gt;**</summary>
+<details><summary>📃 <b>Example &lt;Carousel&gt;</b></summary>
 
 ```javascript
 import React from "react";
