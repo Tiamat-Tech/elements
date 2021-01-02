@@ -101,8 +101,9 @@ export const Carousel = ({ children, ...rest }) => {
 };
 ```
 
-### Required styles
-Use of the carousel components in a project requires the following styles.
+### Styles
+
+#### Basic carousel functionality *(required)*
 
 ```css
 .carousel {
@@ -111,24 +112,6 @@ Use of the carousel components in a project requires the following styles.
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-
-.carousel--gestures {
-  touch-action: none;
-}
-
-.carousel--gestures * {
-  user-select: none;
-}
-
-.carousel--expanded {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .carousel-intersection-observer {
@@ -174,8 +157,19 @@ Use of the carousel components in a project requires the following styles.
 }
 ```
 
-### Optional styles
-Support of the expansion functionality requires the following styles.
+#### Gesture functionality *(optional)*
+
+```css
+.carousel--gestures {
+  touch-action: none;
+}
+
+.carousel--gestures * {
+  user-select: none;
+}
+```
+
+#### Expansion functionality *(optional)*
 
 ```css
 .carousel--expanded {
@@ -189,7 +183,7 @@ Support of the expansion functionality requires the following styles.
 }
 ```
 
-Use of the optional `<Drawer>` compoment requires the following styles.
+#### `<Drawer>` component *(optional)*
 
 ```css
 .carousel-drawer {
@@ -205,7 +199,7 @@ Use of the optional `<Drawer>` compoment requires the following styles.
 ```
 
 
-### Required peer dependencies
+### Node dependencies
 Use of the carousel components in a project requires that the following peer dependencies also be installed.
 
 - `classnames`
