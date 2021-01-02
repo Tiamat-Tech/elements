@@ -37,7 +37,7 @@ The **&lt;Provider&gt;** component must be the parent of all other carousel comp
 | allowGestures   | `true`         | `bool`                              | enable or disable mouse and touch gestures                   |
 | dragThreshold   | `50`           | `number`                            | the number of pixels the track must be panned to initiate an automatic slide change |
 | allowKeyboard   | `true`         | `bool`                              | enable or disable keyboard interactivity                     |
-| keyboardMode    | `'standard'`   | `'standard' `or `'gaming'`          | `'standard'` listens to `ArrowUp`, `ArrowLeft`, `ArrowDown`, `ArrowRight` keyboard codes for advancing through slides<br /><br />`'gaming'` listens to `KeyW`, `KeyA`, `KeyS`, and `KeyD` in addition to all `'standard'` keys |
+| keyboardMode    | `'standard'`   | `'standard ` or `'gaming'`          | `'standard'` listens to `ArrowUp`, `ArrowLeft`, `ArrowDown`, `ArrowRight` keyboard codes for advancing through slides<br /><br />`'gaming'` listens to `KeyW`, `KeyA`, `KeyS`, and `KeyD` in addition to all `'standard'` keys |
 | allowExpansion  | `true`         | `bool`                              | enable or disable expanded-mode support                      |
 | allowFullscreen | `true`         | `bool`                              | enable or disable fullscreen-mode support                    |
 
