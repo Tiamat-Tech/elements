@@ -50,10 +50,10 @@ The optional `<Drawer>` component may be placed placed within the `<Wrapper>` an
 
 The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the `<Provider>` component and can accept a `children` prop to wrap its behavior around any React node.
 
-- `<Start/>` moves to the first slide
+- `<Start>` moves to the first slide
 - `<Backward>` moves to the previous slide
 - `<Forward>` moves to the next slide
-- `<End/>` moves to the last slide
+- `<End>` moves to the last slide
 - `<Expand>` toggles expanded mode
 - `<Fullscreen>` toggles fullscreen mode
 
@@ -183,7 +183,7 @@ export const Carousel = ({ children, ...rest }) => {
 }
 ```
 
-#### `<Drawer>` component *(optional)*
+#### <Drawer> component *(optional)*
 
 ```css
 .carousel-drawer {
