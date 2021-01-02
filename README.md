@@ -25,9 +25,9 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 The following components can be used to create a custom `<Carousel>` component. Every rendered component accepts `className` and `style` props (in addition to any other prop accepted by a React DOM node) so custom CSS classes and styles may be applied to supplement the basic required styles. The contents of the included `styles.css` file must be manually added to the project's CSS for the carousel to function.
 
 
-### Carousel components
+### API
 
-The `<Provider>` component must be the parent of all other carousel components and accepts the props below.
+The `<Provider>` component must be the parent of all other carousel components and accepts the following props.
 
 | **prop**        | **default**    | type                          | **details**                                                  |
 | --------------- | -------------- | ----------------------------- | ------------------------------------------------------------ |
@@ -58,7 +58,7 @@ The following control components include built-in interactivity on click and tou
 - `<Fullscreen>` toggles fullscreen mode
 
 
-### Example `<Carousel>` component
+### Example
 
 ```javascript
 import React from "react";
@@ -101,8 +101,98 @@ export const Carousel = ({ children, ...rest }) => {
 };
 ```
 
+### Required styles
+Use of the carousel components in a project requires the following styles.
 
-### Required Peer dependencies
+```css
+.carousel {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel--gestures {
+  touch-action: none;
+}
+
+.carousel--gestures * {
+  user-select: none;
+}
+
+.carousel--expanded {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-intersection-observer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  height: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.carousel-slide > * {
+  min-width: 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
+.carousel-slide img {
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.carousel-button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+```
+
+### Optional styles
+Use of the optional `<Drawer>` compoment requires the following styles.
+
+```css
+.carousel-drawer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+```
+
+
+### Required peer dependencies
 Use of the carousel components in a project requires that the following peer dependencies also be installed.
 
 - `classnames`
