@@ -116,6 +116,7 @@ export const Track = ({ className, children, ...rest }) => {
           handleEscapePress();
           break;
         case 'Home':
+          // @TODO must prevent a 'Home' press from also scrolling up the page
           handleStartPress();
           break;
         case 'ArrowLeft':
@@ -149,6 +150,7 @@ export const Track = ({ className, children, ...rest }) => {
           handleForwardPress();
           break;
         case 'End':
+          // @TODO must prevent an 'End' press from also scrolling down the page
           handleEndPress();
           break;
         case 'KeyE':
