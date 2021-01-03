@@ -41,6 +41,7 @@ export const Track = ({ className, children, ...rest }) => {
       config: {
         ...config.default,
         clamp: true,
+        precision: 0.05,
       },
     });
   });
@@ -52,6 +53,7 @@ export const Track = ({ className, children, ...rest }) => {
     config: {
       ...config.default,
       clamp: true,
+      precision: 0.05,
     },
   }));
 
@@ -63,6 +65,7 @@ export const Track = ({ className, children, ...rest }) => {
       config: {
         ...config.default,
         clamp: true,
+        precision: 0.05,
       },
     });
   }, [currentSlide, totalSlides, allowGestures]); // eslint-disable-line react-hooks/exhaustive-deps
