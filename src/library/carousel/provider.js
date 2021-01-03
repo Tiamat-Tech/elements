@@ -1,5 +1,8 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
+import { Provider as JotaiProvider } from 'jotai';
+
+export const carouselScope = Symbol(); // eslint-disable-line no-undef
 
 const defaultValues = {
   currentSlide: 0,
@@ -50,34 +53,36 @@ export const Provider = ({
   const lastSlide = totalSlides - 1;
 
   return (
-    <CarouselContext.Provider
-      value={{
-        ...defaultValues,
-        currentSlide,
-        setCurrentSlide,
-        lastSlide,
-        totalSlides,
-        aspectRatio,
-        orientation,
-        springConfig,
-        isFocused,
-        setIsFocused,
-        focusMode,
-        inViewThreshold,
-        allowGestures,
-        dragThreshold,
-        allowKeyboard,
-        keyboardMode,
-        allowExpansion,
-        isExpanded,
-        setIsExpanded,
-        allowFullscreen,
-        isFullscreen,
-        setIsFullscreen,
-      }}
-    >
-      {children}
-    </CarouselContext.Provider>
+    <JotaiProvider initialValues={[]} scope={carouselScope}>
+      <CarouselContext.Provider
+        value={{
+          ...defaultValues,
+          currentSlide,
+          setCurrentSlide,
+          lastSlide,
+          totalSlides,
+          aspectRatio,
+          orientation,
+          springConfig,
+          isFocused,
+          setIsFocused,
+          focusMode,
+          inViewThreshold,
+          allowGestures,
+          dragThreshold,
+          allowKeyboard,
+          keyboardMode,
+          allowExpansion,
+          isExpanded,
+          setIsExpanded,
+          allowFullscreen,
+          isFullscreen,
+          setIsFullscreen,
+        }}
+      >
+        {children}
+      </CarouselContext.Provider>
+    </JotaiProvider>
   );
 };
 
