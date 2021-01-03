@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
-import { useAtomValue, useUpdateAtom } from 'jotai/utils';
+import { useAtomValue } from 'jotai/utils';
 import { useHover } from 'react-use-gesture';
 import { useInView } from 'react-intersection-observer';
 
@@ -20,7 +20,7 @@ export const Wrapper = ({ children }) => {
     allowFullscreen,
   } = useAtomValue(configAtom);
 
-  const setIsFocused = useUpdateAtom(focusAtom);
+  const [, setIsFocused] = useAtom(focusAtom);
 
   const [isExpanded] = useAtom(expandAtom);
 
