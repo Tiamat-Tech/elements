@@ -25,7 +25,9 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 
 These atomic components can be used to assemble a custom **&lt;Carousel&gt;** component. Every rendered component accepts `className` and `style` props (as well as all other props accepted by a React DOM node). These props may be used to supplement the basic styles provided in the `styles.css` file, which must be manually added to the project and contain only the minimal CSS necessary for the carousel to function.
 
-### &lt;Provider&gt;
+### Carousel state
+
+#### &lt;Provider&gt;
 
 A **&lt;Provider&gt;** component must be the parent of all other carousel components and accepts the following props.
 
@@ -42,19 +44,21 @@ A **&lt;Provider&gt;** component must be the parent of all other carousel compon
 | **allowExpansion**                | `true`         | `bool`                              | enable/disable expanded-mode support                         |
 | **allowFullscreen**               | `true`         | `bool`                              | enable/disable fullscreen-mode support                       |
 
-### &lt;Wrapper&gt;
+### Carousel elements
+
+#### &lt;Wrapper&gt;
 A **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** component. It must contain a **&lt;Track&gt;** component. It may also include a **&lt;Drawer&gt;** component and any other React nodes.
 
-### &lt;Track&gt;
+#### &lt;Track&gt;
 A **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component. It must contain one or more **&lt;Slide&gt;** components as direct children.
 
-### &lt;Slide&gt;
+#### &lt;Slide&gt;
 Each **&lt;Slide&gt;** component is placed directly under the **&lt;Track&gt;** component. Each contains the contents of one panel of the carousel.
 
-### &lt;Drawer&gt;
+#### &lt;Drawer&gt;
 An optional **&lt;Drawer&gt;** component may be placed placed within the **&lt;Wrapper&gt;**. It can be used to contain one or more control elements or other React nodes.
 
-### Controls
+### Carousel controls
 
 The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the **&lt;Provider&gt;** component and can accept a `children` prop to wrap its behavior around any React node.
 
