@@ -1,16 +1,18 @@
 import React, { useEffect, useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useAtom } from 'jotai';
 import { useSpring, animated, config as defaultConfigs } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
+import { currentSlideAtom } from '../atoms';
 import { CarouselContext } from '../provider';
 import { getAnimationConfig } from '../utilities/get-animation-config';
 
 export const Track = ({ className, children, ...rest }) => {
+  const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
+
   const {
-    currentSlide,
-    setCurrentSlide,
     lastSlide,
     totalSlides,
     orientation,

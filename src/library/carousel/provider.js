@@ -5,8 +5,6 @@ import { Provider as JotaiProvider } from 'jotai';
 export const carouselScope = Symbol(); // eslint-disable-line no-undef
 
 const defaultValues = {
-  currentSlide: 0,
-  setCurrentSlide: () => null,
   lastSlide: 0,
   totalSlides: 1,
   aspectRatio: undefined,
@@ -45,7 +43,6 @@ export const Provider = ({
   allowFullscreen,
   children,
 }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [isFocused, setIsFocused] = useState(() => focusMode === 'always');
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -57,8 +54,6 @@ export const Provider = ({
       <CarouselContext.Provider
         value={{
           ...defaultValues,
-          currentSlide,
-          setCurrentSlide,
           lastSlide,
           totalSlides,
           aspectRatio,
