@@ -47,16 +47,26 @@ A **&lt;Provider&gt;** component must be the parent of all other carousel compon
 ### Carousel elements
 
 #### &lt;Wrapper&gt;
-A **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** component. It must contain a **&lt;Track&gt;** component. It may also include a **&lt;Drawer&gt;** component and any other React nodes.
+A **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** component.
+
+It must contain a **&lt;Track&gt;** component.
+
+It may also include a **&lt;Drawer&gt;** component and any other React nodes.
 
 #### &lt;Track&gt;
-A **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component. It must contain one or more **&lt;Slide&gt;** components as direct children.
+A **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component.
+
+It must contain one or more **&lt;Slide&gt;** components as direct children.
 
 #### &lt;Slide&gt;
-Each **&lt;Slide&gt;** component is placed directly under the **&lt;Track&gt;** component. Each contains the contents of one panel of the carousel.
+Each **&lt;Slide&gt;** component is placed directly under the **&lt;Track&gt;** component.
+
+Each contains the contents of one panel of the carousel.
 
 #### &lt;Drawer&gt;
-An optional **&lt;Drawer&gt;** component may be placed placed within the **&lt;Wrapper&gt;**. It can be used to contain one or more control elements or other React nodes.
+An optional **&lt;Drawer&gt;** component may be placed placed within the **&lt;Wrapper&gt;**.
+
+It can be used to contain one or more control elements or other React nodes.
 
 ### Carousel controls
 
