@@ -62,7 +62,7 @@ Each **&lt;Slide&gt;** component must be placed directly under the &lt;Track&gt;
 A **&lt;Drawer&gt;** component may be placed somewhere within the &lt;Wrapper&gt; component, but outside the &lt;Track&gt; component. It can be used to contain one or more control elements or other React nodes.
 
 ## Controls
-The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the &lt;Provider&gt; component and can accept a `children` prop to wrap its behavior around any React node.
+The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the &lt;Provider&gt; component and can accept a `children` prop to wrap its logic and behavior around any React node.
 
 - **&lt;Start&gt;** moves to the first slide
 - **&lt;Backward&gt;** moves to the previous slide
@@ -215,13 +215,14 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following style
 Use of the assembled **&lt;Carousel&gt;** component requires the following peer dependencies.
 
 - `classnames`
+- `jotai`
 - `prop-types`
-- `react`
 - `react-dom`
 - `react-intersection-observer`
 - `react-spring`
 - `react-use-gesture`
 - `react-use-measure`
+- `react`
 </details>
 
 <details><summary>📃 <b>Example &lt;Carousel&gt;</b></summary>
