@@ -10,7 +10,6 @@ import { useOnClickOutside } from '../../hooks/use-on-click-outside';
 export const Wrapper = ({ children }) => {
   const {
     aspectRatio,
-    orientation,
     setIsFocused,
     focusMode,
     inViewThreshold,
@@ -50,7 +49,7 @@ export const Wrapper = ({ children }) => {
   };
 
   // Set aspect ratio class
-  const aspectRatioClassName = useMemo(() => getAspectRatioClassName(aspectRatio));
+  const aspectRatioClassName = useMemo(() => getAspectRatioClassName(aspectRatio), [aspectRatio]);
 
   // Add/remove focus based on viewport visibility in 'auto' focus mode
   useEffect(() => {

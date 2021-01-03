@@ -29,7 +29,9 @@ export const Track = ({ className, children, ...rest }) => {
     setIsFullscreen,
   } = useContext(CarouselContext);
 
-  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs));
+  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), [
+    springConfig,
+  ]);
 
   // Drag gestures functionality
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {
