@@ -21,3 +21,12 @@ export const configAtom = atom({
   allowFullscreen: true,
 });
 configAtom.scope = carouselScope;
+
+export const focusAtom = atom(false);
+focusAtom.scope = carouselScope;
+
+export const expandAtom = atom(false);
+expandAtom.scope = carouselScope;
+
+export const fullscreenAtom = atom(false);
+fullscreenAtom.scope = carouselScope;

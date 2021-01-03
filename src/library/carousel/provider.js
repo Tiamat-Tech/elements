@@ -1,30 +1,15 @@
-import React, { createContext, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider as JotaiProvider } from 'jotai';
 
-import { carouselScope, currentSlideAtom, configAtom } from './atoms';
-
-const defaultValues = {
-  aspectRatio: undefined,
-  orientation: 'horizontal',
-  springConfig: 'default',
-  isFocused: false,
-  setIsFocused: () => null,
-  focusMode: 'auto',
-  inViewThreshold: 0.1,
-  allowGestures: true,
-  dragThreshold: 50,
-  allowKeyboard: true,
-  keyboardMode: 'standard',
-  allowExpansion: true,
-  isExpanded: false,
-  setIsExpanded: () => null,
-  allowFullscreen: true,
-  isFullscreen: false,
-  setIsFullscreen: () => null,
-};
-
-export const CarouselContext = createContext(defaultValues);
+import {
+  carouselScope,
+  currentSlideAtom,
+  configAtom,
+  focusAtom,
+  expandAtom,
+  fullscreenAtom,
+} from './atoms';
 
 export const Provider = ({
   totalSlides,
@@ -41,10 +26,6 @@ export const Provider = ({
   allowFullscreen,
   children,
 }) => {
-  const [isFocused, setIsFocused] = useState(() => focusMode === 'always');
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-
   const lastSlide = totalSlides - 1;
 
   return (
@@ -69,22 +50,13 @@ export const Provider = ({
             allowFullscreen: allowFullscreen,
           },
         ],
+        [focusAtom, () => focusMode === 'always'],
+        [expandAtom, false],
+        [fullscreenAtom, false],
       ]}
       scope={carouselScope}
     >
-      <CarouselContext.Provider
-        value={{
-          ...defaultValues,
-          isFocused,
-          setIsFocused,
-          isExpanded,
-          setIsExpanded,
-          isFullscreen,
-          setIsFullscreen,
-        }}
-      >
-        {children}
-      </CarouselContext.Provider>
+      {children}
     </JotaiProvider>
   );
 };

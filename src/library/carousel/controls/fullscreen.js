@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
 
-import { configAtom } from '../atoms';
-import { CarouselContext } from '../provider';
+import { configAtom, fullscreenAtom } from '../atoms';
 
 export const Fullscreen = ({ className, children, ...rest }) => {
-  const { allowFullscreen } = useAtomValue(configAtom);
+  const [isFullscreen, setIsFullscreen] = useAtom(fullscreenAtom);
 
-  const { isFullscreen, setIsFullscreen } = useContext(CarouselContext);
+  const { allowFullscreen } = useAtomValue(configAtom);
 
   const handleFullscreenClick = () => {
     if (!allowFullscreen) return;

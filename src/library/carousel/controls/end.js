@@ -8,6 +8,7 @@ import { currentSlideAtom, configAtom } from '../atoms';
 
 export const End = ({ className, children, ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
+
   const { lastSlide } = useAtomValue(configAtom);
 
   return (
