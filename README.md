@@ -19,13 +19,11 @@
 
 The `@cndycd/core` package consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
 
-
 ## Carousel
 
 <details><summary>📃 <b>Components</b></summary>
 
 These atomic components can be used to assemble a custom **&lt;Carousel&gt;** component. Every rendered component accepts `className` and `style` props (as well as all other props accepted by a React DOM node). These props may be used to supplement the basic styles provided in the `styles.css` file, which must be manually added to the project and contain only the minimal CSS necessary for the carousel to function.
-
 
 ### Carousel state
 
@@ -44,7 +42,6 @@ The **&lt;Provider&gt;** component must be the parent of all other carousel comp
 | **allowExpansion**                | `true`         | `bool`                              | enable/disable expanded-mode support                         |
 | **allowFullscreen**               | `true`         | `bool`                              | enable/disable fullscreen-mode support                       |
 
-
 ### Carousel elements
 
 The **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** component and must contain a **&lt;Track&gt;** component and may optionally include a **&lt;Drawer&gt;** component or any other React nodes.
@@ -52,7 +49,6 @@ The **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** comp
 The **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component and must contain one or more **&lt;Slide&gt;** components as direct children. Each **&lt;Slide&gt;** component contains the contents of one panel of the carousel.
 
 The optional **&lt;Drawer&gt;** component may be placed placed within the **&lt;Wrapper&gt;** and can be used to contain one or more control elements or other React nodes.
-
 
 ### Carousel controls
 
@@ -66,7 +62,7 @@ The following control components include built-in interactivity on click and tou
 - **&lt;Fullscreen&gt;** toggles fullscreen mode
 </details>
 
-<details><summary>📃 <b>Styles</b></summary>
+<details><summary>📃 <b>Required and optional styles</b></summary>
 
 ### Basic carousel functionality *(required)*
 
@@ -164,7 +160,7 @@ The following control components include built-in interactivity on click and tou
 ```
 </details>
 
-<details><summary>📃 <b>Node dependencies</b></summary>
+<details><summary>📃 <b>Dependencies</b></summary>
 
 Use of the assembled **&lt;Carousel&gt;** component requires the following peer dependencies.
 
@@ -222,16 +218,20 @@ export const Carousel = ({ children, ...rest }) => {
 ```
 </details>
 
-## Hooks
+## Other
+
+<details><summary>📃 <b>Hooks</b></summary>
+
 The package includes several general-purpose custom hooks.
 
 - `useEffectOnce`
 - `useCallbackOnce`
 - `useLocalStorage`
 - `useOnClickOutside`
+</details>
 
+<details><summary>📃 <b>Utilities</b></summary>
 
-## Utilities
 The package includes several general-purpose utility functions.
 
 - `capitalize`
@@ -241,3 +241,4 @@ The package includes several general-purpose utility functions.
 - `take`
 - `toCamelCase`
 - `toSnakeCase`
+</details>
