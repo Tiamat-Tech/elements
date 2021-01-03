@@ -21,7 +21,7 @@ The `@cndycd/core` package consists of atomic components used to assemble custom
 
 ## Carousel
 
-<details><summary>📃 <b>Components</b></summary>
+<details><summary>📃 <b>Component API</b></summary>
 
 These atomic components can be used to assemble a custom **&lt;Carousel&gt;** component. Every rendered component accepts `className` and `style` props (as well as all other props accepted by a React DOM node). These props may be used to supplement the basic styles provided in the `styles.css` file, which must be manually added to the project and contain only the minimal CSS necessary for the carousel to function.
 
@@ -168,7 +168,7 @@ The following control components include built-in interactivity on click and tou
 ```
 </details>
 
-<details><summary>📃 <b>Dependencies</b></summary>
+<details><summary>📃 <b>Required peer dependencies</b></summary>
 
 Use of the assembled **&lt;Carousel&gt;** component requires the following peer dependencies.
 
