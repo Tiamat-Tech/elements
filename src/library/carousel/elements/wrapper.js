@@ -21,6 +21,11 @@ export const Wrapper = ({ children }) => {
     setIsFullscreen,
   } = useContext(CarouselContext);
 
+  // @TODO remove useEffect and console.info for inViewThreshold
+  useEffect(() => {
+    console.info('inViewThreshold:', inViewThreshold);
+  }, [inViewThreshold]);
+
   const ref = useRef();
 
   useOnClickOutside(ref, () => {
