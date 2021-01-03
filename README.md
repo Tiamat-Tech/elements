@@ -27,6 +27,8 @@ These atomic components can be used to assemble a custom **&lt;Carousel&gt;** co
 
 ### Carousel state
 
+#### &lt;Provider&gt;
+
 The **&lt;Provider&gt;** component must be the parent of all other carousel components and accepts the following props.
 
 | **prop**                          | **default**    | type                                | **details**                                                  |
@@ -44,10 +46,16 @@ The **&lt;Provider&gt;** component must be the parent of all other carousel comp
 
 ### Carousel elements
 
+#### &lt;Wrapper&gt;
 The **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** component and must contain a **&lt;Track&gt;** component and may optionally include a **&lt;Drawer&gt;** component or any other React nodes.
 
-The **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component and must contain one or more **&lt;Slide&gt;** components as direct children. Each **&lt;Slide&gt;** component contains the contents of one panel of the carousel.
+#### &lt;Track&gt;
+The **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component and must contain one or more **&lt;Slide&gt;** components as direct children.
 
+#### &lt;Slide&gt;
+Each **&lt;Slide&gt;** component contains the contents of one panel of the carousel.
+
+#### &lt;Drawer&gt;
 The optional **&lt;Drawer&gt;** component may be placed placed within the **&lt;Wrapper&gt;** and can be used to contain one or more control elements or other React nodes.
 
 ### Carousel controls
