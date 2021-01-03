@@ -1,10 +1,11 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { useSpring, animated, config } from 'react-spring';
+import { useSpring, animated, config as defaultConfigs } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
 import { CarouselContext } from '../provider';
+import { getAnimationConfig } from '../utilities/get-animation-config';
 
 export const Track = ({ className, children, ...rest }) => {
   const {
@@ -13,6 +14,7 @@ export const Track = ({ className, children, ...rest }) => {
     lastSlide,
     totalSlides,
     orientation,
+    springConfig,
     isFocused,
     focusMode,
     allowGestures,
@@ -27,6 +29,8 @@ export const Track = ({ className, children, ...rest }) => {
     setIsFullscreen,
   } = useContext(CarouselContext);
 
+  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs));
+
   // Drag gestures functionality
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {
     if (!allowGestures) return;
@@ -39,10 +43,7 @@ export const Track = ({ className, children, ...rest }) => {
       width: `${totalSlides * 100}%`,
       transform: `translate3d(calc(-${currentSlide * 100}% + ${dragging ? mx : 0}px),0,0)`,
       cursor: down ? 'grabbing' : 'grab',
-      config: {
-        ...config.default,
-        clamp: true,
-      },
+      config: animationConfig,
     });
   });
 
@@ -51,10 +52,7 @@ export const Track = ({ className, children, ...rest }) => {
     width: `${totalSlides * 100}%`,
     transform: `translate3d(calc(-${currentSlide * 100}% + ${0}px),0,0)`,
     cursor: allowGestures ? 'grab' : 'default',
-    config: {
-      ...config.default,
-      clamp: true,
-    },
+    config: animationConfig,
   }));
 
   // Basic carousel functionality
@@ -63,10 +61,7 @@ export const Track = ({ className, children, ...rest }) => {
       width: `${totalSlides * 100}%`,
       transform: `translate3d(calc(-${currentSlide * 100}% + ${0}px),0,0)`,
       cursor: allowGestures ? 'grab' : 'default',
-      config: {
-        ...config.default,
-        clamp: true,
-      },
+      config: animationConfig,
     });
   }, [currentSlide, totalSlides, allowGestures]); // eslint-disable-line react-hooks/exhaustive-deps
 

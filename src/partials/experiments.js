@@ -11,7 +11,7 @@ const Experiments = () => {
         <h2 className="mt-16 font-bold text-xl">Carousel Demo</h2>
         {/* <div style={{ height: '900px' }} /> */}
         <div className="max-w-2xl mt-4">
-          <Carousel aspectRatio="wider" keyboardMode="gaming">
+          <Carousel aspectRatio="widest" keyboardMode="gaming">
             {SLIDES}
           </Carousel>
         </div>
