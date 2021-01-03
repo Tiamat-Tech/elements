@@ -47,27 +47,19 @@ A **&lt;Provider&gt;** component must be the parent of all other carousel compon
 ## Carousel elements
 
 ### Wrapper
-A **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** component.
-
-It must contain a **&lt;Track&gt;** component. It may also include a **&lt;Drawer&gt;** component and any other React nodes.
+A **&lt;Wrapper&gt;** component must placed anywhere within the &lt;Provider&gt; component. It must contain a &lt;Track&gt; component. It may also include a &lt;Drawer&gt; component and any other React nodes.
 
 ### Track
-A **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component.
-
-It must contain one or more **&lt;Slide&gt;** components as direct children.
+A **&lt;Track&gt;** component must placed anywhere within the &lt;Wrapper&gt; component. It must contain one or more &lt;Slide&gt; components as direct children.
 
 ### Slide
-Each **&lt;Slide&gt;** component is placed directly under the **&lt;Track&gt;** component.
-
-Each contains the contents of one panel of the carousel.
+Each **&lt;Slide&gt;** component must be placed directly under the &lt;Track&gt; component. Each contains the contents of one panel of the carousel.
 
 ### Drawer
-An optional **&lt;Drawer&gt;** component may be placed placed within the **&lt;Wrapper&gt;**.
-
-It can be used to contain one or more control elements or other React nodes.
+A **&lt;Drawer&gt;** component may be placed placed within the &lt;Wrapper&gt; component anywhere outside the &lt;Track&gt; component. It can be used to contain one or more control elements or other React nodes.
 
 ## Controls
-The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the **&lt;Provider&gt;** component and can accept a `children` prop to wrap its behavior around any React node.
+The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the &lt;Provider&gt; component and can accept a `children` prop to wrap its behavior around any React node.
 
 - **&lt;Start&gt;** moves to the first slide
 - **&lt;Backward&gt;** moves to the previous slide
@@ -77,7 +69,9 @@ The following control components include built-in interactivity on click and tou
 - **&lt;Fullscreen&gt;** toggles fullscreen mode
 </details>
 
-<details><summary>📃 <b>Required and optional styles</b></summary>
+<details><summary>📃 <b>Supporting styles</b></summary>
+
+Use of the assembled **&lt;Carousel&gt;** component requires the following styles.
 
 ## Basic carousel functionality *(required)*
 
@@ -175,7 +169,7 @@ The following control components include built-in interactivity on click and tou
 ```
 </details>
 
-<details><summary>📃 <b>Required peer dependencies</b></summary>
+<details><summary>📃 <b>Node dependencies</b></summary>
 
 Use of the assembled **&lt;Carousel&gt;** component requires the following peer dependencies.
 
