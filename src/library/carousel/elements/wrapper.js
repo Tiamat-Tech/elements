@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 
 import { CarouselContext } from '../provider';
 import { useOnClickOutside } from '../../hooks/use-on-click-outside';
+import { getAspectRatioClassName } from '../utilities/get-aspect-ratio-class-name';
 
 export const Wrapper = ({ children }) => {
   const {
@@ -26,27 +27,6 @@ export const Wrapper = ({ children }) => {
   const { ref: inViewRef, inView } = useInView({
     threshold: inViewThreshold,
   });
-
-  const getAspectRatioClassName = (aspectRatio) => {
-    switch (aspectRatio) {
-      case 'square':
-        return 'carousel--aspect-ratio-square';
-      case 'wide':
-        return 'carousel--aspect-ratio-wide';
-      case 'wider':
-        return 'carousel--aspect-ratio-wider';
-      case 'widest':
-        return 'carousel--aspect-ratio-widest';
-      case 'tall':
-        return 'carousel--aspect-ratio-tall';
-      case 'taller':
-        return 'carousel--aspect-ratio-taller';
-      case 'tallest':
-        return 'carousel--aspect-ratio-tallest';
-      default:
-        return undefined;
-    }
-  };
 
   // Set aspect ratio class
   const aspectRatioClassName = useMemo(() => getAspectRatioClassName(aspectRatio), [aspectRatio]);

@@ -59,7 +59,7 @@ export const Provider = ({
         totalSlides,
         aspectRatio,
         orientation,
-        spring,
+        springConfig,
         isFocused,
         setIsFocused,
         focusMode,
