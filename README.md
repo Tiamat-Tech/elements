@@ -47,16 +47,16 @@ A **&lt;Provider&gt;** component must be the parent of all other carousel compon
 ## Carousel elements
 
 ### Wrapper
-A **&lt;Wrapper&gt;** component must placed somewhere within the &lt;Provider&gt; component. It must contain a &lt;Track&gt; component. It may also include a &lt;Drawer&gt; component and any other React nodes.
+A **&lt;Wrapper&gt;** component must placed somewhere within the &lt;Provider&gt; component. It must contain a &lt;Track&gt; component. It may also include a &lt;Drawer&gt; component and other React nodes.
 
 ### Track
-A **&lt;Track&gt;** component must placed somewhere within the &lt;Wrapper&gt; component. It must contain one or more &lt;Slide&gt; components as direct children.
+A **&lt;Track&gt;** component must be placed somewhere within the &lt;Wrapper&gt; component. It must contain one or more &lt;Slide&gt; components as direct children.
 
 ### Slide
 Each **&lt;Slide&gt;** component must be placed directly under the &lt;Track&gt; component. Each &lt;Slide&gt; can only accept one direct child node.
 
 ### Drawer
-A **&lt;Drawer&gt;** component may be placed within the &lt;Wrapper&gt; component anywhere outside the &lt;Track&gt; component. It can be used to contain one or more control elements or other React nodes.
+A **&lt;Drawer&gt;** component may be placed somewhere within the &lt;Wrapper&gt; component, but outside the &lt;Track&gt; component. It can be used to contain one or more control elements or other React nodes.
 
 ## Controls
 The following control components include built-in interactivity on click and touch events. They may be placed anywhere within the &lt;Provider&gt; component and can accept a `children` prop to wrap its behavior around any React node.
