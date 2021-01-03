@@ -127,7 +127,6 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following style
 ## Aspect ratio functionality *(optional)*
 
 ```css
-/* Aspect ratio functionality (optional) */
 [class*='carousel--aspect-ratio-'] {
   height: 0;
 }
