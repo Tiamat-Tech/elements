@@ -53,7 +53,7 @@ A **&lt;Wrapper&gt;** component must be placed somewhere within the &lt;Provider
 A **&lt;Track&gt;** component must be placed somewhere within the &lt;Wrapper&gt; component. It must contain one or more &lt;Slide&gt; components as direct children.
 
 ### Slide
-Each **&lt;Slide&gt;** component must be placed directly under the &lt;Track&gt; component. Each &lt;Slide&gt; can only accept one direct child node.
+Each **&lt;Slide&gt;** component must be placed directly under the &lt;Track&gt; component. Each &lt;Slide&gt; can only accept one direct child node, which will be stretched to cover the entire slide.
 
 ### Drawer
 A **&lt;Drawer&gt;** component may be placed somewhere within the &lt;Wrapper&gt; component, but outside the &lt;Track&gt; component. It can be used to contain one or more control elements or other React nodes.
