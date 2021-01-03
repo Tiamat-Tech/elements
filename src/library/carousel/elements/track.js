@@ -2,16 +2,16 @@ import React, { useEffect, useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
+import { useAtomValue } from 'jotai/utils';
 import { useSpring, animated, config as defaultConfigs } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
-import { currentSlideAtom } from '../atoms';
+import { currentSlideAtom, configAtom } from '../atoms';
 import { CarouselContext } from '../provider';
 import { getAnimationConfig } from '../utilities/get-animation-config';
 
 export const Track = ({ className, children, ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
-
   const {
     lastSlide,
     totalSlides,
@@ -24,12 +24,10 @@ export const Track = ({ className, children, ...rest }) => {
     allowKeyboard,
     keyboardMode,
     allowExpansion,
-    isExpanded,
-    setIsExpanded,
     allowFullscreen,
-    isFullscreen,
-    setIsFullscreen,
-  } = useContext(CarouselContext);
+  } = useAtomValue(configAtom);
+
+  const { isExpanded, setIsExpanded, isFullscreen, setIsFullscreen } = useContext(CarouselContext);
 
   const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), [
     springConfig,

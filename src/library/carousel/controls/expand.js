@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useAtomValue } from 'jotai/utils';
 
+import { configAtom } from '../atoms';
 import { CarouselContext } from '../provider';
 
 export const Expand = ({ className, children, ...rest }) => {
-  const { allowExpansion, isExpanded, setIsExpanded } = useContext(CarouselContext);
+  const { allowExpansion } = useAtomValue(configAtom);
+
+  const { isExpanded, setIsExpanded } = useContext(CarouselContext);
 
   const handleExpandClick = () => {
     if (!allowExpansion) return;
