@@ -1,35 +1,11 @@
-/* Carousel */
+/* Basic carousel functionality (required) */
 .carousel {
   position: relative;
-  display: flex;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
 
-.carousel--gestures {
-  touch-action: none;
-}
-
-.carousel--gestures * {
-  user-select: none;
-}
-
-.carousel--expanded {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.carousel-intersection-observer {
-  position: relative;
+.carousel > div {
   display: flex;
-  width: 100%;
-  height: 100%;
 }
 
 .carousel-track {
@@ -62,6 +38,73 @@
   user-select: none !important;
 }
 
+.carousel-button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Aspect ratio functionality (optional) */
+[class*='carousel--aspect-ratio-'] {
+  height: 0;
+}
+
+[class*='carousel--aspect-ratio-'] > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.carousel--aspect-ratio-square {
+  padding-top: 100%;
+}
+
+.carousel--aspect-ratio-wide {
+  padding-top: 75%;
+}
+
+.carousel--aspect-ratio-wider {
+  padding-top: 56.25%;
+}
+
+.carousel--aspect-ratio-widest {
+  padding-top: 42.1875%;
+}
+
+.carousel--aspect-ratio-tall {
+  padding-top: 133.333333%;
+}
+
+.carousel--aspect-ratio-taller {
+  padding-top: 177.777778%;
+}
+
+.carousel--aspect-ratio-tallest {
+  padding-top: 233.333333%;
+}
+
+/* Gesture functionality (optional) */
+.carousel--gestures {
+  touch-action: none;
+}
+
+.carousel--gestures * {
+  user-select: none;
+}
+
+/* Expansion functionality (optional) */
+.carousel--expanded {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* <Drawer> component (optional) */
 .carousel-drawer {
   position: absolute;
   left: 0;
@@ -71,9 +114,4 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.carousel-button--disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }

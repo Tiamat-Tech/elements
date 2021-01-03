@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useRef } from 'react';
+import React, { useEffect, useContext, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useHover } from 'react-use-gesture';
@@ -9,6 +9,7 @@ import { useOnClickOutside } from '../../hooks/use-on-click-outside';
 
 export const Wrapper = ({ children }) => {
   const {
+    aspectRatio,
     orientation,
     setIsFocused,
     focusMode,
@@ -21,19 +22,44 @@ export const Wrapper = ({ children }) => {
     setIsFullscreen,
   } = useContext(CarouselContext);
 
-  // @TODO remove useEffect and console.info for inViewThreshold
-  useEffect(() => {
-    console.info('inViewThreshold:', inViewThreshold);
-  }, [inViewThreshold]);
-
   const ref = useRef();
 
-  useOnClickOutside(ref, () => {
-    if (focusMode !== 'manual') return;
-
-    setIsFocused(false);
+  const { ref: inViewRef, inView } = useInView({
+    threshold: inViewThreshold,
   });
 
+  const getAspectRatioClassName = (aspectRatio) => {
+    switch (aspectRatio) {
+      case 'square':
+        return 'carousel--aspect-ratio-square';
+      case 'wide':
+        return 'carousel--aspect-ratio-wide';
+      case 'wider':
+        return 'carousel--aspect-ratio-wider';
+      case 'widest':
+        return 'carousel--aspect-ratio-widest';
+      case 'tall':
+        return 'carousel--aspect-ratio-tall';
+      case 'taller':
+        return 'carousel--aspect-ratio-taller';
+      case 'tallest':
+        return 'carousel--aspect-ratio-tallest';
+      default:
+        return undefined;
+    }
+  };
+
+  // Set aspect ratio class
+  const aspectRatioClassName = useMemo(() => getAspectRatioClassName(aspectRatio));
+
+  // Add/remove focus based on viewport visibility in 'auto' focus mode
+  useEffect(() => {
+    if (focusMode !== 'auto') return;
+
+    setIsFocused(inView);
+  }, [inView]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Add focus when hovering over carousel in 'manual' focus mode
   const bind = useHover(({ hovering }) => {
     if (focusMode !== 'manual') return;
 
@@ -42,16 +68,14 @@ export const Wrapper = ({ children }) => {
     }
   });
 
-  const { ref: inViewRef, inView } = useInView({
-    threshold: inViewThreshold,
+  // Remove focus when clicking outside of carousel in 'manual' focus mode
+  useOnClickOutside(ref, () => {
+    if (focusMode !== 'manual') return;
+
+    setIsFocused(false);
   });
 
-  useEffect(() => {
-    if (focusMode !== 'auto') return;
-
-    setIsFocused(inView);
-  }, [inView]); // eslint-disable-line react-hooks/exhaustive-deps
-
+  // Toggle fullscreen mode based on current document and `isFullscreen` state
   useEffect(() => {
     if (!allowFullscreen) return;
 
@@ -80,15 +104,13 @@ export const Wrapper = ({ children }) => {
       ref={ref}
       className={cx(
         'carousel',
-        orientation === 'horizontal' ? 'carousel--horizontal' : 'carousel--vertical',
+        aspectRatioClassName,
         allowGestures && 'carousel--gestures',
         allowExpansion ? (isExpanded ? 'carousel--expanded' : 'carousel--collapsed') : null,
       )}
       {...bind()}
     >
-      <div ref={inViewRef} className="carousel-intersection-observer">
-        {children}
-      </div>
+      <div ref={inViewRef}>{children}</div>
     </div>
   );
 };

@@ -31,18 +31,19 @@ These atomic components can be used to assemble a custom **&lt;Carousel&gt;** co
 
 A **&lt;Provider&gt;** component must be the parent of all other carousel components and accepts the following props.
 
-| **prop**                          | **default**    | type                                | **details**                                                  |
-| --------------------------------- | -------------- | ----------------------------------- | ------------------------------------------------------------ |
-| **totalSlides**<br />*(required)* |                | `number`                            | the value must match the length of the `children` prop passed to the **&lt;Track&gt;** component |
-| **orientation**<br />             | `'horizontal'` | `'horizontal'` or `'vertical'`      | determines the orientation of the carousel track (experimental) |
-| **focusMode**                     | `'auto'`       | `'auto'`, `'manual'`, or `'always'` | `'auto'` toggles keyboard, mouse, and touch interactivity based on whether or not the carousel is visible in the viewport<br /><br />`'manual'` enables interactivity when the carousel is hovered, clicked, or touched and disables it when something outside the carousel is clicked or touched<br /><br />`'always'` always enables interactivity; best when used for carousels that are permanently visible within in the viewport |
-| **inViewThreshold**               | `0.1`          | `number`                            | the number between `0` and `1` indicating the percentage of the carousel that must be visible in the viewport before automatically gaining focus when `focusMode` is set to `'auto'` |
-| **allowGestures**                 | `true`         | `bool`                              | enable/disable mouse and touch support                       |
-| **dragThreshold**                 | `50`           | `number`                            | the number of pixels the track must be panned to initiate an automatic slide change |
-| **allowKeyboard**                 | `true`         | `bool`                              | enable/disable keyboard support                              |
-| **keyboardMode**                  | `'standard'`   | `'standard ` or `'gaming'`          | `'standard'` listens to `↑`, `←`, `↓`,  `→` keyboard codes for moving through slides<br /><br />`'gaming'` listens to `W`, `A`, `S`, `D` in addition to all `'standard'` keys |
-| **allowExpansion**                | `true`         | `bool`                              | enable/disable expanded-mode support                         |
-| **allowFullscreen**               | `true`         | `bool`                              | enable/disable fullscreen-mode support                       |
+| **prop**                          | **default**    | type                                                         | **details**                                                  |
+| --------------------------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **totalSlides**<br />*(required)* |                | `number`                                                     | the value must match the length of the `children` prop passed to the &lt;Track&gt; component |
+| **aspectRatio**                   | `undefined`    | `undefined`, `'square'`, `'wide'`, `'wider'`, `'widest'`, `'tall'`, `'taller'`, or `'tallest`' | enables and sets a fixed aspect ratio for the carousel       |
+| **orientation**                   | `'horizontal'` | `'horizontal'` or `'vertical'`                               | determines the orientation of the carousel track (experimental) |
+| **focusMode**                     | `'auto'`       | `'auto'`, `'manual'`, or `'always'`                          | `'auto'` toggles keyboard, mouse, and touch interactivity based on whether or not the carousel is visible in the viewport<br /><br />`'manual'` enables interactivity when the carousel is hovered, clicked, or touched and disables it when something outside the carousel is clicked or touched<br /><br />`'always'` always enables interactivity; best when used for carousels that are permanently visible within in the viewport |
+| **inViewThreshold**               | `0.1`          | `number`                                                     | the number between `0` and `1` indicating the percentage of the carousel that must be visible in the viewport before automatically gaining focus when `focusMode` is set to `'auto'` |
+| **allowGestures**                 | `true`         | `bool`                                                       | enable/disable mouse and touch support                       |
+| **dragThreshold**                 | `50`           | `number`                                                     | the number of pixels the track must be panned to initiate an automatic slide change |
+| **allowKeyboard**                 | `true`         | `bool`                                                       | enable/disable keyboard support                              |
+| **keyboardMode**                  | `'standard'`   | `'standard ` or `'gaming'`                                   | `'standard'` listens to `↑`, `←`, `↓`,  `→` keyboard codes for moving through slides<br /><br />`'gaming'` listens to `W`, `A`, `S`, `D` in addition to all `'standard'` keys |
+| **allowExpansion**                | `true`         | `bool`                                                       | enable/disable expanded-mode support                         |
+| **allowFullscreen**               | `true`         | `bool`                                                       | enable/disable fullscreen-mode support                       |
 
 
 ## Carousel elements
@@ -79,17 +80,11 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following style
 ```css
 .carousel {
   position: relative;
-  display: flex;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
 
-.carousel-intersection-observer {
-  position: relative;
+.carousel > div {
   display: flex;
-  width: 100%;
-  height: 100%;
 }
 
 .carousel-track {
@@ -125,6 +120,51 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following style
 .carousel-button--disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+```
+
+## Aspect ratio functionality *(optional)*
+
+```css
+/* Aspect ratio functionality (optional) */
+[class*='carousel--aspect-ratio-'] {
+  height: 0;
+}
+
+[class*='carousel--aspect-ratio-'] > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.carousel--aspect-ratio-square {
+  padding-top: 100%;
+}
+
+.carousel--aspect-ratio-wide {
+  padding-top: 75%;
+}
+
+.carousel--aspect-ratio-wider {
+  padding-top: 56.25%;
+}
+
+.carousel--aspect-ratio-widest {
+  padding-top: 42.1875%;
+}
+
+.carousel--aspect-ratio-tall {
+  padding-top: 133.333333%;
+}
+
+.carousel--aspect-ratio-taller {
+  padding-top: 177.777778%;
+}
+
+.carousel--aspect-ratio-tallest {
+  padding-top: 233.333333%;
 }
 ```
 

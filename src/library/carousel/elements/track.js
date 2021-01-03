@@ -27,6 +27,7 @@ export const Track = ({ className, children, ...rest }) => {
     setIsFullscreen,
   } = useContext(CarouselContext);
 
+  // Drag gestures functionality
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {
     if (!allowGestures) return;
     if (currentSlide === 0 && mx > 0) return;
@@ -41,11 +42,11 @@ export const Track = ({ className, children, ...rest }) => {
       config: {
         ...config.default,
         clamp: true,
-        precision: 0.05,
       },
     });
   });
 
+  // Standard carousel animation
   const [animation, setAnimation] = useSpring(() => ({
     width: `${totalSlides * 100}%`,
     transform: `translate3d(calc(-${currentSlide * 100}% + ${0}px),0,0)`,
@@ -53,10 +54,10 @@ export const Track = ({ className, children, ...rest }) => {
     config: {
       ...config.default,
       clamp: true,
-      precision: 0.05,
     },
   }));
 
+  // Basic carousel functionality
   useEffect(() => {
     setAnimation({
       width: `${totalSlides * 100}%`,
@@ -65,11 +66,11 @@ export const Track = ({ className, children, ...rest }) => {
       config: {
         ...config.default,
         clamp: true,
-        precision: 0.05,
       },
     });
   }, [currentSlide, totalSlides, allowGestures]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Keyboard support functionality
   useEffect(() => {
     if (!allowKeyboard || !isFocused) return;
 

@@ -6,11 +6,12 @@ const defaultValues = {
   setCurrentSlide: () => null,
   lastSlide: 0,
   totalSlides: 1,
+  aspectRatio: undefined,
   orientation: 'horizontal',
   isFocused: false,
   setIsFocused: () => null,
   focusMode: 'auto',
-  inViewThreshold: 50,
+  inViewThreshold: 0.1,
   allowGestures: true,
   dragThreshold: 50,
   allowKeyboard: true,
@@ -27,6 +28,7 @@ export const CarouselContext = createContext(defaultValues);
 
 export const Provider = ({
   totalSlides,
+  aspectRatio,
   orientation,
   focusMode,
   inViewThreshold,
@@ -53,6 +55,7 @@ export const Provider = ({
         setCurrentSlide,
         lastSlide,
         totalSlides,
+        aspectRatio,
         orientation,
         isFocused,
         setIsFocused,
@@ -76,9 +79,10 @@ export const Provider = ({
 };
 
 Provider.defaultProps = {
+  aspectRatio: undefined,
   orientation: 'horizontal',
   focusMode: 'auto',
-  inViewThreshold: 50,
+  inViewThreshold: 0.1,
   allowGestures: true,
   dragThreshold: 50,
   allowKeyboard: true,
@@ -89,6 +93,16 @@ Provider.defaultProps = {
 
 Provider.propTypes = {
   totalSlides: PropTypes.number.isRequired,
+  aspectRatio: PropTypes.oneOf([
+    undefined,
+    'square',
+    'wide',
+    'wider',
+    'widest',
+    'tall',
+    'taller',
+    'tallest',
+  ]),
   orientation: PropTypes.oneOf(['horizontal', 'vertical']),
   focusMode: PropTypes.oneOf(['auto', 'manual', 'always']),
   inViewThreshold: PropTypes.number,
