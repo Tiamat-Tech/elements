@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Provider as JotaiProvider } from 'jotai';
 
@@ -26,7 +26,8 @@ export const Provider = ({
   allowFullscreen,
   children,
 }) => {
-  const lastSlide = totalSlides - 1;
+  const lastSlide = useMemo(() => totalSlides - 1, [totalSlides]);
+  const initialFocus = useMemo(() => focusMode === 'always', [focusMode]);
 
   return (
     <JotaiProvider
@@ -50,7 +51,7 @@ export const Provider = ({
             allowFullscreen: allowFullscreen,
           },
         ],
-        [focusAtom, () => focusMode === 'always'],
+        [focusAtom, initialFocus],
         [expandAtom, false],
         [fullscreenAtom, false],
       ]}

@@ -22,7 +22,7 @@ export const Wrapper = ({ children }) => {
 
   const setIsFocused = useUpdateAtom(focusAtom);
 
-  const isExpanded = useAtomValue(expandAtom);
+  const [isExpanded] = useAtom(expandAtom);
 
   const [isFullscreen, setIsFullscreen] = useAtom(fullscreenAtom);
 
