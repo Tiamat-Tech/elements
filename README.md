@@ -49,9 +49,7 @@ A **&lt;Provider&gt;** component must be the parent of all other carousel compon
 ### &lt;Wrapper&gt;
 A **&lt;Wrapper&gt;** component is placed within the **&lt;Provider&gt;** component.
 
-It must contain a **&lt;Track&gt;** component.
-
-It may also include a **&lt;Drawer&gt;** component and any other React nodes.
+It must contain a **&lt;Track&gt;** component. It may also include a **&lt;Drawer&gt;** component and any other React nodes.
 
 ### &lt;Track&gt;
 A **&lt;Track&gt;** component is placed within the **&lt;Wrapper&gt;** component.
