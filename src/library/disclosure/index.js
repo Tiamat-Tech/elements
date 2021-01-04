@@ -11,7 +11,7 @@ import { getAnimationConfig } from '../utilities/get-animation-config';
 export const Disclosure = ({ springConfig, children, ...rest }) => (
   <JotaiProvider
     initialValues={[
-      [openAtom, 0],
+      [openAtom, false],
       [configAtom, { springConfig: springConfig }],
     ]}
     scope={disclosureScope}
@@ -60,9 +60,12 @@ export const Panel = ({ children, ...rest }) => {
 
   const { springConfig } = useAtomValue(configAtom);
 
-  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), []);
+  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), [
+    springConfig,
+  ]);
 
   const [ref, { height }] = useMeasure();
+
   const animation = useSpring({
     height: isOpen ? height : 0,
     overflow: `hidden`,
