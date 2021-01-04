@@ -6,11 +6,13 @@ import { useAtomValue } from 'jotai/utils';
 import { useSpring, animated, config as defaultConfigs } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
-import { currentSlideAtom, configAtom, expandAtom, fullscreenAtom } from '../atoms';
+import { currentSlideAtom, configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
 import { getAnimationConfig } from '../utilities/get-animation-config';
 
 export const Track = ({ className, children, ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
+
+  const [isFocused] = useAtom(focusAtom);
 
   const [isExpanded, setIsExpanded] = useAtom(expandAtom);
 
@@ -21,7 +23,6 @@ export const Track = ({ className, children, ...rest }) => {
     totalSlides,
     orientation,
     springConfig,
-    isFocused,
     focusMode,
     allowGestures,
     dragThreshold,
