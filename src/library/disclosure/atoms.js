@@ -8,3 +8,4 @@ openAtom.scope = disclosureScope;
 export const configAtom = atom({
   springConfig: 'default',
 });
+configAtom.scope = disclosureScope;
