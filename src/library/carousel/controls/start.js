@@ -1,11 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useAtom } from 'jotai';
 
-import { CarouselContext } from '../provider';
+import { currentSlideAtom } from '../atoms';
 
 export const Start = ({ className, children, ...rest }) => {
-  const { currentSlide, setCurrentSlide } = useContext(CarouselContext);
+  const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
   return (
     <button

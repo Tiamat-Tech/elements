@@ -1,31 +1,15 @@
-import React, { createContext, useState } from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
+import { Provider as JotaiProvider } from 'jotai';
 
-const defaultValues = {
-  currentSlide: 0,
-  setCurrentSlide: () => null,
-  lastSlide: 0,
-  totalSlides: 1,
-  aspectRatio: undefined,
-  orientation: 'horizontal',
-  springConfig: 'default',
-  isFocused: false,
-  setIsFocused: () => null,
-  focusMode: 'auto',
-  inViewThreshold: 0.1,
-  allowGestures: true,
-  dragThreshold: 50,
-  allowKeyboard: true,
-  keyboardMode: 'standard',
-  allowExpansion: true,
-  isExpanded: false,
-  setIsExpanded: () => null,
-  allowFullscreen: true,
-  isFullscreen: false,
-  setIsFullscreen: () => null,
-};
-
-export const CarouselContext = createContext(defaultValues);
+import {
+  carouselScope,
+  currentSlideAtom,
+  configAtom,
+  focusAtom,
+  expandAtom,
+  fullscreenAtom,
+} from './atoms';
 
 export const Provider = ({
   totalSlides,
@@ -42,42 +26,39 @@ export const Provider = ({
   allowFullscreen,
   children,
 }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isFocused, setIsFocused] = useState(() => focusMode === 'always');
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-
-  const lastSlide = totalSlides - 1;
+  const lastSlide = useMemo(() => totalSlides - 1, [totalSlides]);
+  const initialFocus = useMemo(() => focusMode === 'always', [focusMode]);
 
   return (
-    <CarouselContext.Provider
-      value={{
-        ...defaultValues,
-        currentSlide,
-        setCurrentSlide,
-        lastSlide,
-        totalSlides,
-        aspectRatio,
-        orientation,
-        springConfig,
-        isFocused,
-        setIsFocused,
-        focusMode,
-        inViewThreshold,
-        allowGestures,
-        dragThreshold,
-        allowKeyboard,
-        keyboardMode,
-        allowExpansion,
-        isExpanded,
-        setIsExpanded,
-        allowFullscreen,
-        isFullscreen,
-        setIsFullscreen,
-      }}
+    <JotaiProvider
+      initialValues={[
+        [currentSlideAtom, 0],
+        [
+          configAtom,
+          {
+            lastSlide: lastSlide,
+            totalSlides: totalSlides,
+            aspectRatio: aspectRatio,
+            orientation: orientation,
+            springConfig: springConfig,
+            focusMode: focusMode,
+            inViewThreshold: inViewThreshold,
+            allowGestures: allowGestures,
+            dragThreshold: dragThreshold,
+            allowKeyboard: allowKeyboard,
+            keyboardMode: keyboardMode,
+            allowExpansion: allowExpansion,
+            allowFullscreen: allowFullscreen,
+          },
+        ],
+        [focusAtom, initialFocus],
+        [expandAtom, false],
+        [fullscreenAtom, false],
+      ]}
+      scope={carouselScope}
     >
       {children}
-    </CarouselContext.Provider>
+    </JotaiProvider>
   );
 };
 

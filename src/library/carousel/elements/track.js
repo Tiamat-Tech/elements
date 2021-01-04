@@ -1,16 +1,22 @@
-import React, { useEffect, useContext, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useAtom } from 'jotai';
+import { useAtomValue } from 'jotai/utils';
 import { useSpring, animated, config as defaultConfigs } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
-import { CarouselContext } from '../provider';
+import { currentSlideAtom, configAtom, expandAtom, fullscreenAtom } from '../atoms';
 import { getAnimationConfig } from '../utilities/get-animation-config';
 
 export const Track = ({ className, children, ...rest }) => {
+  const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
+
+  const [isExpanded, setIsExpanded] = useAtom(expandAtom);
+
+  const [isFullscreen, setIsFullscreen] = useAtom(fullscreenAtom);
+
   const {
-    currentSlide,
-    setCurrentSlide,
     lastSlide,
     totalSlides,
     orientation,
@@ -22,12 +28,8 @@ export const Track = ({ className, children, ...rest }) => {
     allowKeyboard,
     keyboardMode,
     allowExpansion,
-    isExpanded,
-    setIsExpanded,
     allowFullscreen,
-    isFullscreen,
-    setIsFullscreen,
-  } = useContext(CarouselContext);
+  } = useAtomValue(configAtom);
 
   const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), [
     springConfig,
@@ -116,6 +118,7 @@ export const Track = ({ className, children, ...rest }) => {
           handleEscapePress();
           break;
         case 'Home':
+          // @TODO must prevent a 'Home' press from also scrolling up the page
           handleStartPress();
           break;
         case 'ArrowLeft':
@@ -149,6 +152,7 @@ export const Track = ({ className, children, ...rest }) => {
           handleForwardPress();
           break;
         case 'End':
+          // @TODO must prevent an 'End' press from also scrolling down the page
           handleEndPress();
           break;
         case 'KeyE':

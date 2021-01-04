@@ -1,26 +1,30 @@
-import React, { useEffect, useContext, useMemo, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useAtom } from 'jotai';
+import { useAtomValue } from 'jotai/utils';
 import { useHover } from 'react-use-gesture';
 import { useInView } from 'react-intersection-observer';
 
-import { CarouselContext } from '../provider';
+import { configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
 import { useOnClickOutside } from '../../hooks/use-on-click-outside';
 import { getAspectRatioClassName } from '../utilities/get-aspect-ratio-class-name';
 
 export const Wrapper = ({ children }) => {
   const {
     aspectRatio,
-    setIsFocused,
     focusMode,
     inViewThreshold,
     allowGestures,
     allowExpansion,
-    isExpanded,
     allowFullscreen,
-    isFullscreen,
-    setIsFullscreen,
-  } = useContext(CarouselContext);
+  } = useAtomValue(configAtom);
+
+  const [, setIsFocused] = useAtom(focusAtom);
+
+  const [isExpanded] = useAtom(expandAtom);
+
+  const [isFullscreen, setIsFullscreen] = useAtom(fullscreenAtom);
 
   const ref = useRef();
 
