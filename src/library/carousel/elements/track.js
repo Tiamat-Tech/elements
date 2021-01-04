@@ -7,7 +7,7 @@ import { useSpring, animated, config as defaultConfigs } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
 import { currentSlideAtom, configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
-import { getAnimationConfig } from '../utilities/get-animation-config';
+import { getAnimationConfig } from '../../utilities/get-animation-config';
 
 export const Track = ({ className, children, ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
