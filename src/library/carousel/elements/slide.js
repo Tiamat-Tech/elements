@@ -6,8 +6,8 @@ export const Slide = ({ className, children, ...rest }) => {
   return (
     <div
       className={cx('carousel-slide', className)}
-      aria-roledescription="slide"
       role="group"
+      aria-roledescription="slide"
       {...rest}
     >
       {children}
