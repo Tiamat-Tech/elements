@@ -35,5 +35,5 @@ Disclosure.propTypes = {
       friction: PropTypes.number.isRequired,
     }),
   ]),
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
