@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import { Provider as JotaiProvider } from 'jotai';
 
 import { disclosureScope, openAtom, configAtom } from './atoms';
-import { Button } from './controls/button';
-import { Panel } from './elements/panel';
 
-export const Disclosure = ({ springConfig, children, ...rest }) => (
+export const Provider = ({ uid, springConfig, children, ...rest }) => (
   <JotaiProvider
     initialValues={[
       [openAtom, false],
-      [configAtom, { springConfig: springConfig }],
+      [configAtom, { uid: uid, springConfig: springConfig }],
     ]}
     scope={disclosureScope}
   >
@@ -18,10 +16,12 @@ export const Disclosure = ({ springConfig, children, ...rest }) => (
   </JotaiProvider>
 );
 
-Disclosure.Button = Button;
-Disclosure.Panel = Panel;
+Provider.defaultProps = {
+  springConfig: 'default',
+};
 
-Disclosure.propTypes = {
+Provider.propTypes = {
+  uid: PropTypes.string.isRequired,
   springConfig: PropTypes.oneOf([
     'default',
     'gentle',

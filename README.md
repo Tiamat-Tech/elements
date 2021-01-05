@@ -269,6 +269,62 @@ export const Carousel = ({ children, ...rest }) => {
 ```
 </details>
 
+# Disclosure
+
+<details><summary>📃 <b>Component API</b></summary>
+
+These atomic components can be used to assemble a custom **&lt;Disclosurel&gt;** component. Every component accepts `className` and `style` props (as well as all other props accepted by a React DOM node).
+
+## Disclosure components
+
+The **&lt;Provider&gt;** component is the main export and accepts the following props.
+
+| **prop**                  | **default**  | type                                                         | **details**                                                  |
+| ------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **uid**<br />*(required)* |              | `string`                                                     | unique identifier linking the disclosure panel and button    |
+| **orientation**           | `'vertical'` | `'horizontal'` or `'vertical'`                               | determines the orientation of the disclosure animation (experimental) |
+| **springConfig**          | `'default'`  | `'default'`, `'gentle'`, `'wobbly'`, `'stiff'`, `'slow'`, `'molasses'`, or `{ mass: number, tension: number, friction: number }` | determines the settings used to power the disclosure animation |
+
+The **&lt;Button&gt;** subcomponent must be exported as `Disclosure.Button`. It toggles the visibility of the &lt;Panel&gt; component.
+
+The **&lt;Panel&gt;** subcomponent must be exported as `Disclosure.Panel`. Its visibility is toggled by the &lt;Button&gt; component.
+</details>
+
+<details><summary>📃 <b>Node dependencies</b></summary>
+
+Use of the assembled **&lt;Disclosure&gt;** component requires the following peer dependencies.
+
+- `jotai`
+- `prop-types`
+- `react-dom`
+- `react-spring`
+- `react-use-measure`
+- `react`
+</details>
+
+<details><summary>📃 <b>Example &lt;Disclosure&gt;</b></summary>
+
+```javascript
+import React from 'react';
+import { Provider, Button, Panel } from '@cndycd/core/disclosure';
+
+export const Disclosure = ({ children, ...rest }) => {
+  return <Provider {...rest}>{children}</Provider>;
+};
+
+const CustomButton = ({ children, ...rest }) => {
+  return <Button {...rest}>{children}</Button>;
+};
+
+const CustomPanel = ({ children, ...rest }) => {
+  return <Panel {...rest}>{children}</Panel>;
+};
+
+Disclosure.Button = CustomButton;
+Disclosure.Panel = CustomPanel;
+```
+</details>
+
 # Other
 
 <details><summary>📃 <b>Hooks</b></summary>

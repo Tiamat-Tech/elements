@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Provider,
   Wrapper,
@@ -36,8 +36,4 @@ export const Carousel = ({ children, ...rest }) => {
       </Wrapper>
     </Provider>
   );
-};
-
-Carousel.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };

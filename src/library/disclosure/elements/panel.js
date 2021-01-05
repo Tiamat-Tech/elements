@@ -11,7 +11,7 @@ import { getAnimationConfig } from '../../utilities/get-animation-config';
 export const Panel = ({ children, ...rest }) => {
   const [isOpen] = useAtom(openAtom);
 
-  const { springConfig } = useAtomValue(configAtom);
+  const { uid, springConfig } = useAtomValue(configAtom);
 
   const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), [
     springConfig,
@@ -27,7 +27,7 @@ export const Panel = ({ children, ...rest }) => {
 
   return (
     <animated.div style={animation}>
-      <div ref={ref} {...rest}>
+      <div ref={ref} id={uid} {...rest}>
         {children}
       </div>
     </animated.div>
