@@ -92,8 +92,8 @@ export const Wrapper = ({ className, children, ...rest }) => {
         allowExpansion ? (isExpanded ? 'carousel--expanded' : 'carousel--collapsed') : null,
         className,
       )}
-      aria-roledescription="carousel"
       role="group"
+      aria-roledescription="carousel"
       {...bind()}
       {...rest}
     >
