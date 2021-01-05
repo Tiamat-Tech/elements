@@ -46,7 +46,6 @@ A **&lt;Provider&gt;** component must be the parent of all other carousel compon
 | **allowExpansion**                | `true`         | `bool`                                                       | enable/disable expanded-mode support                         |
 | **allowFullscreen**               | `true`         | `bool`                                                       | enable/disable fullscreen-mode support                       |
 
-
 ## Carousel elements
 
 ### Wrapper
@@ -70,6 +69,66 @@ The following control components include built-in interactivity on click and tou
 - **&lt;End&gt;** moves to the last slide
 - **&lt;Expand&gt;** toggles expanded mode
 - **&lt;Fullscreen&gt;** toggles fullscreen mode
+</details>
+
+<details><summary>📃 <b>Example &lt;Carousel&gt; construction</b></summary>
+
+```javascript
+import React from "react";
+import {
+  Provider,
+  Wrapper,
+  Track,
+  Slide,
+  Drawer,
+  Start,
+  Backward,
+  Forward,
+  End,
+  Expand,
+  Fullscreen,
+} from "@cndycd/core/carousel";
+
+export const Carousel = ({ children, ...rest }) => {
+  return (
+    <Provider totalSlides={children.length ? children.length : 1} {...rest}>
+      <Wrapper>
+        <Track>
+          {children.length ? (
+            children.map((child, index) => <Slide key={index}>{child}</Slide>)
+          ) : (
+            <Slide>{children}</Slide>
+          )}
+        </Track>
+        <Drawer>
+          <Start />
+          <Backward />
+          <Expand />
+          <Fullscreen />
+          <Forward />
+          <End />
+        </Drawer>
+      </Wrapper>
+    </Provider>
+  );
+};
+```
+</details>
+
+<details><summary>📃 <b>Example &lt;Carousel&gt; Usage</b> (based on implementation in example)</summary>
+
+```javascript
+import React from 'react';
+import { Carousel } from './carousel';
+
+return (
+  <Carousel>
+    <div>Bulbasaur</div>
+    <div>Charmander</div>
+    <div>Squirtle</div>
+  </Carousel>
+)
+```
 </details>
 
 <details><summary>📃 <b>Supporting styles</b></summary>
@@ -225,67 +284,6 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following peer 
 - `react`
 </details>
 
-<details><summary>📃 <b>Example &lt;Carousel&gt; construction</b></summary>
-
-```javascript
-import React from "react";
-import {
-  Provider,
-  Wrapper,
-  Track,
-  Slide,
-  Drawer,
-  Start,
-  Backward,
-  Forward,
-  End,
-  Expand,
-  Fullscreen,
-} from "@cndycd/core/carousel";
-
-export const Carousel = ({ children, ...rest }) => {
-  return (
-    <Provider totalSlides={children.length ? children.length : 1} {...rest}>
-      <Wrapper>
-        <Track>
-          {children.length ? (
-            children.map((child, index) => <Slide key={index}>{child}</Slide>)
-          ) : (
-            <Slide>{children}</Slide>
-          )}
-        </Track>
-        <Drawer>
-          <Start />
-          <Backward />
-          <Expand />
-          <Fullscreen />
-          <Forward />
-          <End />
-        </Drawer>
-      </Wrapper>
-    </Provider>
-  );
-};
-```
-</details>
-
-<details><summary>📃 <b>Example &lt;Carousel&gt; Usage</b> (based on implementation in example)</summary>
-
-```javascript
-import React from 'react';
-import { Carousel } from './carousel';
-
-return (
-  <Carousel>
-    <div>Bulbasaur</div>
-    <div>Charmander</div>
-    <div>Squirtle</div>
-  </Carousel>
-)
-```
-</details>
-
-
 # Disclosure
 
 <details><summary>📃 <b>Component API</b></summary>
@@ -305,18 +303,6 @@ The **&lt;Provider&gt;** component is the main export and accepts the following 
 The **&lt;Button&gt;** subcomponent must be exported as `Disclosure.Button`. It toggles the visibility of the &lt;Panel&gt; component.
 
 The **&lt;Panel&gt;** subcomponent must be exported as `Disclosure.Panel`. Its visibility is toggled by the &lt;Button&gt; component.
-</details>
-
-<details><summary>📃 <b>Node dependencies</b></summary>
-
-Use of the assembled **&lt;Disclosure&gt;** component requires the following peer dependencies.
-
-- `jotai`
-- `prop-types`
-- `react-dom`
-- `react-spring`
-- `react-use-measure`
-- `react`
 </details>
 
 <details><summary>📃 <b>Example &lt;Disclosure&gt; construction</b></summary>
@@ -365,6 +351,18 @@ return (
   </>
 )
 ```
+</details>
+
+<details><summary>📃 <b>Node dependencies</b></summary>
+
+Use of the assembled **&lt;Disclosure&gt;** component requires the following peer dependencies.
+
+- `jotai`
+- `prop-types`
+- `react-dom`
+- `react-spring`
+- `react-use-measure`
+- `react`
 </details>
 
 # Other
