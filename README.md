@@ -349,18 +349,20 @@ import React from 'react';
 import { Disclosure } from './disclosure';
 
 return (
-  <Disclosure uid="faq_1">
-    <Disclosure.Button>Who’s that Pokémon?</Disclosure.Button>
-    <Disclosure.Panel>It’s Pikachu!</Disclosure.Panel>
-  </Disclosure>
-  <Disclosure uid="faq_2">
-    <Disclosure.Button>What’s Pikachu's Pokédex ID?</Disclosure.Button>
-    <Disclosure.Panel>It’s 25!</Disclosure.Panel>
-  </Disclosure>
-  <Disclosure uid="faq_3">
-    <Disclosure.Button>Where is Pikachu found?</Disclosure.Button>
-    <Disclosure.Panel>Viridian Forest!</Disclosure.Panel>
-  </Disclosure>
+  <>
+    <Disclosure uid="faq_1">
+      <Disclosure.Button>Who’s that Pokémon?</Disclosure.Button>
+      <Disclosure.Panel>It’s Pikachu!</Disclosure.Panel>
+    </Disclosure>
+    <Disclosure uid="faq_2">
+      <Disclosure.Button>What’s Pikachu's Pokédex ID?</Disclosure.Button>
+      <Disclosure.Panel>It’s twenty five!</Disclosure.Panel>
+    </Disclosure>
+    <Disclosure uid="faq_3">
+      <Disclosure.Button>Where is Pikachu found?</Disclosure.Button>
+      <Disclosure.Panel>Viridian Forest!</Disclosure.Panel>
+    </Disclosure>
+  </>
 )
 ```
 </details>
