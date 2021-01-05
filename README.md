@@ -71,7 +71,7 @@ The following control components include built-in interactivity on click and tou
 - **&lt;Fullscreen&gt;** toggles fullscreen mode
 </details>
 
-<details><summary>📃 <b>Example &lt;Carousel&gt; construction</b></summary>
+<details><summary>📃 <b>Example &lt;Carousel&gt; assembly</b></summary>
 
 ```javascript
 import React from "react";
@@ -115,7 +115,7 @@ export const Carousel = ({ children, ...rest }) => {
 ```
 </details>
 
-<details><summary>📃 <b>Example &lt;Carousel&gt; consumption</b> (based on implementation in example)</summary>
+<details><summary>📃 <b>Example &lt;Carousel&gt; usage</b> (based on implementation above)</summary>
 
 ```javascript
 import React from 'react';
@@ -305,7 +305,7 @@ The **&lt;Button&gt;** subcomponent must be exported as `Disclosure.Button`. It 
 The **&lt;Panel&gt;** subcomponent must be exported as `Disclosure.Panel`. Its visibility is toggled by the &lt;Button&gt; component.
 </details>
 
-<details><summary>📃 <b>Example &lt;Disclosure&gt; construction</b></summary>
+<details><summary>📃 <b>Example &lt;Disclosure&gt; assembly</b></summary>
 
 ```javascript
 import React from 'react';
@@ -328,7 +328,7 @@ Disclosure.Panel = CustomPanel;
 ```
 </details>
 
-<details><summary>📃 <b>Example &lt;Disclosure&gt; consumption</b> (based on implementation in example)</summary>
+<details><summary>📃 <b>Example &lt;Disclosure&gt; usage</b> (based on implementation above)</summary>
 
 ```javascript
 import React from 'react';
