@@ -357,7 +357,7 @@ return (
     <Disclosure.Button>What’s Pikachu's Pokédex ID?</Disclosure.Button>
     <Disclosure.Panel>It’s #025!</Disclosure.Panel>
   </Disclosure>
-    <Disclosure uid="faq_3">
+  <Disclosure uid="faq_3">
     <Disclosure.Button>Where is Pikachu found?</Disclosure.Button>
     <Disclosure.Panel>Viridian Forest!</Disclosure.Panel>
   </Disclosure>
