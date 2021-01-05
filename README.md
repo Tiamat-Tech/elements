@@ -225,7 +225,7 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following peer 
 - `react`
 </details>
 
-<details><summary>📃 <b>Example &lt;Carousel&gt;</b></summary>
+<details><summary>📃 <b>Example &lt;Carousel&gt; construction</b></summary>
 
 ```javascript
 import React from "react";
@@ -269,7 +269,7 @@ export const Carousel = ({ children, ...rest }) => {
 ```
 </details>
 
-<details><summary>📃 <b>Usage</b> (based on implementation in example)</summary>
+<details><summary>📃 <b>Example &lt;Carousel&gt; Usage</b> (based on implementation in example)</summary>
 
 ```javascript
 import React from 'react';
@@ -319,7 +319,7 @@ Use of the assembled **&lt;Disclosure&gt;** component requires the following pee
 - `react`
 </details>
 
-<details><summary>📃 <b>Example &lt;Disclosure&gt;</b></summary>
+<details><summary>📃 <b>Example &lt;Disclosure&gt; construction</b></summary>
 
 ```javascript
 import React from 'react';
@@ -342,7 +342,7 @@ Disclosure.Panel = CustomPanel;
 ```
 </details>
 
-<details><summary>📃 <b>Usage</b> (based on implementation in example)</summary>
+<details><summary>📃 <b>Example &lt;Disclosure&gt; usage</b> (based on implementation in example)</summary>
 
 ```javascript
 import React from 'react';
