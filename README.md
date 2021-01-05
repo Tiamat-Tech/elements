@@ -269,11 +269,28 @@ export const Carousel = ({ children, ...rest }) => {
 ```
 </details>
 
+<details><summary>📃 <b>Usage</b> (based on implementation in example)</summary>
+
+```javascript
+import React from 'react';
+import { Carousel } from './carousel';
+
+return (
+  <Carousel>
+    <div>Bulbasaur</div>
+    <div>Charmander</div>
+    <div>Squirtle</div>
+  </Carousel>
+)
+```
+</details>
+
+
 # Disclosure
 
 <details><summary>📃 <b>Component API</b></summary>
 
-These atomic components can be used to assemble a custom **&lt;Disclosurel&gt;** component. Every component accepts `className` and `style` props (as well as all other props accepted by a React DOM node).
+These atomic components can be used to assemble a custom **&lt;Disclosurel&gt;** component. Every component accepts `className` and `style` props (as well as all other props accepted by a React DOM node) to facilitate custom designs.
 
 ## Disclosure components
 
@@ -322,6 +339,29 @@ const CustomPanel = ({ children, ...rest }) => {
 
 Disclosure.Button = CustomButton;
 Disclosure.Panel = CustomPanel;
+```
+</details>
+
+<details><summary>📃 <b>Usage</b> (based on implementation in example)</summary>
+
+```javascript
+import React from 'react';
+import { Disclosure } from './disclosure';
+
+return (
+  <Disclosure uid="faq_1">
+    <Disclosure.Button>Who’s that Pokémon?</Disclosure.Button>
+    <Disclosure.Panel>It’s Pikachu!</Disclosure.Panel>
+  </Disclosure>
+  <Disclosure uid="faq_2">
+    <Disclosure.Button>What’s Pikachu's Pokédex ID?</Disclosure.Button>
+    <Disclosure.Panel>It’s #025!</Disclosure.Panel>
+  </Disclosure>
+    <Disclosure uid="faq_3">
+    <Disclosure.Button>Where is Pikachu found?</Disclosure.Button>
+    <Disclosure.Panel>Viridian Forest!</Disclosure.Panel>
+  </Disclosure>
+)
 ```
 </details>
 
