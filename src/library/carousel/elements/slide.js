@@ -4,7 +4,12 @@ import cx from 'classnames';
 
 export const Slide = ({ className, children, ...rest }) => {
   return (
-    <div className={cx('carousel-slide', className)} aria-roledescription="slide" {...rest}>
+    <div
+      className={cx('carousel-slide', className)}
+      aria-roledescription="slide"
+      role="group"
+      {...rest}
+    >
       {children}
     </div>
   );

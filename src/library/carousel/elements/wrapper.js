@@ -93,6 +93,7 @@ export const Wrapper = ({ className, children, ...rest }) => {
         className,
       )}
       aria-roledescription="carousel"
+      role="group"
       {...bind()}
       {...rest}
     >
