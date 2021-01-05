@@ -11,9 +11,13 @@ export const End = ({ className, children, ...rest }) => {
 
   const { lastSlide } = useAtomValue(configAtom);
 
+  const handleEndClick = () => {
+    setCurrentSlide(lastSlide);
+  };
+
   return (
     <button
-      onClick={() => setCurrentSlide(lastSlide)}
+      onClick={handleEndClick}
       disabled={currentSlide === lastSlide}
       className={cx(
         'carousel-end-button',

@@ -8,9 +8,13 @@ import { currentSlideAtom } from '../atoms';
 export const Start = ({ className, children, ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
+  const handleStartClick = () => {
+    setCurrentSlide(0);
+  };
+
   return (
     <button
-      onClick={() => setCurrentSlide(0)}
+      onClick={handleStartClick}
       disabled={currentSlide === 0}
       className={cx(
         'carousel-start-button',

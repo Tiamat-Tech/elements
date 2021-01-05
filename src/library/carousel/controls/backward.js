@@ -8,9 +8,13 @@ import { currentSlideAtom } from '../atoms';
 export const Backward = ({ className, children, ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
+  const handleBackClick = () => {
+    setCurrentSlide(currentSlide - 1);
+  };
+
   return (
     <button
-      onClick={() => setCurrentSlide(currentSlide - 1)}
+      onClick={handleBackClick}
       disabled={currentSlide === 0}
       className={cx(
         'carousel-back-button',

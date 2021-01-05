@@ -11,9 +11,13 @@ export const Forward = ({ className, children, ...rest }) => {
 
   const { lastSlide } = useAtomValue(configAtom);
 
+  const handleForwardClick = () => {
+    setCurrentSlide(currentSlide + 1);
+  };
+
   return (
     <button
-      onClick={() => setCurrentSlide(currentSlide + 1)}
+      onClick={handleForwardClick}
       disabled={currentSlide === lastSlide}
       className={cx(
         'carousel-forward-button',

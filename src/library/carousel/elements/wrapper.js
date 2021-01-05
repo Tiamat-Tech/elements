@@ -10,7 +10,7 @@ import { configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
 import { useOnClickOutside } from '../../hooks/use-on-click-outside';
 import { getAspectRatioClassName } from '../utilities/get-aspect-ratio-class-name';
 
-export const Wrapper = ({ children }) => {
+export const Wrapper = ({ className, children, ...rest }) => {
   const {
     aspectRatio,
     focusMode,
@@ -90,14 +90,21 @@ export const Wrapper = ({ children }) => {
         aspectRatioClassName,
         allowGestures && 'carousel--gestures',
         allowExpansion ? (isExpanded ? 'carousel--expanded' : 'carousel--collapsed') : null,
+        className,
       )}
       {...bind()}
+      {...rest}
     >
       <div ref={inViewRef}>{children}</div>
     </div>
   );
 };
 
+Wrapper.defaultProps = {
+  className: '',
+};
+
 Wrapper.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
 };
