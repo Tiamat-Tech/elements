@@ -115,7 +115,7 @@ export const Carousel = ({ children, ...rest }) => {
 ```
 </details>
 
-<details><summary>📃 <b>Example &lt;Carousel&gt; Usage</b> (based on implementation in example)</summary>
+<details><summary>📃 <b>Example &lt;Carousel&gt; consumption</b> (based on implementation in example)</summary>
 
 ```javascript
 import React from 'react';
@@ -328,7 +328,7 @@ Disclosure.Panel = CustomPanel;
 ```
 </details>
 
-<details><summary>📃 <b>Example &lt;Disclosure&gt; usage</b> (based on implementation in example)</summary>
+<details><summary>📃 <b>Example &lt;Disclosure&gt; consumption</b> (based on implementation in example)</summary>
 
 ```javascript
 import React from 'react';
