@@ -19,6 +19,7 @@ export const Fullscreen = ({ className, children, ...rest }) => {
 
   return (
     <button
+      type="button"
       onClick={handleFullscreenClick}
       className={cx('carousel-fullscreen-button', className)}
       {...rest}

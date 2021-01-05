@@ -14,6 +14,7 @@ export const Start = ({ className, children, ...rest }) => {
 
   return (
     <button
+      type="button"
       onClick={handleStartClick}
       disabled={currentSlide === 0}
       className={cx(

@@ -17,6 +17,7 @@ export const Forward = ({ className, children, ...rest }) => {
 
   return (
     <button
+      type="button"
       onClick={handleForwardClick}
       disabled={currentSlide === lastSlide}
       className={cx(

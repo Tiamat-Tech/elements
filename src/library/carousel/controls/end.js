@@ -17,6 +17,7 @@ export const End = ({ className, children, ...rest }) => {
 
   return (
     <button
+      type="button"
       onClick={handleEndClick}
       disabled={currentSlide === lastSlide}
       className={cx(

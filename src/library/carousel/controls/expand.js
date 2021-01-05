@@ -19,6 +19,7 @@ export const Expand = ({ className, children, ...rest }) => {
 
   return (
     <button
+      type="button"
       onClick={handleExpandClick}
       className={cx('carousel-expand-button', className)}
       {...rest}

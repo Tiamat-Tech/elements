@@ -83,7 +83,7 @@ export const Wrapper = ({ className, children, ...rest }) => {
   }, [allowFullscreen, isFullscreen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div
+    <section
       ref={ref}
       className={cx(
         'carousel',
@@ -92,11 +92,12 @@ export const Wrapper = ({ className, children, ...rest }) => {
         allowExpansion ? (isExpanded ? 'carousel--expanded' : 'carousel--collapsed') : null,
         className,
       )}
+      aria-roledescription="carousel"
       {...bind()}
       {...rest}
     >
       <div ref={inViewRef}>{children}</div>
-    </div>
+    </section>
   );
 };
 

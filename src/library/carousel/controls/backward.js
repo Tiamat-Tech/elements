@@ -14,6 +14,7 @@ export const Backward = ({ className, children, ...rest }) => {
 
   return (
     <button
+      type="button"
       onClick={handleBackClick}
       disabled={currentSlide === 0}
       className={cx(
