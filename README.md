@@ -382,7 +382,6 @@ The package includes several general-purpose custom hooks.
 The package includes several general-purpose utility functions.
 
 - `capitalize`
-- `getFirst`
 - `getMarkup`
 - `isSSR`
 - `take`
