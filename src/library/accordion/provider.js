@@ -1,37 +1,42 @@
-import React, { createContext, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { Provider as JotaiProvider } from 'jotai';
 
-const defaultValues = {
-  currentPanel: [],
-  setCurrentPanel: () => null,
-  mode: 'loose',
-};
+import { accordionScope, currentPanelAtom, configAtom } from './atoms';
 
-export const AccordionContext = createContext(defaultValues);
-
-export const Provider = ({ mode, children }) => {
-  const defaultPanel = mode === 'loose' ? [] : -1;
-  const [currentPanel, setCurrentPanel] = useState(defaultPanel);
-
+export const Provider = ({ defaultPanel, springConfig, children }) => {
   return (
-    <AccordionContext.Provider
-      value={{
-        ...defaultValues,
-        currentPanel,
-        setCurrentPanel,
-        mode,
-      }}
+    <JotaiProvider
+      initialValues={[
+        [currentPanelAtom, undefined],
+        [configAtom, { defaultPanel: defaultPanel, springConfig: springConfig }],
+      ]}
+      scope={accordionScope}
     >
       {children}
-    </AccordionContext.Provider>
+    </JotaiProvider>
   );
 };
 
 Provider.defaultProps = {
-  mode: 'loose',
+  defaultPanel: 'none',
+  springConfig: 'default',
 };
 
 Provider.propTypes = {
-  mode: PropTypes.oneOf(['tight', 'loose']),
+  defaultPanel: PropTypes.oneOf(['none', 'first']),
+  springConfig: PropTypes.oneOf([
+    'default',
+    'gentle',
+    'wobbly',
+    'stiff',
+    'slow',
+    'molasses',
+    PropTypes.shape({
+      mass: PropTypes.number,
+      tension: PropTypes.number.isRequired,
+      friction: PropTypes.number.isRequired,
+    }),
+  ]),
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };

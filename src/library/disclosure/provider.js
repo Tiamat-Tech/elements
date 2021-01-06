@@ -4,17 +4,19 @@ import { Provider as JotaiProvider } from 'jotai';
 
 import { disclosureScope, openAtom, configAtom } from './atoms';
 
-export const Provider = ({ uid, springConfig, children, ...rest }) => (
-  <JotaiProvider
-    initialValues={[
-      [openAtom, false],
-      [configAtom, { uid: uid, springConfig: springConfig }],
-    ]}
-    scope={disclosureScope}
-  >
-    <div {...rest}>{children}</div>
-  </JotaiProvider>
-);
+export const Provider = ({ uid, springConfig, children, ...rest }) => {
+  return (
+    <JotaiProvider
+      initialValues={[
+        [openAtom, false],
+        [configAtom, { uid: uid, springConfig: springConfig }],
+      ]}
+      scope={disclosureScope}
+    >
+      <div {...rest}>{children}</div>
+    </JotaiProvider>
+  );
+};
 
 Provider.defaultProps = {
   springConfig: 'default',
