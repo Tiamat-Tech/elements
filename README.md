@@ -284,21 +284,109 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following peer 
 - `react`
 </details>
 
+# Accordion
+
+<details><summary>📃 <b>Component API</b></summary>
+
+These atomic components can be used to assemble a custom **&lt;Accordion&gt;** component. Every component accepts `className` and `style` props (as well as all other props accepted by a React DOM node) to facilitate custom designs.
+
+## Accordion components
+
+The **&lt;Provider&gt;** component is the main export and accepts the following props.
+
+| **prop**                        | **default** | type                                                         | **details**                                                  |
+| ------------------------------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **keyString**<br />*(required)* |             | `string`                                                     | unique identifier concatenated with an index to link each accordion item's panel and button |
+| **springConfig**                | `'default'` | `'default'`, `'gentle'`, `'wobbly'`, `'stiff'`, `'slow'`, `'molasses'`, or `{ mass: number, tension: number, friction: number }` | determines the settings used to power the disclosure animation |
+
+A **&lt;Wrapper&gt;** component must be placed somewhere within the &lt;Provider&gt; component. It must contain one or more child nodes each with precisely two child nodes.
+
+</details>
+
+<details><summary>📃 <b>Example &lt;Accordion&gt; assembly</b></summary>
+
+```javascript
+import React from 'react';
+import { Provider, Wrapper } from '@cndycd/core/accordion';
+
+export const Accordion = ({ children, ...rest }) => {
+  return (
+    <Provider initialPanel="first" {...rest}>
+      <Wrapper>{children}</Wrapper>
+    </Provider>
+  );
+};
+
+const CustomItem = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+const CustomButton = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+const CustomPanel = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+Accordion.Item = CustomItem;
+Accordion.Button = CustomButton;
+Accordion.Panel = CustomPanel;
+```
+</details>
+
+<details><summary>📃 <b>Example &lt;Accordion&gt; usage</b> (based on implementation above)</summary>
+
+```javascript
+import React from 'react';
+import { Accordion } from './accordion';
+
+return (
+  <Accordion keyString="faq_">
+    <Accordion.Item>
+      <Accordion.Button>Who’s that Pokémon?</Accordion.Button>
+      <Accordion.Panel>It’s Pikachu!</Accordion.Panel>
+    </Accordion.Item>
+    <Accordion.Item>
+      <Accordion.Button>What’s Pikachu's Pokédex ID?</Accordion.Button>
+      <Accordion.Panel>It’s twenty five!</Accordion.Panel>
+    </Accordion.Item>
+    <Accordion.Item>
+      <Accordion.Button>Where is Pikachu found?</Accordion.Button>
+      <Accordion.Panel>Viridian Forest!</Accordion.Panel>
+    </Accordion.Item>
+  </Accordion>
+)
+```
+</details>
+
+<details><summary>📃 <b>Node dependencies</b></summary>
+
+Use of the assembled **&lt;Accordion&gt;** component requires the following peer dependencies.
+
+- `classnames`
+- `jotai`
+- `prop-types`
+- `react-dom`
+- `react-spring`
+- `react-use-measure`
+- `react`
+</details>
+
 # Disclosure
 
 <details><summary>📃 <b>Component API</b></summary>
 
-These atomic components can be used to assemble a custom **&lt;Disclosurel&gt;** component. Every component accepts `className` and `style` props (as well as all other props accepted by a React DOM node) to facilitate custom designs.
+These atomic components can be used to assemble a custom **&lt;Disclosure&gt;** component. Every component accepts `className` and `style` props (as well as all other props accepted by a React DOM node) to facilitate custom designs.
 
 ## Disclosure components
 
 The **&lt;Provider&gt;** component is the main export and accepts the following props.
 
-| **prop**                  | **default**  | type                                                         | **details**                                                  |
-| ------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **uid**<br />*(required)* |              | `string`                                                     | unique identifier linking the disclosure panel and button    |
-| **orientation**           | `'vertical'` | `'horizontal'` or `'vertical'`                               | determines the orientation of the disclosure animation (experimental) |
-| **springConfig**          | `'default'`  | `'default'`, `'gentle'`, `'wobbly'`, `'stiff'`, `'slow'`, `'molasses'`, or `{ mass: number, tension: number, friction: number }` | determines the settings used to power the disclosure animation |
+| **prop**                        | **default** | type                                                         | **details**                                                  |
+| ------------------------------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **keyString**<br />*(required)* |             | `string`                                                     | unique identifier combined with an index to link each disclosure's panel and button |
+| **springConfig**                | `'default'` | `'default'`, `'gentle'`, `'wobbly'`, `'stiff'`, `'slow'`, `'molasses'`, or `{ mass: number, tension: number, friction: number }` | determines the settings used to power the disclosure animation |
 
 The **&lt;Button&gt;** subcomponent must be exported as `Disclosure.Button`. It toggles the visibility of the &lt;Panel&gt; component.
 
