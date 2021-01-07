@@ -15,9 +15,9 @@ const App = () => {
         <h2 className="mt-16 font-bold text-xl">Accordion Demo</h2>
 
         <div className="max-w-xs mt-4">
-          <Accordion>
+          <Accordion keyString="pokemon">
             {SLIDES.map((slide, index) => (
-              <Accordion.Item key={index} uid={`pokemon_faq${index}`}>
+              <Accordion.Item key={index}>
                 <Accordion.Button>Open/close</Accordion.Button>
                 <Accordion.Panel>{slide}</Accordion.Panel>
               </Accordion.Item>

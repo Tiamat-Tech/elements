@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Provider as JotaiProvider } from 'jotai';
 
 import { accordionScope, currentPanelAtom, configAtom } from './atoms';
 
-export const Provider = ({ defaultPanel, springConfig, children }) => {
+export const Provider = ({ defaultPanel, keyString, springConfig, children }) => {
+  const initialPanel = useMemo(() => {
+    switch (defaultPanel) {
+      case 'none':
+        return -1;
+      case 'first':
+        return 1;
+    }
+  }, [defaultPanel]);
+
   return (
     <JotaiProvider
       initialValues={[
-        [currentPanelAtom, undefined],
-        [configAtom, { defaultPanel: defaultPanel, springConfig: springConfig }],
+        [currentPanelAtom, initialPanel],
+        [configAtom, { keyString: keyString, springConfig: springConfig }],
       ]}
       scope={accordionScope}
     >
@@ -24,6 +33,7 @@ Provider.defaultProps = {
 };
 
 Provider.propTypes = {
+  keyString: PropTypes.string.isRequired,
   defaultPanel: PropTypes.oneOf(['none', 'first']),
   springConfig: PropTypes.oneOf([
     'default',

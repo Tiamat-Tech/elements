@@ -8,12 +8,12 @@ import useMeasure from 'react-use-measure';
 import { currentPanelAtom, configAtom } from '../atoms';
 import { getAnimationConfig } from '../../utilities/get-animation-config';
 
-export const Panel = ({ uid, children, ...rest }) => {
+export const Panel = ({ index, children, ...rest }) => {
   const [currentPanel] = useAtom(currentPanelAtom);
+  const { keyString, springConfig } = useAtomValue(configAtom);
 
-  const isOpen = currentPanel === uid;
-
-  const { springConfig } = useAtomValue(configAtom);
+  const isOpen = currentPanel === index;
+  const uid = `${keyString}${index}`;
 
   const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), [
     springConfig,
@@ -37,6 +37,6 @@ export const Panel = ({ uid, children, ...rest }) => {
 };
 
 Panel.propTypes = {
-  uid: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };
