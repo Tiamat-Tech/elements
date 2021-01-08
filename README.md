@@ -297,9 +297,9 @@ The **&lt;Provider&gt;** component is the main export and accepts the following 
 | **prop**                        | **default** | type                                                         | **details**                                                  |
 | ------------------------------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **keyString**<br />*(required)* |             | `string`                                                     | unique identifier concatenated with an index to link each accordion item's panel and button |
-| **springConfig**                | `'default'` | `'default'`, `'gentle'`, `'wobbly'`, `'stiff'`, `'slow'`, `'molasses'`, or `{ mass: number, tension: number, friction: number }` | determines the settings used to power the disclosure animation |
+| **springConfig**                | `'default'` | `'default'`, `'gentle'`, `'wobbly'`, `'stiff'`, `'slow'`, `'molasses'`, or `{ mass: number, tension: number, friction: number }` | determines the settings used to power the accordion animation |
 
-A **&lt;Wrapper&gt;** component must be placed somewhere within the &lt;Provider&gt; component. It must contain one or more child nodes each with precisely two child nodes.
+A **&lt;Wrapper&gt;** component must be placed somewhere within the &lt;Provider&gt; component. It must contain one or more child nodes each with precisely two child nodes, the first of which becomes an accordion button and the second of which becomes an accordion anel.
 
 </details>
 
@@ -383,10 +383,10 @@ These atomic components can be used to assemble a custom **&lt;Disclosure&gt;** 
 
 The **&lt;Provider&gt;** component is the main export and accepts the following props.
 
-| **prop**                        | **default** | type                                                         | **details**                                                  |
-| ------------------------------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **keyString**<br />*(required)* |             | `string`                                                     | unique identifier combined with an index to link each disclosure's panel and button |
-| **springConfig**                | `'default'` | `'default'`, `'gentle'`, `'wobbly'`, `'stiff'`, `'slow'`, `'molasses'`, or `{ mass: number, tension: number, friction: number }` | determines the settings used to power the disclosure animation |
+| **prop**                  | **default** | type                                                         | **details**                                                  |
+| ------------------------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **uid**<br />*(required)* |             | `string`                                                     | unique identifier linking the disclosure panel and button    |
+| **springConfig**          | `'default'` | `'default'`, `'gentle'`, `'wobbly'`, `'stiff'`, `'slow'`, `'molasses'`, or `{ mass: number, tension: number, friction: number }` | determines the settings used to power the disclosure animation |
 
 The **&lt;Button&gt;** subcomponent must be exported as `Disclosure.Button`. It toggles the visibility of the &lt;Panel&gt; component.
 
