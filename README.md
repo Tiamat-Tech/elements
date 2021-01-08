@@ -121,13 +121,18 @@ export const Carousel = ({ children, ...rest }) => {
 import React from 'react';
 import { Carousel } from './carousel';
 
-return (
-  <Carousel>
-    <div>Bulbasaur</div>
-    <div>Charmander</div>
-    <div>Squirtle</div>
-  </Carousel>
-)
+export const Pokemon = () => {
+  return (
+    <Carousel>
+      <div>Bulbasaur</div>
+      <div>Charmander</div>
+      <div>Squirtle</div>
+      <div>Pikachu</div>
+      <div>Eevee</div>
+      <div>Togepi</div>
+    </Carousel>
+  )
+}
 ```
 </details>
 
@@ -341,22 +346,24 @@ Accordion.Panel = CustomPanel;
 import React from 'react';
 import { Accordion } from './accordion';
 
-return (
-  <Accordion keyString="faq_">
-    <Accordion.Item>
-      <Accordion.Button>Who’s that Pokémon?</Accordion.Button>
-      <Accordion.Panel>It’s Pikachu!</Accordion.Panel>
-    </Accordion.Item>
-    <Accordion.Item>
-      <Accordion.Button>What’s Pikachu's Pokédex ID?</Accordion.Button>
-      <Accordion.Panel>It’s twenty five!</Accordion.Panel>
-    </Accordion.Item>
-    <Accordion.Item>
-      <Accordion.Button>Where is Pikachu found?</Accordion.Button>
-      <Accordion.Panel>Viridian Forest!</Accordion.Panel>
-    </Accordion.Item>
-  </Accordion>
-)
+export const FAQ = () => {
+  return (
+    <Accordion keyString="faq_">
+      <Accordion.Item>
+        <Accordion.Button>Who’s that Pokémon?</Accordion.Button>
+        <Accordion.Panel>It’s Pikachu!</Accordion.Panel>
+      </Accordion.Item>
+      <Accordion.Item>
+        <Accordion.Button>What’s Pikachu's Pokédex ID?</Accordion.Button>
+        <Accordion.Panel>It’s twenty five!</Accordion.Panel>
+      </Accordion.Item>
+      <Accordion.Item>
+        <Accordion.Button>Where is Pikachu found?</Accordion.Button>
+        <Accordion.Panel>Viridian Forest!</Accordion.Panel>
+      </Accordion.Item>
+    </Accordion>
+  )
+}
 ```
 </details>
 
@@ -422,22 +429,24 @@ Disclosure.Panel = CustomPanel;
 import React from 'react';
 import { Disclosure } from './disclosure';
 
-return (
-  <>
-    <Disclosure uid="faq_1">
-      <Disclosure.Button>Who’s that Pokémon?</Disclosure.Button>
-      <Disclosure.Panel>It’s Pikachu!</Disclosure.Panel>
-    </Disclosure>
-    <Disclosure uid="faq_2">
-      <Disclosure.Button>What’s Pikachu's Pokédex ID?</Disclosure.Button>
-      <Disclosure.Panel>It’s twenty five!</Disclosure.Panel>
-    </Disclosure>
-    <Disclosure uid="faq_3">
-      <Disclosure.Button>Where is Pikachu found?</Disclosure.Button>
-      <Disclosure.Panel>Viridian Forest!</Disclosure.Panel>
-    </Disclosure>
-  </>
-)
+export const FAQ = () => {
+  return (
+    <>
+      <Disclosure uid="faq_1">
+        <Disclosure.Button>Who’s that Pokémon?</Disclosure.Button>
+        <Disclosure.Panel>It’s Pikachu!</Disclosure.Panel>
+      </Disclosure>
+      <Disclosure uid="faq_2">
+        <Disclosure.Button>What’s Pikachu's Pokédex ID?</Disclosure.Button>
+        <Disclosure.Panel>It’s twenty five!</Disclosure.Panel>
+      </Disclosure>
+      <Disclosure uid="faq_3">
+        <Disclosure.Button>Where is Pikachu found?</Disclosure.Button>
+        <Disclosure.Panel>Viridian Forest!</Disclosure.Panel>
+      </Disclosure>
+    </>
+  )
+}
 ```
 </details>
 

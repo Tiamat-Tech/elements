@@ -25,7 +25,7 @@ export const Carousel = ({ children, ...rest }) => {
             <Slide>{children}</Slide>
           )}
         </Track>
-        <Drawer className="bg-black bg-opacity-75 text-pink">
+        <Drawer className="bg-black bg-opacity-75">
           <Start className="p-4" />
           <Backward className="p-4" />
           <Expand className="p-4" />

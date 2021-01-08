@@ -9,3 +9,6 @@
 
 /* Minimal styles required for @cndycd/core package */
 @import './css/library.css';
+
+/* 🍭 classes */
+@import './css/candycode.css';

@@ -10,9 +10,12 @@ export const Provider = ({ defaultPanel, keyString, springConfig, children }) =>
       case 'none':
         return -1;
       case 'first':
-        return 1;
+        return 0;
     }
   }, [defaultPanel]);
+
+  // @TODO remove console.info for defaultPanel, initialPanel
+  console.info('defaultPanel, initialPanel:', defaultPanel, initialPanel);
 
   return (
     <JotaiProvider

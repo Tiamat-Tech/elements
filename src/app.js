@@ -3,8 +3,9 @@ import React from 'react';
 import '~styles/app.css';
 import '~styles/core.css';
 
-import { Accordion, Carousel, Credits, Disclosure } from '~components';
+import { Accordion, Carousel, Disclosure } from '~components';
 import { SLIDES } from '~data';
+import Credits from '~partials/credits';
 
 const App = () => {
   return (
@@ -12,8 +13,14 @@ const App = () => {
       <div className="p-16">
         <h1 className="font-bold text-3xl">@candycode/core</h1>
 
-        <h2 className="mt-16 font-bold text-xl">Accordion Demo</h2>
+        <h2 className="mt-16 font-bold text-xl">Carousel Demo</h2>
+        <div className="max-w-3xl mt-4">
+          <Carousel aspectRatio="wider" keyboardMode="gaming">
+            {SLIDES}
+          </Carousel>
+        </div>
 
+        <h2 className="mt-16 font-bold text-xl">Accordion Demo</h2>
         <div className="max-w-xs mt-4">
           <Accordion keyString="pokemon">
             {SLIDES.map((slide, index) => (
@@ -26,24 +33,16 @@ const App = () => {
         </div>
 
         <h2 className="mt-16 font-bold text-xl">Disclosure Demo</h2>
-
         <div className="max-w-xs mt-4">
           {SLIDES.map((slide, index) => (
-            <Disclosure key={index} uid={`pokemon_item${index}`}>
+            <Disclosure key={index} uid={`pokemon_item_${index}`}>
               <Disclosure.Button>Open/close</Disclosure.Button>
               <Disclosure.Panel>{slide}</Disclosure.Panel>
             </Disclosure>
           ))}
         </div>
-
-        <h2 className="mt-16 font-bold text-xl">Carousel Demo</h2>
-        <div className="max-w-3xl mt-4">
-          <Carousel aspectRatio="wider" keyboardMode="gaming">
-            {SLIDES}
-          </Carousel>
-        </div>
       </div>
-      <Credits className="fixed right-0 bottom-0" />
+      <Credits content="package by" to="http://candycode.co/" className="fixed right-0 bottom-0" />
     </>
   );
 };

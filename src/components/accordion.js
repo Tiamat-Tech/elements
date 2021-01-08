@@ -1,25 +1,25 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { Provider, Wrapper } from '@cndycd/core/accordion';
+import { Provider, Wrapper, Disclosure, Button, Panel } from '@cndycd/core/accordion';
 
 export const Accordion = ({ children, ...rest }) => {
   return (
-    <Provider initialPanel="first" {...rest}>
+    <Provider defaultPanel="first" {...rest}>
       <Wrapper>{children}</Wrapper>
     </Provider>
   );
 };
 
 const CustomItem = ({ children }) => {
-  return <div className="p-4 bg-blue-500">{children}</div>;
+  return <div>{children}</div>;
 };
 
 const CustomButton = ({ children }) => {
-  return <div className="p-4 bg-green-500">{children}</div>;
+  return <div>{children}</div>;
 };
 
 const CustomPanel = ({ children }) => {
-  return <div className="p-4 bg-yellow-500">{children}</div>;
+  return <div>{children}</div>;
 };
 
 Accordion.Item = CustomItem;
