@@ -14,9 +14,6 @@ export const Provider = ({ defaultPanel, keyString, springConfig, children }) =>
     }
   }, [defaultPanel]);
 
-  // @TODO remove console.info for defaultPanel, initialPanel
-  console.info('defaultPanel, initialPanel:', defaultPanel, initialPanel);
-
   return (
     <JotaiProvider
       initialValues={[
