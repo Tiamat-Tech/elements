@@ -296,7 +296,7 @@ The **&lt;Provider&gt;** component is the main export and accepts the following 
 
 | **prop**                        | **default** | type                                                         | **details**                                                  |
 | ------------------------------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **keyString**<br />*(required)* |             | `string`                                                     | unique identifier concatenated with an index to link each accordion item's panel and button |
+| **keyString**<br />*(required)* |             | `string`                                                     | unique identifier appended with an index to link each accordion item's panel and button |
 | **springConfig**                | `'default'` | `'default'`, `'gentle'`, `'wobbly'`, `'stiff'`, `'slow'`, `'molasses'`, or `{ mass: number, tension: number, friction: number }` | determines the settings used to power the accordion animation |
 
 A **&lt;Wrapper&gt;** component must be placed somewhere within the &lt;Provider&gt; component. It must contain one or more child nodes each with precisely two child nodes, the first of which becomes an accordion button and the second of which becomes an accordion anel.
