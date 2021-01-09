@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef } from 'react';
+import * as React from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useAtom } from 'jotai';

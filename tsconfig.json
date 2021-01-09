@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "strict": false,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": false,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@cndycd/core": ["./src/index.ts"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

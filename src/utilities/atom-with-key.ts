@@ -1,6 +1,6 @@
-const atoms = new Map(); // eslint-disable-line no-undef
+const atoms = new Map();
 
-export const atomWithKey = (key, atom) => {
+export const atomWithKey = (key: string, atom: any) => {
   if (!atom.debugLabel) {
     atom.debugLabel = key;
   }

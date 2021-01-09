@@ -1,4 +1,4 @@
-export const getAspectRatioClassName = (aspectRatio) => {
+export const getAspectRatioClassName = (aspectRatio: string) => {
   switch (aspectRatio) {
     case 'square':
       return 'carousel--aspect-ratio-square';
