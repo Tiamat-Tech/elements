@@ -1,12 +1,11 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
 
 import { currentSlideAtom, configAtom } from '../atoms';
 
-export const End = ({ className, children, ...rest }) => {
+export const End = ({ className = '', children = 'End', ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
   const { lastSlide } = useAtomValue(configAtom);
@@ -30,14 +29,4 @@ export const End = ({ className, children, ...rest }) => {
       {children}
     </button>
   );
-};
-
-End.defaultProps = {
-  className: '',
-  children: 'End',
-};
-
-End.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
 };

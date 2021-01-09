@@ -1,11 +1,10 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
 
 import { currentSlideAtom } from '../atoms';
 
-export const Start = ({ className, children, ...rest }) => {
+export const Start = ({ className = '', children = 'Start', ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
   const handleStartClick = () => {
@@ -27,14 +26,4 @@ export const Start = ({ className, children, ...rest }) => {
       {children}
     </button>
   );
-};
-
-Start.defaultProps = {
-  className: '',
-  children: 'Start',
-};
-
-Start.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
 };

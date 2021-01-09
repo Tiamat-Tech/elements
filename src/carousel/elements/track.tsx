@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useEffect, useMemo } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
@@ -10,7 +9,7 @@ import { useDrag } from 'react-use-gesture';
 import { currentSlideAtom, configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
 import { getAnimationConfig } from '../../utilities/get-animation-config';
 
-export const Track = ({ className, children, ...rest }) => {
+export const Track = ({ className = '', children, ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
   const [isFocused] = useAtom(focusAtom);
@@ -192,13 +191,4 @@ export const Track = ({ className, children, ...rest }) => {
       {children}
     </animated.div>
   );
-};
-
-Track.defaultProps = {
-  className: '',
-};
-
-Track.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };

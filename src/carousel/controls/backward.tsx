@@ -1,11 +1,10 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
 
 import { currentSlideAtom } from '../atoms';
 
-export const Backward = ({ className, children, ...rest }) => {
+export const Backward = ({ className = '', children = 'Backward', ...rest }) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
   const handleBackClick = () => {
@@ -27,14 +26,4 @@ export const Backward = ({ className, children, ...rest }) => {
       {children}
     </button>
   );
-};
-
-Backward.defaultProps = {
-  className: '',
-  children: 'Backward',
-};
-
-Backward.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
 };

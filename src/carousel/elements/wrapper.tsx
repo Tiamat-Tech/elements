@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useEffect, useMemo, useRef } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
@@ -11,7 +10,7 @@ import { configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
 import { useOnClickOutside } from '../../hooks/use-on-click-outside';
 import { getAspectRatioClassName } from '../utilities/get-aspect-ratio-class-name';
 
-export const Wrapper = ({ className, children, ...rest }) => {
+export const Wrapper = ({ className = '', children, ...rest }) => {
   const {
     aspectRatio,
     focusMode,
@@ -71,7 +70,7 @@ export const Wrapper = ({ className, children, ...rest }) => {
       }
     };
 
-    if (isFullscreen && ref.current) {
+    if (isFullscreen && ref !== undefined && ref.current !== undefined) {
       ref.current.requestFullscreen();
     }
 
@@ -101,13 +100,4 @@ export const Wrapper = ({ className, children, ...rest }) => {
       <div ref={inViewRef}>{children}</div>
     </section>
   );
-};
-
-Wrapper.defaultProps = {
-  className: '',
-};
-
-Wrapper.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
 };
