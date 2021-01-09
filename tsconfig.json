@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "strict": false,
+    "module": "esnext",
+    "lib": ["dom", "es2017"],
+    "allowJs": true,
+    "checkJs": true,
     "jsx": "react",
-    "allowSyntheticDefaultImports": true,
+    "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "rootDir": "src/carousel"
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
