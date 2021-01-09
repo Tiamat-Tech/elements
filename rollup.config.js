@@ -40,5 +40,8 @@ function createESMConfig(input, output) {
 }
 
 export default () => {
-  return [createESMConfig('src/carousel.ts', 'dist/carousel.js')];
+  return [
+    createDeclarationConfig('src/carousel.ts', 'dist'),
+    createESMConfig('src/carousel.ts', 'dist/carousel.js'),
+  ];
 };

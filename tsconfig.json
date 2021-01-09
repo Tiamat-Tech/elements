@@ -6,7 +6,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "rootDir": "src/carousel"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
