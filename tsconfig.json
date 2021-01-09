@@ -14,7 +14,7 @@
     "emitDecoratorMetadata": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "rootDir": "src"
+    "baseDir": "./"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
