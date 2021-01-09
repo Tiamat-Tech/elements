@@ -12,7 +12,7 @@ import {
   End,
   Expand,
   Fullscreen,
-} from '@cndycd/core/carousel';
+} from '../../../src/carousel';
 
 export const Carousel = ({ children, ...rest }) => {
   return (

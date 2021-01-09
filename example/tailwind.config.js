@@ -4,9 +4,6 @@ module.exports = {
     content: ['./src/**/*.js', './src/**/*.jsx', './src/**/*.json'],
   },
   theme: {
-    fontFamily: {
-      inter: ['"Inter"', '"Arial"', 'sans-serif'],
-    },
     fontSize: {
       '4xs': ['0.375rem'],
       '3xs': ['0.5rem'],
@@ -36,13 +33,6 @@ module.exports = {
       cursor: {
         grab: 'grab',
         grabbing: 'grabbing',
-      },
-      zIndex: {
-        60: '60',
-        70: '70',
-        80: '80',
-        90: '90',
-        100: '100',
       },
     },
   },
