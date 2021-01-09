@@ -30,10 +30,15 @@ function createESMConfig(input, output) {
     input,
     output: { file: output, format: 'esm' },
     external,
-    plugins: [resolve({ extensions }), babel(getBabelOptions({ node: 8 }))],
+    plugins: [
+      resolve({ extensions }),
+      typescript(),
+      babel(getBabelOptions({ node: 8 })),
+      sizeSnapshot(),
+    ],
   };
 }
 
 export default () => {
-  return [createESMConfig('src/carousel.js', 'dist/carousel.js')];
+  return [createESMConfig('src/carousel.ts', 'dist/carousel.js')];
 };

@@ -32,12 +32,11 @@
     "prebuild": "shx rm -rf dist",
     "build": "rollup -c --config-esm",
     "postbuild": "yarn copy",
-    "eslint": "eslint --fix '{src,tests}/**/*.{js,ts,jsx,tsx}'",
-    "eslint:ci": "eslint '{src,tests}/**/*.{js,ts,jsx,tsx}'",
+    "eslint": "eslint --fix '{src}/**/*.{js,ts,jsx,tsx}'",
+    "eslint:ci": "eslint '{src}/**/*.{js,ts,jsx,tsx}'",
     "prepare": "yarn build",
     "pretest": "tsc --noEmit",
-    "test:coverage:watch": "jest --watch",
-    "copy": "shx mv dist/src/* dist && shx rm -rf dist/{src,tests} && shx cp dist/carousel.d.ts dist/carousel.cjs.d.ts && copyfiles -f package.json readme.md LICENSE dist && json -I -f dist/package.json -e \"this.private=false; this.devDependencies=undefined; this.scripts=undefined; this['lint-staged']=undefined;\""
+    "copy": "shx mv dist/src/* dist && shx rm -rf dist/{src} && shx cp dist/carousel.d.ts dist/carousel.cjs.d.ts && copyfiles -f package.json readme.md LICENSE dist && json -I -f dist/package.json -e \"this.private=false; this.devDependencies=undefined; this.scripts=undefined; this['lint-staged']=undefined;\""
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
