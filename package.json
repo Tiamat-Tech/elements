@@ -6,28 +6,23 @@
   "bugs": "https://github.com/cndycd/core/issues",
   "license": "UNLICENSED",
   "author": "Sophia Michelle Andren <sophia@candycode.co> (http://candycode.co/)",
-  "repository": "github:cndycd/core",
-  "main": "index.cjs.js",
+  "files": [
+    "**"
+  ],
   "module": "index.js",
   "types": "index.d.ts",
   "exports": {
     ".": {
       "import": "./index.js",
-      "require": "./index.cjs.js",
-      "node": "./index.cjs.js",
       "types": "./index.d.ts"
     },
     "./carousel": {
       "import": "./carousel.js",
-      "require": "./carousel.cjs.js",
-      "node": "./carousel.cjs.js",
       "types": "./carousel.d.ts"
     }
   },
-  "files": [
-    "**"
-  ],
   "sideEffects": false,
+  "repository": "github:cndycd/core",
   "scripts": {
     "prebuild": "shx rm -rf dist",
     "build": "rollup -c --config-esm",
@@ -36,7 +31,17 @@
     "eslint:ci": "eslint '{src}/**/*.{js,ts,jsx,tsx}'",
     "prepare": "yarn build",
     "pretest": "tsc --noEmit",
-    "copy": "shx mv dist/src/* dist && shx rm -rf dist/{src} && shx cp dist/carousel.d.ts dist/carousel.cjs.d.ts && copyfiles -f package.json readme.md LICENSE dist && json -I -f dist/package.json -e \"this.private=false; this.devDependencies=undefined; this.scripts=undefined; this['lint-staged']=undefined;\""
+    "copy": "shx mv dist/src/* dist && shx rm -rf dist/{src} && shx cp dist/carousel.d.ts && copyfiles -f package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.scripts=undefined, this.devDependencies=undefined, this.private=false;\""
+  },
+  "peerDependencies": {
+    "classnames": "^2.2.0",
+    "jotai": "^0.12.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-intersection-observer": "^8.30.0",
+    "react-spring": "^9.0.0-rc.0",
+    "react-use-gesture": "^9.0.0-beta.0",
+    "react-use-measure": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -62,7 +67,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "jotai": "^0.12.2",
     "json": "^10.0.0",
-    "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -72,19 +76,8 @@
     "react-use-gesture": "^9.0.0-beta.11",
     "react-use-measure": "^2.0.3",
     "rollup": "^2.36.0",
-    "rollup-plugin-size-snapshot": "^0.12.0",
     "shx": "^0.3.3",
     "typescript": "^4.1.3"
   },
-  "peerDependencies": {
-    "classnames": "^2.2.0",
-    "jotai": "^0.12.2",
-    "prop-types": "^15.7.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "react-intersection-observer": "^8.30.0",
-    "react-spring": "^9.0.0-rc.0",
-    "react-use-gesture": "^9.0.0-beta.0",
-    "react-use-measure": "^2.0.0"
-  }
+  "private": true
 }
