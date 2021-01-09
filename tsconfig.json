@@ -13,8 +13,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "rootDir": "src"
   },
-  "include": ["src/**/*", "wip/disclosure", "wip/accordion", "wip/client-only"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
