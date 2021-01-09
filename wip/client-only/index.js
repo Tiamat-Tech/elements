@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { useEffectOnce } from '../hooks/use-effect-once';
+import { useEffectOnce } from '../../src/hooks/use-effect-once';
 
 export const ClientOnly = ({ children }) => {
   const [hasMounted, setHasMounted] = useState(false);
