@@ -1,4 +1,8 @@
 module.exports = (api, targets) => {
+  if (api.cache) {
+    api.cache(true);
+  }
+
   return {
     babelrc: false,
     ignore: ['./node_modules'],
