@@ -11,27 +11,32 @@
   ],
   "module": "index.js",
   "types": "index.d.ts",
+  "main": "index.cjs.js",
   "exports": {
     ".": {
       "import": "./index.js",
-      "types": "./index.d.ts"
+      "types": "./index.d.ts",
+      "require": "./index.cjs.js",
+      "node": "./index.cjs.js"
     },
     "./carousel": {
       "import": "./carousel.js",
-      "types": "./carousel.d.ts"
+      "types": "./carousel.d.ts",
+      "require": "./carousel.cjs.js",
+      "node": "./carousel.cjs.js"
     }
   },
   "sideEffects": false,
   "repository": "github:cndycd/core",
   "scripts": {
     "prebuild": "shx rm -rf dist",
-    "build": "rollup -c --config-esm",
+    "build": "rollup -c",
     "postbuild": "yarn copy",
     "eslint": "eslint --fix '{src}/**/*.{js,ts,jsx,tsx}'",
     "eslint:ci": "eslint '{src}/**/*.{js,ts,jsx,tsx}'",
     "prepare": "yarn build",
     "pretest": "tsc --noEmit",
-    "copy": "shx mv dist/src/* dist && shx rm -rf dist/{src} && shx cp dist/carousel.d.ts && copyfiles -f package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.scripts=undefined, this.devDependencies=undefined, this.private=false;\""
+    "copy": "shx cp dist/carousel.d.ts dist/carousel.cjs.d.ts && copyfiles -f package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.scripts=undefined, this.devDependencies=undefined, this.private=false;\""
   },
   "peerDependencies": {
     "classnames": "^2.2.0",
