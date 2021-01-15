@@ -12,5 +12,39 @@
         "code": 1773
       }
     }
+  },
+  "carousel.iife.js": {
+    "bundled": 23887,
+    "minified": 8166,
+    "gzipped": 2477
+  },
+  "carousel.cjs.js": {
+    "bundled": 21799,
+    "minified": 9901,
+    "gzipped": 2648
+  },
+  "index.js": {
+    "bundled": 74,
+    "minified": 60,
+    "gzipped": 69,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
+      }
+    }
+  },
+  "index.iife.js": {
+    "bundled": 249,
+    "minified": 125,
+    "gzipped": 127
+  },
+  "index.cjs.js": {
+    "bundled": 173,
+    "minified": 141,
+    "gzipped": 134
   }
 }
