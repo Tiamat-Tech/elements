@@ -32,7 +32,9 @@ function createESMConfig(input, output) {
     external,
     plugins: [
       resolve({ extensions }),
-      typescript(),
+      typescript({
+        cacheDir: '.rollup.tscache',
+      }),
       babel(getBabelOptions({ node: 8 })),
       sizeSnapshot(),
     ],
