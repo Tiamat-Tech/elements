@@ -1,0 +1,16 @@
+{
+  "carousel.js": {
+    "bundled": 16235,
+    "minified": 8496,
+    "gzipped": 2313,
+    "treeshaked": {
+      "rollup": {
+        "code": 491,
+        "import_statements": 165
+      },
+      "webpack": {
+        "code": 1773
+      }
+    }
+  }
+}
