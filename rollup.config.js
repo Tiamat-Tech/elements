@@ -68,12 +68,22 @@ function createIIFEConfig(input, output, globalName) {
 
 export default () => {
 	return [
+		// index + types
 		createDeclarationConfig('src/index.ts', 'dist'),
 		createESMConfig('src/index.ts', 'dist/index.js'),
 		createIIFEConfig('src/index.ts', 'dist/index.iife.js'),
 		createCommonJSConfig('src/index.ts', 'dist/index.cjs.js'),
+		// carousel
 		createESMConfig('src/carousel.ts', 'dist/carousel.js'),
 		createIIFEConfig('src/carousel.ts', 'dist/carousel.iife.js'),
-		createCommonJSConfig('src/carousel.ts', 'dist/carousel.cjs.js')
+		createCommonJSConfig('src/carousel.ts', 'dist/carousel.cjs.js'),
+		// hooks
+		createESMConfig('src/hooks.ts', 'dist/hooks.js'),
+		createIIFEConfig('src/hooks.ts', 'dist/hooks.iife.js'),
+		createCommonJSConfig('src/hooks.ts', 'dist/hooks.cjs.js'),
+		// utilities
+		createESMConfig('src/utilities.ts', 'dist/utilities.js'),
+		createIIFEConfig('src/utilites.ts', 'dist/utilities.iife.js'),
+		createCommonJSConfig('src/utilities.ts', 'dist/utilites.cjs.js')
 	];
 };
