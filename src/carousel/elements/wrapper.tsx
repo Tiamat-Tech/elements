@@ -26,7 +26,7 @@ export const Wrapper = ({ className = '', children, ...rest }) => {
 
   const [isFullscreen, setIsFullscreen] = useAtom(fullscreenAtom);
 
-  const ref = useRef(null);
+  const ref = useRef<any>(null);
 
   const { ref: inViewRef, inView } = useInView({
     threshold: inViewThreshold,
