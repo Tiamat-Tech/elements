@@ -84,6 +84,6 @@ export default () => {
 		// utilities
 		createESMConfig('src/utilities.ts', 'dist/utilities.js'),
 		createIIFEConfig('src/utilites.ts', 'dist/utilities.iife.js'),
-		createCommonJSConfig('src/utilities.ts', 'dist/utilites.cjs.js')
+		createCommonJSConfig('src/utilities.ts', 'dist/utilities.cjs.js')
 	];
 };

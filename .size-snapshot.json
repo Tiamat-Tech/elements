@@ -46,5 +46,43 @@
     "bundled": 173,
     "minified": 141,
     "gzipped": 134
+  },
+  "hooks.js": {
+    "bundled": 1336,
+    "minified": 745,
+    "gzipped": 356,
+    "treeshaked": {
+      "rollup": {
+        "code": 14,
+        "import_statements": 14
+      },
+      "webpack": {
+        "code": 998
+      }
+    }
+  },
+  "hooks.iife.js": {
+    "bundled": 1891,
+    "minified": 794,
+    "gzipped": 400
+  },
+  "hooks.cjs.js": {
+    "bundled": 1676,
+    "minified": 973,
+    "gzipped": 435
+  },
+  "utilities.js": {
+    "bundled": 1551,
+    "minified": 858,
+    "gzipped": 520,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 959
+      }
+    }
   }
 }
