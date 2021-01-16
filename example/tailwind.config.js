@@ -1,7 +1,13 @@
 module.exports = {
   purge: {
     layers: ['base', 'components', 'utilities'],
-    content: ['./src/**/*.js', './src/**/*.jsx', './src/**/*.json'],
+    content: [
+      './src/**/*.js',
+      './src/**/*.json',
+      './src/**/*.jsx',
+      './src/**/*.ts',
+      './src/**/*.tsx',
+    ],
   },
   theme: {
     fontSize: {

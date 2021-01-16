@@ -1,8 +1,8 @@
 {
   "carousel.js": {
-    "bundled": 16235,
-    "minified": 8496,
-    "gzipped": 2313,
+    "bundled": 14572,
+    "minified": 7497,
+    "gzipped": 2065,
     "treeshaked": {
       "rollup": {
         "code": 491,
@@ -14,14 +14,14 @@
     }
   },
   "carousel.iife.js": {
-    "bundled": 23887,
-    "minified": 8166,
-    "gzipped": 2477
+    "bundled": 17300,
+    "minified": 6648,
+    "gzipped": 2021
   },
   "carousel.cjs.js": {
-    "bundled": 21799,
-    "minified": 9901,
-    "gzipped": 2648
+    "bundled": 15500,
+    "minified": 8336,
+    "gzipped": 2224
   },
   "index.js": {
     "bundled": 74,
@@ -38,14 +38,14 @@
     }
   },
   "index.iife.js": {
-    "bundled": 249,
-    "minified": 125,
-    "gzipped": 127
+    "bundled": 237,
+    "minified": 119,
+    "gzipped": 128
   },
   "index.cjs.js": {
-    "bundled": 173,
-    "minified": 141,
-    "gzipped": 134
+    "bundled": 161,
+    "minified": 137,
+    "gzipped": 131
   },
   "hooks.js": {
     "bundled": 1336,
@@ -62,19 +62,19 @@
     }
   },
   "hooks.iife.js": {
-    "bundled": 1891,
-    "minified": 794,
-    "gzipped": 400
+    "bundled": 1717,
+    "minified": 723,
+    "gzipped": 386
   },
   "hooks.cjs.js": {
-    "bundled": 1676,
-    "minified": 973,
-    "gzipped": 435
+    "bundled": 1510,
+    "minified": 908,
+    "gzipped": 420
   },
   "utilities.js": {
-    "bundled": 1551,
-    "minified": 858,
-    "gzipped": 520,
+    "bundled": 1145,
+    "minified": 635,
+    "gzipped": 391,
     "treeshaked": {
       "rollup": {
         "code": 0,
@@ -86,13 +86,13 @@
     }
   },
   "utilities.iife.js": {
-    "bundled": 2364,
-    "minified": 958,
-    "gzipped": 542
+    "bundled": 1620,
+    "minified": 628,
+    "gzipped": 425
   },
   "utilities.cjs.js": {
-    "bundled": 2016,
-    "minified": 1197,
-    "gzipped": 594
+    "bundled": 1380,
+    "minified": 846,
+    "gzipped": 462
   }
 }
