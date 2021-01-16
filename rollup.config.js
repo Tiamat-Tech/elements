@@ -83,7 +83,7 @@ export default () => {
 		createCommonJSConfig('src/hooks.ts', 'dist/hooks.cjs.js'),
 		// utilities
 		createESMConfig('src/utilities.ts', 'dist/utilities.js'),
-		createIIFEConfig('src/utilites.ts', 'dist/utilities.iife.js'),
+		createIIFEConfig('src/utilities.ts', 'dist/utilities.iife.js'),
 		createCommonJSConfig('src/utilities.ts', 'dist/utilities.cjs.js')
 	];
 };

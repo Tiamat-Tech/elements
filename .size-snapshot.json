@@ -84,5 +84,15 @@
         "code": 959
       }
     }
+  },
+  "utilities.iife.js": {
+    "bundled": 2364,
+    "minified": 958,
+    "gzipped": 542
+  },
+  "utilities.cjs.js": {
+    "bundled": 2016,
+    "minified": 1197,
+    "gzipped": 594
   }
 }
