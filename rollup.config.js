@@ -26,7 +26,7 @@ const getBabelOptions = (targets) => ({
   extensions,
 });
 
-function createDeclarationConfig(input, output) {
+const createDeclarationConfig = (input, output) => {
   return {
     input,
     output: {
@@ -35,9 +35,9 @@ function createDeclarationConfig(input, output) {
     external,
     plugins: [typescript({ declaration: true, outDir: output })],
   };
-}
+};
 
-function createESMConfig(input, output) {
+const createESMConfig = (input, output) => {
   return {
     input,
     output: { file: output, format: 'esm' },
@@ -51,8 +51,9 @@ function createESMConfig(input, output) {
       sizeSnapshot(),
     ],
   };
-}
-function createCommonJSConfig(input, output) {
+};
+
+const createCommonJSConfig = (input, output) => {
   return {
     input,
     output: { file: output, format: 'cjs', exports: 'named' },
@@ -64,9 +65,9 @@ function createCommonJSConfig(input, output) {
       sizeSnapshot(),
     ],
   };
-}
+};
 
-function createIIFEConfig(input, output, globalName) {
+const createIIFEConfig = (input, output, globalName) => {
   return {
     input,
     output: {
@@ -86,7 +87,7 @@ function createIIFEConfig(input, output, globalName) {
       sizeSnapshot(),
     ],
   };
-}
+};
 
 export default () => {
   return [
