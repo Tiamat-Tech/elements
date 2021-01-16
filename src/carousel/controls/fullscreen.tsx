@@ -5,7 +5,12 @@ import { useAtomValue } from 'jotai/utils';
 
 import { configAtom, fullscreenAtom } from '../atoms';
 
-export const Fullscreen = ({ className = '', children = 'Fullscreen', ...rest }) => {
+type Props = {
+  className?: string;
+  children?: React.ReactNode;
+};
+
+export const Fullscreen = ({ className = '', children = 'Fullscreen', ...rest }: Props) => {
   const [isFullscreen, setIsFullscreen] = useAtom(fullscreenAtom);
 
   const { allowFullscreen } = useAtomValue(configAtom);

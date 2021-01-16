@@ -3,13 +3,25 @@ import { useEffect, useMemo } from 'react';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
-import { useSpring, animated, config as defaultConfigs, SpringValues, SpringStartFn, SpringStopFn } from 'react-spring';
+import {
+  useSpring,
+  animated,
+  config as defaultConfigs,
+  SpringValues,
+  SpringStartFn,
+  SpringStopFn,
+} from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
 import { currentSlideAtom, configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
 import { getAnimationConfig } from '../../utilities/get-animation-config';
 
-export const Track = ({ className = '', children, ...rest }) => {
+type Props = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export const Track = ({ className = '', children, ...rest }: Props) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
   const [isFocused] = useAtom(focusAtom);
@@ -43,8 +55,7 @@ export const Track = ({ className = '', children, ...rest }) => {
     transform: `translate3d(calc(-${currentSlide * 100}% + ${0}px),0,0)`,
     cursor: allowGestures ? 'grab' : 'default',
     config: animationConfig,
-  })) as [SpringValues<any>,SpringStartFn<any>,SpringStopFn<any>];
-
+  })) as [SpringValues<any>, SpringStartFn<any>, SpringStopFn<any>];
 
   // Drag gestures functionality
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {
@@ -61,7 +72,6 @@ export const Track = ({ className = '', children, ...rest }) => {
       config: animationConfig,
     });
   });
-
 
   // Basic carousel functionality
   useEffect(() => {

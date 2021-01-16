@@ -5,7 +5,12 @@ import { useAtomValue } from 'jotai/utils';
 
 import { currentSlideAtom, configAtom } from '../atoms';
 
-export const End = ({ className = '', children = 'End', ...rest }) => {
+type Props = {
+  className?: string;
+  children?: React.ReactNode;
+};
+
+export const End = ({ className = '', children = 'End', ...rest }: Props) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
   const { lastSlide } = useAtomValue(configAtom);

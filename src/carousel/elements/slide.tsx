@@ -1,7 +1,12 @@
 import * as React from 'react';
 import cx from 'classnames';
 
-export const Slide = ({ className = '', children, ...rest }) => {
+type Props = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export const Slide = ({ className = '', children, ...rest }: Props) => {
   return (
     <div
       className={cx('carousel-slide', className)}

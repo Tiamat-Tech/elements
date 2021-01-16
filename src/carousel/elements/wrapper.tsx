@@ -10,7 +10,12 @@ import { configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
 import { useOnClickOutside } from '../../hooks/use-on-click-outside';
 import { getAspectRatioClassName } from '../utilities/get-aspect-ratio-class-name';
 
-export const Wrapper = ({ className = '', children, ...rest }) => {
+type Props = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export const Wrapper = ({ className = '', children, ...rest }: Props) => {
   const {
     aspectRatio,
     focusMode,

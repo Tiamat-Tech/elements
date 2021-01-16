@@ -4,7 +4,12 @@ import { useAtom } from 'jotai';
 
 import { currentSlideAtom } from '../atoms';
 
-export const Start = ({ className = '', children = 'Start', ...rest }) => {
+type Props = {
+  className?: string;
+  children?: React.ReactNode;
+};
+
+export const Start = ({ className = '', children = 'Start', ...rest }: Props) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
   const handleStartClick = () => {

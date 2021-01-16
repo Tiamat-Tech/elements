@@ -5,7 +5,12 @@ import { useAtomValue } from 'jotai/utils';
 
 import { configAtom, expandAtom } from '../atoms';
 
-export const Expand = ({ className = '', children = 'Expand', ...rest }) => {
+type Props = {
+  className?: string;
+  children?: React.ReactNode;
+};
+
+export const Expand = ({ className = '', children = 'Expand', ...rest }: Props) => {
   const [isExpanded, setIsExpanded] = useAtom(expandAtom);
 
   const { allowExpansion } = useAtomValue(configAtom);

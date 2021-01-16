@@ -4,7 +4,12 @@ import { useAtom } from 'jotai';
 
 import { currentSlideAtom } from '../atoms';
 
-export const Backward = ({ className = '', children = 'Backward', ...rest }) => {
+type Props = {
+  className?: string;
+  children?: React.ReactNode;
+};
+
+export const Backward = ({ className = '', children = 'Backward', ...rest }: Props) => {
   const [currentSlide, setCurrentSlide] = useAtom(currentSlideAtom);
 
   const handleBackClick = () => {

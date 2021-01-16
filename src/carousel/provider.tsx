@@ -11,6 +11,28 @@ import {
   fullscreenAtom,
 } from './atoms';
 
+type Props = {
+  totalSlides: number;
+  aspectRatio?: undefined | 'square' | 'wide' | 'wider' | 'widest' | 'tall' | 'taller' | 'tallest';
+  orientation?: 'horizontal' | 'vertical';
+  springConfig?: 'default' | 'gentle' | 'wobbly' | 'stiff' | 'slow' | 'molasses' | SpringConfig;
+  focusMode?: 'auto' | 'manual' | 'always';
+  inViewThreshold?: number;
+  allowGestures?: boolean;
+  dragThreshold?: number;
+  allowKeyboard?: boolean;
+  keyboardMode?: 'standard' | 'gaming';
+  allowExpansion?: boolean;
+  allowFullscreen?: boolean;
+  children: React.ReactNode;
+};
+
+type SpringConfig = {
+  mass?: number;
+  tension: number;
+  friction: number;
+};
+
 export const Provider = ({
   totalSlides,
   aspectRatio = undefined,
@@ -25,7 +47,7 @@ export const Provider = ({
   allowExpansion = true,
   allowFullscreen = true,
   children,
-}) => {
+}: Props) => {
   const lastSlide = useMemo(() => totalSlides - 1, [totalSlides]);
   const initialFocus = useMemo(() => focusMode === 'always', [focusMode]);
 
