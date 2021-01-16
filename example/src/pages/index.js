@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
-import { Carousel } from '../components';
-import { SLIDES } from '../data';
+import { Carousel } from '../components/carousel';
+import { SLIDES } from '../data/slides';
 
 const Home = () => {
   return (
