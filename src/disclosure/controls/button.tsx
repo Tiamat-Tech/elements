@@ -1,11 +1,14 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
 
 import { openAtom, configAtom } from '../atoms';
 
-export const Button = ({ children, ...rest }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+export const Button = ({ children, ...rest }: Props) => {
   const [isOpen, setIsOpen] = useAtom(openAtom);
 
   const { uid } = useAtomValue(configAtom);
@@ -25,8 +28,4 @@ export const Button = ({ children, ...rest }) => {
       {children}
     </button>
   );
-};
-
-Button.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };

@@ -1,4 +1,6 @@
-export const getAspectRatioClassName = (aspectRatio: string) => {
+type AspectRatio = 'square' | 'wide' | 'wider' | 'widest' | 'tall' | 'taller' | 'tallest';
+
+export const getAspectRatioClassName = (aspectRatio: AspectRatio) => {
   switch (aspectRatio) {
     case 'square':
       return 'carousel--aspect-ratio-square';
@@ -14,7 +16,5 @@ export const getAspectRatioClassName = (aspectRatio: string) => {
       return 'carousel--aspect-ratio-taller';
     case 'tallest':
       return 'carousel--aspect-ratio-tallest';
-    default:
-      return undefined;
   }
 };

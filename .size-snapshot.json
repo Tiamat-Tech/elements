@@ -1,8 +1,8 @@
 {
   "carousel.js": {
-    "bundled": 14572,
-    "minified": 7497,
-    "gzipped": 2065,
+    "bundled": 14513,
+    "minified": 7482,
+    "gzipped": 2060,
     "treeshaked": {
       "rollup": {
         "code": 491,
@@ -14,14 +14,14 @@
     }
   },
   "carousel.iife.js": {
-    "bundled": 17300,
-    "minified": 6648,
-    "gzipped": 2021
+    "bundled": 17233,
+    "minified": 6633,
+    "gzipped": 2014
   },
   "carousel.cjs.js": {
-    "bundled": 15500,
-    "minified": 8336,
-    "gzipped": 2224
+    "bundled": 15441,
+    "minified": 8321,
+    "gzipped": 2218
   },
   "index.js": {
     "bundled": 74,
@@ -48,7 +48,7 @@
     "gzipped": 131
   },
   "hooks.js": {
-    "bundled": 1336,
+    "bundled": 1234,
     "minified": 745,
     "gzipped": 356,
     "treeshaked": {
@@ -62,12 +62,12 @@
     }
   },
   "hooks.iife.js": {
-    "bundled": 1717,
+    "bundled": 1615,
     "minified": 723,
     "gzipped": 386
   },
   "hooks.cjs.js": {
-    "bundled": 1510,
+    "bundled": 1408,
     "minified": 908,
     "gzipped": 420
   },
@@ -94,5 +94,29 @@
     "bundled": 1380,
     "minified": 846,
     "gzipped": 462
+  },
+  "disclosure.js": {
+    "bundled": 2118,
+    "minified": 1334,
+    "gzipped": 588,
+    "treeshaked": {
+      "rollup": {
+        "code": 177,
+        "import_statements": 110
+      },
+      "webpack": {
+        "code": 1324
+      }
+    }
+  },
+  "disclosure.iife.js": {
+    "bundled": 2777,
+    "minified": 1104,
+    "gzipped": 577
+  },
+  "disclosure.cjs.js": {
+    "bundled": 2488,
+    "minified": 1647,
+    "gzipped": 701
   }
 }

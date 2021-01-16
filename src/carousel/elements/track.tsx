@@ -49,7 +49,7 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
   ]);
 
   // Standard carousel animation
-  // not familiar so much with spring, will be fixed later
+  // @TODO types can be revised later
   const [animation, setAnimation] = useSpring(() => ({
     width: `${totalSlides * 100}%`,
     transform: `translate3d(calc(-${currentSlide * 100}% + ${0}px),0,0)`,

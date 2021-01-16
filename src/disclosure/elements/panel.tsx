@@ -1,14 +1,25 @@
-import React, { useMemo } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import { useMemo } from 'react';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
-import { useSpring, animated, config as defaultConfigs } from 'react-spring';
+import {
+  useSpring,
+  animated,
+  config as defaultConfigs,
+  SpringValues,
+  SpringStartFn,
+  SpringStopFn,
+} from 'react-spring';
 import useMeasure from 'react-use-measure';
 
 import { openAtom, configAtom } from '../atoms';
 import { getAnimationConfig } from '../../utilities/get-animation-config';
 
-export const Panel = ({ children, ...rest }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+export const Panel = ({ children, ...rest }: Props) => {
   const [isOpen] = useAtom(openAtom);
 
   const { uid, springConfig } = useAtomValue(configAtom);
@@ -19,11 +30,13 @@ export const Panel = ({ children, ...rest }) => {
 
   const [ref, { height }] = useMeasure();
 
-  const animation = useSpring({
+  // Standard disclosure animation
+  // @TODO types can be revised later
+  const [animation] = useSpring(() => ({
     height: isOpen ? height : 0,
-    overflow: `hidden`,
+    overflow: 'hidden',
     config: animationConfig,
-  });
+  })) as [SpringValues<any>, SpringStartFn<any>, SpringStopFn<any>];
 
   return (
     <animated.div style={animation}>
@@ -32,8 +45,4 @@ export const Panel = ({ children, ...rest }) => {
       </div>
     </animated.div>
   );
-};
-
-Panel.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };
