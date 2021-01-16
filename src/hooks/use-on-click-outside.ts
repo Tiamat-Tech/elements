@@ -15,8 +15,8 @@ export const useOnClickOutside = (
   handler: (event: Event) => void,
 ) => {
   useEffect(() => {
-    const listener = (event: ListenerEvent) => {
-      if (!node.current || node.current.contains(event.target)) {
+    const listener = (event: MouseEvent | TouchEvent) => {
+      if (!node.current || node.current.contains(event.target as Node)) {
         return;
       }
 
