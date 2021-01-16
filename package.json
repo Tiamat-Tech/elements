@@ -1,5 +1,5 @@
 {
-  "name": "@cndycd/core-dev",
+  "name": "@cndycd/core",
   "version": "0.0.0",
   "description": "",
   "homepage": "https://github.com/cndycd/core",
@@ -10,20 +10,32 @@
     "**"
   ],
   "module": "index.js",
-  "types": "index.d.ts",
   "main": "index.cjs.js",
+  "types": "index.d.ts",
   "exports": {
     ".": {
       "import": "./index.js",
-      "types": "./index.d.ts",
       "require": "./index.cjs.js",
-      "node": "./index.cjs.js"
+      "node": "./index.cjs.js",
+      "types": "./index.d.ts"
     },
     "./carousel": {
       "import": "./carousel.js",
-      "types": "./carousel.d.ts",
       "require": "./carousel.cjs.js",
-      "node": "./carousel.cjs.js"
+      "node": "./carousel.cjs.js",
+      "types": "./carousel.d.ts"
+    },
+    "./hooks": {
+      "import": "./hooks.js",
+      "require": "./hooks.cjs.js",
+      "node": "./hooks.cjs.js",
+      "types": "./hooks.d.ts"
+    },
+    "./utilities": {
+      "import": "./utilities.js",
+      "require": "./utilities.cjs.js",
+      "node": "./utilities.cjs.js",
+      "types": "./utilities.d.ts"
     }
   },
   "sideEffects": false,

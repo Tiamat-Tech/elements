@@ -1,1 +1,11 @@
-export * from './carousel/index';
+export { Provider } from './carousel/provider';
+export { Wrapper } from './carousel/elements/wrapper';
+export { Track } from './carousel/elements/track';
+export { Slide } from './carousel/elements/slide';
+export { Drawer } from './carousel/elements/drawer';
+export { Start } from './carousel/controls/start';
+export { Backward } from './carousel/controls/backward';
+export { Forward } from './carousel/controls/forward';
+export { End } from './carousel/controls/end';
+export { Expand } from './carousel/controls/expand';
+export { Fullscreen } from './carousel/controls/fullscreen';
