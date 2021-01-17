@@ -368,3 +368,16 @@ Use of the assembled **&lt;Disclosure&gt;** component requires the following pee
 - `react-use-measure`
 - `react`
 </details>
+
+# Future development
+
+The library is currently in active development. Future expansions will include the following components:
+
+- &lt;Accordion&gt; (in development)
+- &lt;Lightbox&gt;
+- &lt;Modal&gt;
+- &lt;Reveal&gt;
+- &lt;Screen&gt;
+- &lt;Slide&gt;
+- &lt;Tabs&gt;
+- &lt;Wobble&gt;
