@@ -17,7 +17,9 @@
 
 # Overview
 
-The `@cndycd/core` package consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`. Required dependencies must be installed seperately. This library is intended for projects that already use `react-spring` and related packages for other purposes.
+The `@cndycd/elements` library consists of atomic components used to assemble derivative custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
+
+Required dependencies must be installed seperately. This library is intended for use in projects that already use `react-spring` and related packages for other purposes.
 
 # Carousel
 
@@ -87,7 +89,7 @@ import {
   End,
   Expand,
   Fullscreen,
-} from "@cndycd/core/carousel";
+} from "@cndycd/elements/carousel";
 
 export const Carousel = ({ children, ...rest }) => {
   return (
@@ -312,7 +314,7 @@ The **&lt;Panel&gt;** subcomponent must be exported as `Disclosure.Panel`. Its v
 
 ```javascript
 import React from 'react';
-import { Provider, Button, Panel } from '@cndycd/core/disclosure';
+import { Provider, Button, Panel } from '@cndycd/elements/disclosure';
 
 export const Disclosure = ({ children, ...rest }) => {
   return <Provider {...rest}>{children}</Provider>;
@@ -369,7 +371,7 @@ Use of the assembled **&lt;Disclosure&gt;** component requires the following pee
 - `react`
 </details>
 
-# Future development
+# More
 
 The library is currently in active development. Future expansions will include the following components:
 
