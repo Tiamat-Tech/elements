@@ -280,7 +280,6 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following peer 
 
 - `classnames`
 - `jotai`
-- `prop-types`
 - `react-dom`
 - `react-intersection-observer`
 - `react-spring`
@@ -373,7 +372,6 @@ Use of the assembled **&lt;Accordion&gt;** component requires the following peer
 
 - `classnames`
 - `jotai`
-- `prop-types`
 - `react-dom`
 - `react-spring`
 - `react-use-measure`
@@ -455,7 +453,6 @@ export const FAQ = () => {
 Use of the assembled **&lt;Disclosure&gt;** component requires the following peer dependencies.
 
 - `jotai`
-- `prop-types`
 - `react-dom`
 - `react-spring`
 - `react-use-measure`
