@@ -1,11 +1,15 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
 
 import { currentPanelAtom, configAtom } from '../atoms';
 
-export const Button = ({ index, children, ...rest }) => {
+type Props = {
+  index: number;
+  children: React.ReactNode;
+};
+
+export const Button = ({ index, children, ...rest }: Props) => {
   const [currentPanel, setCurrentPanel] = useAtom(currentPanelAtom);
   const { keyString } = useAtomValue(configAtom);
 
@@ -31,9 +35,4 @@ export const Button = ({ index, children, ...rest }) => {
       {children}
     </button>
   );
-};
-
-Button.propTypes = {
-  index: PropTypes.number.isRequired,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 };

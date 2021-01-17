@@ -112,6 +112,12 @@ export default () => {
     // createIIFEConfig('src/disclosure.ts', 'dist/disclosure.iife.js'),
     // createCommonJSConfig('src/disclosure.ts', 'dist/disclosure.cjs.js'),
 
+    // accordion
+    createESMConfig('src/accordion.ts', 'dist/accordion.js'),
+    // @TODO re-enable IIFE and CommonJS
+    // createIIFEConfig('src/accordion.ts', 'dist/accordion.iife.js'),
+    // createCommonJSConfig('src/accordion.ts', 'dist/accordion.cjs.js'),
+
     // hooks
     createESMConfig('src/hooks.ts', 'dist/hooks.js'),
     // @TODO re-enable IIFE and CommonJS

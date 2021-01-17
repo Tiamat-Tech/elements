@@ -1,11 +1,11 @@
 import { atom } from 'jotai';
 
-export const accordionScope = Symbol(); // eslint-disable-line no-undef
+export const accordionScope = Symbol();
 
-export const currentPanelAtom = atom(undefined);
+export const currentPanelAtom = atom<number | undefined>(undefined);
 currentPanelAtom.scope = accordionScope;
 
-export const configAtom = atom({
+export const configAtom = atom<any>({
   defaultPanel: undefined,
   springConfig: 'default',
 });

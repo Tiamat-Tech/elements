@@ -1,12 +1,16 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { Disclosure } from './disclosure';
 import { Button } from '../controls/button';
 import { Panel } from './panel';
 
-export const Wrapper = ({ className, children, ...rest }) => {
+type Props = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export const Wrapper = ({ className = '', children = [], ...rest }: Props) => {
   return (
     <section className={cx('accordion', className)} {...rest}>
       {children.length ? (
@@ -24,13 +28,4 @@ export const Wrapper = ({ className, children, ...rest }) => {
       )}
     </section>
   );
-};
-
-Wrapper.defaultProps = {
-  className: '',
-};
-
-Wrapper.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
 };
