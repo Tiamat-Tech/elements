@@ -2,11 +2,10 @@ import React from 'react';
 
 import { Head, Carousel } from '~components';
 import SLIDES from '~data/slides';
-import Layout from '~partials/layout';
 
 const Home = () => {
   return (
-    <Layout>
+    <>
       <Head title="@cndycd/core example" uri="__home__" />
       <div className="p-16">
         <h1 className="font-bold text-3xl">@cndycd/core</h1>
@@ -17,7 +16,7 @@ const Home = () => {
           </Carousel>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

@@ -32,8 +32,6 @@ module.exports = {
     },
     fontFamily: {
       sans: ['"Helvetica"', '"Arial"', 'sans-serif'],
-      serif: ['"Georgia"', '"Times"', 'serif'],
-      mono: ['"Consolas"', '"Menlo"', 'monospace'],
     },
     fontSize: {
       '4xs': ['0.375rem'],
