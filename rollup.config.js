@@ -10,6 +10,17 @@ const external = (id) => !id.startsWith('.') && !id.startsWith(root);
 
 const createBabelConfig = require('./babel.config');
 const extensions = ['.js', '.ts', '.tsx'];
+const browsers = {
+  browsers: [
+    'last 3 firefox major versions',
+    'last 3 and_ff major versions',
+    'last 3 chrome major versions',
+    'last 3 and_chr major versions',
+    'last 3 edge major versions',
+    'last 2 safari major versions',
+    'last 2 ios_saf major versions',
+  ],
+};
 
 const getBabelOptions = (targets) => ({
   ...createBabelConfig({ env: (env) => env === 'build' }, targets),
@@ -98,10 +109,5 @@ export default () => {
     createESMConfig('src/disclosure.ts', 'dist/disclosure.js'),
     createIIFEConfig('src/disclosure.ts', 'dist/disclosure.iife.js'),
     createCommonJSConfig('src/disclosure.ts', 'dist/disclosure.cjs.js'),
-
-    // accordion
-    createESMConfig('src/accordion.ts', 'dist/accordion.js'),
-    createIIFEConfig('src/accordion.ts', 'dist/accordion.iife.js'),
-    createCommonJSConfig('src/accordion.ts', 'dist/accordion.cjs.js'),
   ];
 };
