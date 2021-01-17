@@ -30,18 +30,6 @@
       "require": "./disclosure.cjs.js",
       "node": "./disclosure.cjs.js",
       "types": "./disclosure.d.ts"
-    },
-    "./hooks": {
-      "import": "./hooks.js",
-      "require": "./hooks.cjs.js",
-      "node": "./hooks.cjs.js",
-      "types": "./hooks.d.ts"
-    },
-    "./utilities": {
-      "import": "./utilities.js",
-      "require": "./utilities.cjs.js",
-      "node": "./utilities.cjs.js",
-      "types": "./utilities.d.ts"
     }
   },
   "sideEffects": false,
@@ -54,7 +42,7 @@
     "eslint:ci": "eslint '{src}/**/*.{js,ts,jsx,tsx}'",
     "prepare": "yarn build",
     "pretest": "tsc --noEmit",
-    "copy": "shx cp dist/index.d.ts dist/index.cjs.d.ts && shx cp dist/carousel.d.ts dist/carousel.cjs.d.ts && shx cp dist/disclosure.d.ts dist/disclosure.cjs.d.ts && shx cp dist/accordion.d.ts dist/accordion.cjs.d.ts && shx cp dist/hooks.d.ts dist/hooks.cjs.d.ts && shx cp dist/utilities.d.ts dist/utilities.cjs.d.ts && copyfiles -f package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.scripts=undefined, this.devDependencies=undefined, this.private=false; this.husky = undefined, this['lint-staged']=undefined\""
+    "copy": "shx cp dist/index.d.ts dist/index.cjs.d.ts && shx cp dist/carousel.d.ts dist/carousel.cjs.d.ts && shx cp dist/disclosure.d.ts dist/disclosure.cjs.d.ts && shx cp dist/accordion.d.ts dist/accordion.cjs.d.ts && copyfiles -f package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.scripts=undefined, this.devDependencies=undefined, this.private=false; this.husky = undefined, this['lint-staged']=undefined\""
   },
   "peerDependencies": {
     "classnames": "^2.2.0",

@@ -96,38 +96,22 @@ export default () => {
 
     // index
     createESMConfig('src/index.ts', 'dist/index.js'),
-    // @TODO re-enable IIFE and CommonJS
-    // createIIFEConfig('src/index.ts', 'dist/index.iife.js'),
-    // createCommonJSConfig('src/index.ts', 'dist/index.cjs.js'),
+    createIIFEConfig('src/index.ts', 'dist/index.iife.js'),
+    createCommonJSConfig('src/index.ts', 'dist/index.cjs.js'),
 
     // carousel
     createESMConfig('src/carousel.ts', 'dist/carousel.js'),
-    // @TODO re-enable IIFE and CommonJS
-    // createIIFEConfig('src/carousel.ts', 'dist/carousel.iife.js'),
-    // createCommonJSConfig('src/carousel.ts', 'dist/carousel.cjs.js'),
+    createIIFEConfig('src/carousel.ts', 'dist/carousel.iife.js'),
+    createCommonJSConfig('src/carousel.ts', 'dist/carousel.cjs.js'),
 
     // disclosure
     createESMConfig('src/disclosure.ts', 'dist/disclosure.js'),
-    // @TODO re-enable IIFE and CommonJS
-    // createIIFEConfig('src/disclosure.ts', 'dist/disclosure.iife.js'),
-    // createCommonJSConfig('src/disclosure.ts', 'dist/disclosure.cjs.js'),
+    createIIFEConfig('src/disclosure.ts', 'dist/disclosure.iife.js'),
+    createCommonJSConfig('src/disclosure.ts', 'dist/disclosure.cjs.js'),
 
     // accordion
     createESMConfig('src/accordion.ts', 'dist/accordion.js'),
-    // @TODO re-enable IIFE and CommonJS
-    // createIIFEConfig('src/accordion.ts', 'dist/accordion.iife.js'),
-    // createCommonJSConfig('src/accordion.ts', 'dist/accordion.cjs.js'),
-
-    // hooks
-    createESMConfig('src/hooks.ts', 'dist/hooks.js'),
-    // @TODO re-enable IIFE and CommonJS
-    // createIIFEConfig('src/hooks.ts', 'dist/hooks.iife.js'),
-    // createCommonJSConfig('src/hooks.ts', 'dist/hooks.cjs.js'),
-
-    // utilities
-    createESMConfig('src/utilities.ts', 'dist/utilities.js'),
-    // @TODO re-enable IIFE and CommonJS
-    // createIIFEConfig('src/utilities.ts', 'dist/utilities.iife.js'),
-    // createCommonJSConfig('src/utilities.ts', 'dist/utilities.cjs.js'),
+    createIIFEConfig('src/accordion.ts', 'dist/accordion.iife.js'),
+    createCommonJSConfig('src/accordion.ts', 'dist/accordion.cjs.js'),
   ];
 };
