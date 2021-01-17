@@ -17,13 +17,12 @@
 
 # Overview
 
-The `@cndycd/elements` library consists of atomic components used to assemble derivative custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
+The `@cndycd/elements` library consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
 
-Required dependencies must be installed seperately. This library is intended for use in projects that already use `react-spring` and related packages for other purposes.
+Note that peer dependencies must be installed separately. This library is intended for use in projects that already have `react-spring` and related packages installed for other purposes.
 
-# Components
 
-## Carousel
+# Carousel
 
 <details><summary>📃 <b>Component API</b></summary>
 
@@ -292,7 +291,7 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following peer 
 - `react`
 </details>
 
-## Disclosure
+# Disclosure
 
 <details><summary>📃 <b>Component API</b></summary>
 
@@ -373,7 +372,7 @@ Use of the assembled **&lt;Disclosure&gt;** component requires the following pee
 - `react`
 </details>
 
-# Development
+# Future development
 
 The library is currently in active development. Existing components will receive additional functionality. New components will include:
 

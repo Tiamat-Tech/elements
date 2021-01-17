@@ -9,8 +9,7 @@
     "develop": "gatsby develop",
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "postinstall": "shx mkdir node_modules/@cndycd && shx cp -r ../dist node_modules/@cndycd/core"
+    "clean": "gatsby clean"
   },
   "peerDependencies": {
     "react": "^17.0.0",
