@@ -21,7 +21,9 @@ The `@cndycd/elements` library consists of atomic components used to assemble de
 
 Required dependencies must be installed seperately. This library is intended for use in projects that already use `react-spring` and related packages for other purposes.
 
-# Carousel
+# Components
+
+## Carousel
 
 <details><summary>📃 <b>Component API</b></summary>
 
@@ -290,7 +292,7 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following peer 
 - `react`
 </details>
 
-# Disclosure
+## Disclosure
 
 <details><summary>📃 <b>Component API</b></summary>
 
@@ -371,9 +373,9 @@ Use of the assembled **&lt;Disclosure&gt;** component requires the following pee
 - `react`
 </details>
 
-# More
+# Development
 
-The library is currently in active development. Future expansions will include the following components:
+The library is currently in active development. Existing components will receive additional functionality. New components will include:
 
 - &lt;Accordion&gt; (in development)
 - &lt;Lightbox&gt;
