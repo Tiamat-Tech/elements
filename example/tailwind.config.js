@@ -10,29 +10,6 @@ module.exports = {
     ],
   },
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: 'hsl(0 0% 0%)',
-      white: 'hsl(0 0% 100%)',
-      gray: {
-        DEFAULT: 'hsl(0 0% 50%)',
-        50: 'hsl(0 0% 95%)',
-        100: 'hsl(0 0% 90%)',
-        200: 'hsl(0 0% 80%)',
-        300: 'hsl(0 0% 70%)',
-        400: 'hsl(0 0% 60%)',
-        500: 'hsl(0 0% 50%)',
-        600: 'hsl(0 0% 40%)',
-        700: 'hsl(0 0% 30%)',
-        800: 'hsl(0 0% 20%)',
-        900: 'hsl(0 0% 10%)',
-        950: 'hsl(0 0% 5%)',
-      },
-    },
-    fontFamily: {
-      sans: ['"Helvetica"', '"Arial"', 'sans-serif'],
-    },
     fontSize: {
       '4xs': ['0.375rem'],
       '3xs': ['0.5rem'],
