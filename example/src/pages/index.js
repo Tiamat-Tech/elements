@@ -1,15 +1,13 @@
 import React from 'react';
-import Head from 'next/head';
 
-import { Carousel } from '../components/carousel';
-import { SLIDES } from '../data/slides';
+import { Head, Carousel } from '~components';
+import SLIDES from '~data/slides';
+import Layout from '~partials/layout';
 
 const Home = () => {
   return (
-    <>
-      <Head>
-        <title>@cndycd/core playground</title>
-      </Head>
+    <Layout>
+      <Head title="@cndycd/core example" uri="__home__" />
       <div className="p-16">
         <h1 className="font-bold text-3xl">@cndycd/core</h1>
         <h2 className="mt-16 font-bold text-xl">Carousel Demo</h2>
@@ -19,7 +17,7 @@ const Home = () => {
           </Carousel>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 

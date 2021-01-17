@@ -17,7 +17,7 @@
 
 # Overview
 
-The `@cndycd/core` package consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
+The `@cndycd/core` package consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`. Required dependencies must be installed seperately. This library is intended for projects that already use `react-spring` and related packages for other purposes.
 
 # Carousel
 

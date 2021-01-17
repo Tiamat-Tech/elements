@@ -6,7 +6,12 @@
 /* Prevent shrinking the viewport below Apple iPhone SE dimensions */
 body {
   min-width: 375px;
-  background: #18181b;
-  font-family: 'Inter';
-  color: #fafafa;
+  background: black;
+  color: white;
+}
+
+/* Add custom flair to selected elements */
+::selection {
+  background: #00000080;
+  color: #ffffffff;
 }

@@ -10,6 +10,31 @@ module.exports = {
     ],
   },
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: 'hsl(0 0% 0%)',
+      white: 'hsl(0 0% 100%)',
+      gray: {
+        DEFAULT: 'hsl(0 0% 50%)',
+        50: 'hsl(0 0% 95%)',
+        100: 'hsl(0 0% 90%)',
+        200: 'hsl(0 0% 80%)',
+        300: 'hsl(0 0% 70%)',
+        400: 'hsl(0 0% 60%)',
+        500: 'hsl(0 0% 50%)',
+        600: 'hsl(0 0% 40%)',
+        700: 'hsl(0 0% 30%)',
+        800: 'hsl(0 0% 20%)',
+        900: 'hsl(0 0% 10%)',
+        950: 'hsl(0 0% 5%)',
+      },
+    },
+    fontFamily: {
+      sans: ['"Helvetica"', '"Arial"', 'sans-serif'],
+      serif: ['"Georgia"', '"Times"', 'serif'],
+      mono: ['"Consolas"', '"Menlo"', 'monospace'],
+    },
     fontSize: {
       '4xs': ['0.375rem'],
       '3xs': ['0.5rem'],
@@ -40,6 +65,38 @@ module.exports = {
         grab: 'grab',
         grabbing: 'grabbing',
       },
+      height: {
+        'gr-sm': '38.461538%',
+        'gr-lg': '61.538462%',
+      },
+      letterSpacing: {
+        condensed: '-.15em',
+        tightest: '-.1em',
+        expanded: '.15em',
+        extended: '.3em',
+        extreme: '.6em',
+      },
+      listStyleType: {
+        circle: 'circle',
+        square: 'square',
+      },
+      spacing: {
+        112: '28rem',
+        128: '32rem',
+        192: '48rem',
+        256: '64rem',
+      },
+      width: {
+        'gr-sm': '38.461538%',
+        'gr-lg': '61.538462%',
+      },
+      zIndex: {
+        60: '60',
+        70: '70',
+        80: '80',
+        90: '90',
+        100: '100',
+      },
     },
   },
   variants: {
@@ -50,5 +107,5 @@ module.exports = {
     appearance: false,
     boxSizing: false,
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };

@@ -11,7 +11,7 @@
 }
 
 [class*='aspect-ratio-'] > * {
-  @apply block w-full h-full absolute left-0 top-0;
+  @apply absolute left-0 top-0 block w-full h-full;
 }
 
 @responsive {

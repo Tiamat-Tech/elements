@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SLIDES = [
+const SLIDES = [
   <div key="1">
     <div className="flex bg-blue-200 w-full h-full justify-center">
       <img
@@ -50,3 +50,5 @@ export const SLIDES = [
     </div>
   </div>,
 ];
+
+export default SLIDES;
