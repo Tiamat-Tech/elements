@@ -21,7 +21,6 @@ The `@cndycd/elements` library consists of atomic components used to assemble cu
 
 Note that peer dependencies must be installed separately. This library is intended for use in projects that already have `react-spring` and related packages installed for other purposes.
 
-
 # Carousel
 
 <details><summary>📃 <b>Component API</b></summary>
