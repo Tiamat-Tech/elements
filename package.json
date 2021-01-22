@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Basic ingredients for baking custom React components spiced with spring physics. 🧁",
   "homepage": "https://github.com/cndycd/elements",
-  "bugs": "https://github.com/cndycd/core/issues",
+  "bugs": "https://github.com/cndycd/elements/issues",
   "license": "UNLICENSED",
   "author": "Sophia Michelle Andren <sophia@candycode.co> (http://candycode.co/)",
   "files": [
