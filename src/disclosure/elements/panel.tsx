@@ -2,11 +2,7 @@ import * as React from 'react';
 import { useMemo } from 'react';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
-import {
-  useSpring,
-  animated,
-  config as defaultConfigs,
-} from 'react-spring';
+import { useSpring, animated, config as defaultConfigs, SpringValues } from 'react-spring';
 import useMeasure from 'react-use-measure';
 
 import { openAtom, configAtom } from '../atoms';
@@ -30,12 +26,11 @@ export const Panel = ({ children, ...rest }: Props) => {
   // Standard disclosure animation
   const animation = useSpring({
     height: isOpen ? height : 0,
-    overflow: 'hidden',
     config: animationConfig,
-  });
+  }) as SpringValues<any>;
 
   return (
-    <animated.div style={animation}>
+    <animated.div className="overflow-hidden" style={animation}>
       <div ref={ref} id={uid} {...rest}>
         {children}
       </div>

@@ -3,7 +3,14 @@ import { useEffect, useMemo } from 'react';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
-import { useSpring, animated, config as defaultConfigs } from 'react-spring';
+import {
+  useSpring,
+  animated,
+  config as defaultConfigs,
+  SpringValues,
+  SpringStartFn,
+  SpringStopFn,
+} from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
 import { currentSlideAtom, configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
@@ -47,7 +54,7 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
     transform: `translate3d(calc(-${currentSlide * 100}% + ${0}px),0,0)`,
     cursor: allowGestures ? 'grab' : 'default',
     config: animationConfig,
-  }));
+  })) as [SpringValues<any>, SpringStartFn<any>, SpringStopFn<any>];
 
   // Drag gestures functionality
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {

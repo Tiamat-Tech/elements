@@ -410,6 +410,19 @@ export const FAQ = () => {
 ```
 </details>
 
+<details><summary>📃 <b>Supporting styles</b></summary>
+
+Use of the assembled **&lt;Disclosure&gt;** component requires the following styles.
+
+## Basic disclosure functionality *(required)*
+
+```css
+.overflow-hidden {
+  overflow: hidden;
+}
+```
+</details>
+
 <details><summary>📃 <b>Node dependencies</b></summary>
 
 Use of the assembled **&lt;Disclosure&gt;** component requires the following peer dependencies.
