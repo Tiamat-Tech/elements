@@ -1,0 +1,10 @@
+[build]
+  base = "example"
+  command = "yarn build"
+  publish = "example/public"
+
+[build.environment]
+  NODE_OPTIONS = "--max_old_space_size=8192"
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
