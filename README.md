@@ -17,7 +17,7 @@
 
 # Overview
 
-The `@cndycd/elements` library consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
+The `@candycode/elements` library consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
 
 Note that peer dependencies must be installed separately. This library is intended for use in projects that already have `react-spring` and related packages installed for other purposes.
 
