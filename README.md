@@ -21,6 +21,13 @@ The `@candycode/elements` library consists of atomic components used to assemble
 
 Note that peer dependencies must be installed separately. This library is intended for use in projects that already have `react-spring` and related packages installed for other purposes.
 
+Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance.
+
+<a href="https://discord.candycode.xyz/">
+  <img alt="Discord" src="https://discord.com/assets/fc0b01fe10a0b8c602fb0106d8189d9b.png" height="64">
+</a>
+
+
 # Carousel
 
 <details><summary>📃 <b>Component API</b></summary>
@@ -433,3 +440,4 @@ The library is currently in active development. Existing components will receive
 - &lt;Slide&gt;
 - &lt;Tabs&gt;
 - &lt;Wobble&gt;
+
