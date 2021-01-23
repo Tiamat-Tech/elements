@@ -2,7 +2,7 @@
   "name": "@candycode/elements",
   "version": "0.0.0",
   "description": "Basic ingredients for baking custom React components spiced with spring physics. 🧁",
-  "keywords": ["candycode", "react", "react-spring", "react-use-gesture", "jotai", "animated", "animation", "spring"],
+  "keywords": ["candycode", "react", "carousel", "accordion", "lightbox", "modal", "reveal", "slider", "tabs", "react-spring", "react-use-gesture", "jotai", "animated", "animation", "spring"],
   "homepage": "https://github.com/cndycd/elements",
   "bugs": "https://github.com/cndycd/elements/issues",
   "license": "MIT",
