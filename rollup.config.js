@@ -9,7 +9,7 @@ const { root } = path.parse(process.cwd());
 const external = (id) => !id.startsWith('.') && !id.startsWith(root);
 
 const createBabelConfig = require('./babel.config');
-const extensions = ['.js', '.ts', '.tsx'];
+const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 const browsers = {
   browsers: [
     'last 3 firefox major versions',

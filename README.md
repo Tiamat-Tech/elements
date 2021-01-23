@@ -73,7 +73,7 @@ The following control components include built-in interactivity on click and tou
 - **&lt;Fullscreen&gt;** toggles fullscreen mode
 </details>
 
-<details><summary>📃 <b>Example &lt;Carousel&gt; assembly</b></summary>
+<details><summary>📃 <b>Example &lt;Carousel&gt; assembly (unstyled)</b></summary>
 
 ```javascript
 import React from "react";
@@ -117,7 +117,57 @@ export const Carousel = ({ children, ...rest }) => {
 ```
 </details>
 
-<details><summary>📃 <b>Example &lt;Carousel&gt; usage</b> (based on implementation above)</summary>
+<details><summary>📃 <b>Example &lt;Carousel&gt; assembly (with styles and icons)</b></summary>
+
+```javascript
+import React from "react";
+import {
+  Provider,
+  Wrapper,
+  Track,
+  Slide,
+  Drawer,
+  Backward,
+  Forward,
+  Expand,
+  Fullscreen,
+} from "@cndycd/elements/carousel";
+
+import { BackIcon, NextIcon, ExpandIcon, FullscreenIcon } from './icons'
+
+export const Carousel = ({ children, ...rest }) => {
+  return (
+    <Provider totalSlides={children.length ? children.length : 1} {...rest}>
+      <Wrapper>
+        <Track>
+          {children.length ? (
+            children.map((child, index) => <Slide key={index} className="pb-16">{child}</Slide>)
+          ) : (
+            <Slide className="pb-16">{children}</Slide>
+          )}
+        </Track>
+        <Backward className="absolute left-0 p-4">
+          <BackIcon />
+        </Backward>
+        <Forward className="absolute right-0 p-4">
+          <NextIcon />
+        </Forward>
+        <Drawer className="h-16 bg-black bg-opacity-50 text-white">
+          <Expand className="p-4">
+            <ExpandIcon />
+          </Expand>
+          <Fullscreen className="p-4">
+            <FullscreenIcon />
+          </Fullscreen>
+        </Drawer>
+      </Wrapper>
+    </Provider>
+  );
+};
+```
+</details>
+
+<details><summary>📃 <b>Example &lt;Carousel&gt; usage</b> (based on implementations above)</summary>
 
 ```javascript
 import React from 'react';
