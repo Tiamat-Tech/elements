@@ -1,9 +1,12 @@
 import React from 'react';
 
-import { Head, Carousel, Disclosure } from '~components';
+import { Head, Carousel_PROD, Carousel_DEV, Disclosure_PROD, Disclosure_DEV } from '~components';
 import SLIDES from '~data/slides';
 
 const Home = () => {
+  const Carousel = process.env.GATSBY_USE_PACKAGE ? Carousel_PROD : Carousel_DEV;
+  const Disclosure = process.env.GATSBY_USE_PACKAGE ? Disclosure_PROD : Disclosure_DEV;
+
   return (
     <>
       <Head />

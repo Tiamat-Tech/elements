@@ -57,5 +57,8 @@
     "last 3 edge major versions",
     "last 2 safari major versions",
     "last 2 ios_saf major versions"
-  ]
+  ],
+  "dependencies": {
+    "@candycode/elements": "^0.0.6"
+  }
 }

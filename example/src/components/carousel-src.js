@@ -11,9 +11,9 @@ import {
   End,
   Expand,
   Fullscreen,
-} from '@candycode/elements/carousel';
+} from '../../../src/carousel';
 
-export const Carousel_PROD = ({ children, ...rest }) => {
+export const Carousel_DEV = ({ children, ...rest }) => {
   return (
     <Provider totalSlides={children.length ? children.length : 1} {...rest}>
       <Wrapper>

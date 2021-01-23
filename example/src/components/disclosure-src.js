@@ -1,7 +1,7 @@
 import React from 'react';
-import { Provider, Button, Panel } from '@candycode/elements/disclosure';
+import { Provider, Button, Panel } from '../../../src/disclosure';
 
-export const Disclosure_PROD = ({ children, ...rest }) => {
+export const Disclosure_DEV = ({ children, ...rest }) => {
   return <Provider {...rest}>{children}</Provider>;
 };
 
@@ -13,5 +13,5 @@ const CustomPanel = ({ children, ...rest }) => {
   return <Panel {...rest}>{children}</Panel>;
 };
 
-Disclosure_PROD.Button = CustomButton;
-Disclosure_PROD.Panel = CustomPanel;
+Disclosure_DEV.Button = CustomButton;
+Disclosure_DEV.Panel = CustomPanel;
