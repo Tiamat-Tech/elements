@@ -3,14 +3,7 @@ import { useEffect, useMemo } from 'react';
 import cx from 'classnames';
 import { useAtom } from 'jotai';
 import { useAtomValue } from 'jotai/utils';
-import {
-  useSpring,
-  animated,
-  config as defaultConfigs,
-  SpringValues,
-  SpringStartFn,
-  SpringStopFn,
-} from 'react-spring';
+import { useSpring, animated, config as defaultConfigs } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
 import { currentSlideAtom, configAtom, focusAtom, expandAtom, fullscreenAtom } from '../atoms';
@@ -49,13 +42,12 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
   ]);
 
   // Standard carousel animation
-  // @TODO types can be revised later
   const [animation, setAnimation] = useSpring(() => ({
     width: `${totalSlides * 100}%`,
     transform: `translate3d(calc(-${currentSlide * 100}% + ${0}px),0,0)`,
     cursor: allowGestures ? 'grab' : 'default',
     config: animationConfig,
-  })) as [SpringValues<any>, SpringStartFn<any>, SpringStopFn<any>];
+  }));
 
   // Drag gestures functionality
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {
@@ -81,7 +73,7 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
       cursor: allowGestures ? 'grab' : 'default',
       config: animationConfig,
     });
-  }, [currentSlide, totalSlides, allowGestures]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [setAnimation, totalSlides, currentSlide, allowGestures, animationConfig]);
 
   // Keyboard support functionality
   useEffect(() => {
@@ -180,18 +172,21 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
 
     document.addEventListener('keyup', onKeyUp);
     return () => document.removeEventListener('keyup', onKeyUp);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     currentSlide,
+    setCurrentSlide,
     lastSlide,
+    orientation,
     isFocused,
     focusMode,
     allowKeyboard,
     keyboardMode,
     allowExpansion,
     isExpanded,
+    setIsExpanded,
     allowFullscreen,
     isFullscreen,
+    setIsFullscreen,
   ]);
 
   return (

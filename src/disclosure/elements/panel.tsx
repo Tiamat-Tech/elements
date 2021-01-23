@@ -6,9 +6,6 @@ import {
   useSpring,
   animated,
   config as defaultConfigs,
-  SpringValues,
-  SpringStartFn,
-  SpringStopFn,
 } from 'react-spring';
 import useMeasure from 'react-use-measure';
 
@@ -31,12 +28,11 @@ export const Panel = ({ children, ...rest }: Props) => {
   const [ref, { height }] = useMeasure();
 
   // Standard disclosure animation
-  // @TODO types can be revised later
-  const [animation] = useSpring(() => ({
+  const animation = useSpring({
     height: isOpen ? height : 0,
     overflow: 'hidden',
     config: animationConfig,
-  })) as [SpringValues<any>, SpringStartFn<any>, SpringStopFn<any>];
+  });
 
   return (
     <animated.div style={animation}>

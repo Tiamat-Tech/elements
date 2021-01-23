@@ -45,7 +45,7 @@ export const Wrapper = ({ className = '', children, ...rest }: Props) => {
     if (focusMode !== 'auto') return;
 
     setIsFocused(inView);
-  }, [inView]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [focusMode, setIsFocused, inView]);
 
   // Add focus when hovering over carousel in 'manual' focus mode
   const bind = useHover(({ hovering }) => {
@@ -85,7 +85,7 @@ export const Wrapper = ({ className = '', children, ...rest }: Props) => {
 
     document.addEventListener('fullscreenchange', onFullscreenChange);
     return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
-  }, [allowFullscreen, isFullscreen]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [allowFullscreen, isFullscreen, setIsFullscreen]);
 
   return (
     <section

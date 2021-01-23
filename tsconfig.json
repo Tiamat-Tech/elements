@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": "./src",
     "target": "esnext",
-    "lib": ["dom", "esnext"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": true,
