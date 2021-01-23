@@ -28,6 +28,11 @@ Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance
 </a>
 
 
+# Installation
+1. Run `npm install @candycode/elements` or `yarn add @candycode/elements`.
+2. Continue following instructions for one or more of the following component APIs.
+
+
 # Carousel
 
 <details><summary>📃 <b>Component API</b></summary>
