@@ -89,7 +89,7 @@ import {
   End,
   Expand,
   Fullscreen,
-} from "@cndycd/elements/carousel";
+} from "@candycode/elements/carousel";
 
 export const Carousel = ({ children, ...rest }) => {
   return (
@@ -131,7 +131,7 @@ import {
   Forward,
   Expand,
   Fullscreen,
-} from "@cndycd/elements/carousel";
+} from "@candycode/elements/carousel";
 
 import { BackIcon, NextIcon, ExpandIcon, FullscreenIcon } from './icons'
 
@@ -364,7 +364,7 @@ The **&lt;Panel&gt;** subcomponent must be exported as `Disclosure.Panel`. Its v
 
 ```javascript
 import React from 'react';
-import { Provider, Button, Panel } from '@cndycd/elements/disclosure';
+import { Provider, Button, Panel } from '@candycode/elements/disclosure';
 
 export const Disclosure = ({ children, ...rest }) => {
   return <Provider {...rest}>{children}</Provider>;
