@@ -96,9 +96,9 @@
     "gzipped": 462
   },
   "disclosure.js": {
-    "bundled": 2080,
-    "minified": 1336,
-    "gzipped": 591,
+    "bundled": 2070,
+    "minified": 1326,
+    "gzipped": 585,
     "treeshaked": {
       "rollup": {
         "code": 177,
@@ -110,13 +110,13 @@
     }
   },
   "disclosure.iife.js": {
-    "bundled": 2735,
-    "minified": 1106,
-    "gzipped": 580
+    "bundled": 2725,
+    "minified": 1096,
+    "gzipped": 573
   },
   "disclosure.cjs.js": {
-    "bundled": 2450,
-    "minified": 1649,
-    "gzipped": 704
+    "bundled": 2440,
+    "minified": 1639,
+    "gzipped": 696
   }
 }

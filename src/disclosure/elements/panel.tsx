@@ -26,11 +26,12 @@ export const Panel = ({ children, ...rest }: Props) => {
   // Standard disclosure animation
   const animation = useSpring({
     height: isOpen ? height : 0,
+    overflow: 'hidden' as const,
     config: animationConfig,
   }) as SpringValues<any>;
 
   return (
-    <animated.div className="overflow-hidden" style={animation}>
+    <animated.div style={animation}>
       <div ref={ref} id={uid} {...rest}>
         {children}
       </div>

@@ -398,27 +398,14 @@ export const FAQ = () => {
       </Disclosure>
       <Disclosure uid="faq_2">
         <Disclosure.Button>What’s Pikachu's Pokédex ID?</Disclosure.Button>
-        <Disclosure.Panel>It’s twenty five!</Disclosure.Panel>
+        <Disclosure.Panel>Twenty five.</Disclosure.Panel>
       </Disclosure>
       <Disclosure uid="faq_3">
-        <Disclosure.Button>Where is Pikachu found?</Disclosure.Button>
-        <Disclosure.Panel>Viridian Forest!</Disclosure.Panel>
+        <Disclosure.Button>Where’s Pikachu found?</Disclosure.Button>
+        <Disclosure.Panel>Viridian Forest.</Disclosure.Panel>
       </Disclosure>
     </>
   )
-}
-```
-</details>
-
-<details><summary>📃 <b>Supporting styles</b></summary>
-
-Use of the assembled **&lt;Disclosure&gt;** component requires the following styles.
-
-## Basic disclosure functionality *(required)*
-
-```css
-.overflow-hidden {
-  overflow: hidden;
 }
 ```
 </details>
