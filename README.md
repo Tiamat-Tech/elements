@@ -29,16 +29,14 @@ Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance
   <img alt="Discord" src="https://discord.com/assets/fc0b01fe10a0b8c602fb0106d8189d9b.png" height="64">
 </a>
 
-
 # Installation
-Run `npm install @candycode/elements` or `yarn add @candycode/elements` in an existing React project. Then continue following instructions for one or more of the following component APIs.
-
+Run `npm install @candycode/elements` or `yarn add @candycode/elements` in an existing React project. Continue following instructions for one or more of the following component APIs to assemble your own custom React components with their own unique appearance and behavior.
 
 # Carousel
 
 <details><summary>📃 <b>Component API</b></summary>
 
-These atomic components can be used to assemble a custom **&lt;Carousel&gt;** component. Every rendered component accepts `className` and `style` props (as well as all other props accepted by a React DOM node). These props may be used to supplement the basic styles provided in the `styles.css` file, which must be manually added to the project and contain only the minimal CSS necessary for the carousel to function.
+These atomic components can be used to assemble a custom **&lt;Carousel&gt;** component. Every rendered component accepts `className` and `style` props (as well as all other props accepted by a React DOM node). These props may be used to supplement the basic styles provided in the `styles.css` file (and the "supporting styles" section below), which must be manually added to your project and contain only the minimal CSS necessary for the carousel to function.
 
 ## Carousel state
 
