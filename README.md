@@ -38,15 +38,15 @@ Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance
 # Installation
 ### yarn
 ```bash
-yarn add @candycode/elements
+yarn add @candycode/elements react-spring@next jotai
 ```
 
 ### npm
 ```bash
-npm install @candycode/elements
+npm install @candycode/elements react-spring@next jotai
 ```
 
-After installing the package follow instructions for one or more of the below component APIs to assemble your own custom, interactive React components, each with their own unique appearance and behavior.
+After installing the package (and peer dependencies) follow instructions for one or more of the below component APIs to assemble your own custom, interactive React components, each with their own unique appearance and behavior.
 
 # Carousel
 
@@ -361,7 +361,7 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following peer 
 - `classnames`
 - `jotai`
 - `react-intersection-observer`
-- `react-spring`
+- `react-spring@next`
 - `react-use-gesture`
 - `react-use-measure`
 </details>
@@ -441,7 +441,7 @@ export const FAQ = () => {
 Use of the assembled **&lt;Disclosure&gt;** component requires the following peer dependencies.
 
 - `jotai`
-- `react-spring`
+- `react-spring@next`
 - `react-use-measure`
 </details>
 
