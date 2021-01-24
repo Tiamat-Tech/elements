@@ -46,7 +46,7 @@ yarn add @candycode/elements react-spring@next jotai
 npm install @candycode/elements react-spring@next jotai
 ```
 
-After installing the package (and peer dependencies) follow instructions for one or more of the below component APIs to assemble your own custom, interactive React components, each with their own unique appearance and behavior.
+After installing the package (and peer dependencies), follow instructions for one or more of the below component APIs to assemble your own custom, interactive React components, each with their own unique appearance and behavior. Some components require basic styles or additional peer dependencies so be careful to check the "supporting styles" and "Node dependencies" sections for the chosen component.
 
 # Carousel
 
