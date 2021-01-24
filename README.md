@@ -459,3 +459,7 @@ The library is currently in very active development. Existing components are rec
 - &lt;Wobble&gt;
 
 We are also seeking additional contributors. Feel free to [join us on Discord](https://discord.candycode.xyz/) to discuss opportunities for further development.
+
+<a href="https://discord.candycode.xyz/">
+  <img alt="Discord" src="https://discord.com/assets/fc0b01fe10a0b8c602fb0106d8189d9b.png" height="64">
+</a>
