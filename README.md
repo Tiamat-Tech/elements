@@ -27,7 +27,7 @@ The **@candycode/elements** library consists of atomic components used to assemb
 
 See [this CodeSandbox example](https://codesandbox.io/s/candycodeelements-demo-60m25?file=/src/app.js) for a quick demonstration of how several different custom &lt;Carousel&gt; components—each having their own unique appearance and behavior—can be assembled using the same set of atomic components from this library.
 
-Note that peer dependencies are not bundled with this library and must be installed separately. This library is intended for use in React projects that already have `react-spring` and related packages installed for other purposes.
+Note that peer dependencies are not bundled with this library and must be installed separately. This prevents having multiple versions of the same dependency installed for projects that already have `react-spring` and related packages installed for other purposes.
 
 Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance and please [star this project on GitHub](https://github.com/cndycd/elements) if you enjoy using it. Thanks! 🥰
 
