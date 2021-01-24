@@ -25,7 +25,7 @@
 
 The **@candycode/elements** library consists of atomic components used to assemble custom React components with animations and interactivity powered by `react-spring` and `react-use-gesture` respectively.
 
-See [this CodeSandbox example](https://codesandbox.io/s/candycodeelements-demo-60m25?file=/src/app.js) for a quick demonstration of how several different custom &lt;Carousel&gt; components can be assembled using the same atomic components from this package, each having their own unique appearance and behavior.
+See [this CodeSandbox example](https://codesandbox.io/s/candycodeelements-demo-60m25?file=/src/app.js) for a quick demonstration of how several different custom &lt;Carousel&gt; components—each having their own unique appearance and behavior—can be assembled using the same atomic components from this package, .
 
 Note that peer dependencies are not bundled with this library and must be installed separately. This library is intended for use in React projects that already have `react-spring` and related packages installed for other purposes.
 
