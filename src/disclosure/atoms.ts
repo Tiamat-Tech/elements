@@ -1,6 +1,6 @@
 import { atom } from 'jotai';
 
-export const disclosureScope = Symbol(); // eslint-disable-line no-undef
+export const disclosureScope = Symbol();
 
 export const openAtom = atom<boolean>(false);
 openAtom.scope = disclosureScope;
