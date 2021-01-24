@@ -23,7 +23,7 @@ See [this CodeSandbox example](https://codesandbox.io/s/candycodeelements-demo-6
 
 Note that peer dependencies are not bundled with this library and must be installed separately. This library is intended for use in React projects that already have `react-spring` and related packages installed for other purposes.
 
-Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance and please ⭐ [this project on GitHub](https://github.com/cndycd/elements) if you enjoy using it. Thanks! 🥰
+Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance and please [star this project on GitHub](https://github.com/cndycd/elements) if you enjoy using it. Thanks! 🥰
 
 <a href="https://discord.candycode.xyz/">
   <img alt="Discord" src="https://discord.com/assets/fc0b01fe10a0b8c602fb0106d8189d9b.png" height="64">
