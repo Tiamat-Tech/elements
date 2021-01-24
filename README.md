@@ -25,7 +25,7 @@
 
 The **@candycode/elements** library consists of atomic components used to assemble custom React components with animations and interactivity powered by `react-spring` and `react-use-gesture` respectively.
 
-See [this CodeSandbox example](https://codesandbox.io/s/candycodeelements-demo-60m25?file=/src/app.js) for a quick demonstration of how several different custom &lt;Carousel&gt; components—each having their own unique appearance and behavior—can be assembled using the same atomic components from this package, .
+See [this CodeSandbox example](https://codesandbox.io/s/candycodeelements-demo-60m25?file=/src/app.js) for a quick demonstration of how several different custom &lt;Carousel&gt; components—each having their own unique appearance and behavior—can be assembled using the same set of atomic components from this library.
 
 Note that peer dependencies are not bundled with this library and must be installed separately. This library is intended for use in React projects that already have `react-spring` and related packages installed for other purposes.
 
@@ -36,15 +36,17 @@ Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance
 </a>
 
 # Installation
-```bash
-npm install @candycode/elements
-```
-
+### yarn
 ```bash
 yarn add @candycode/elements
 ```
 
-Run `npm install @candycode/elements` or `yarn add @candycode/elements` in an existing React project. Continue following instructions for one or more of the following component APIs to assemble your own custom React components with their own unique appearance and behavior.
+### npm
+```bash
+npm install @candycode/elements
+```
+
+After installing the package follow instructions for one or more of the below component APIs to assemble your own custom, interactive React components, each with their own unique appearance and behavior.
 
 # Carousel
 
@@ -447,7 +449,7 @@ Use of the assembled **&lt;Disclosure&gt;** component requires the following pee
 - `react`
 </details>
 
-# Roadmap and contributing
+# Contributing and roadmap
 
 The library is currently in very active development. Existing components are receiving additional functionality. New components will include:
 
@@ -459,3 +461,5 @@ The library is currently in very active development. Existing components are rec
 - &lt;Slide&gt;
 - &lt;Tabs&gt;
 - &lt;Wobble&gt;
+
+We are also seeking additional contributors. Feel free to [join us on Discord](https://discord.candycode.xyz/) to discuss opportunities for further development.
