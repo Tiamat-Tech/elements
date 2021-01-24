@@ -6,6 +6,7 @@
 
 .carousel > div {
   display: flex;
+  align-items: center;
 }
 
 .carousel-track {

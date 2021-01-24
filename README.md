@@ -214,6 +214,7 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following style
 
 .carousel > div {
   display: flex;
+  align-items: center;
 }
 
 .carousel-track {
