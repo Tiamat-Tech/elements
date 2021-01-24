@@ -9,6 +9,12 @@
 </div>
 <div align="center">
   Basic ingredients for baking custom React components spiced with spring physics. 🧁
+  <br>
+  <br>
+
+  [![Version](https://img.shields.io/npm/v/@candycode/elements?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/@candycode/elements)
+  [![Downloads](https://img.shields.io/npm/dt/@candycode/elements.svg?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/@candycode/elements)
+  [![Discord](https://img.shields.io/discord/797087479102570506?style=flat&colorA=000000&colorB=000000&label=discord&logo=discord&logoColor=ffffff)](https://discord.gg/2QyUsnxbxF)
 </div>
 
 &nbsp;
@@ -30,6 +36,14 @@ Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance
 </a>
 
 # Installation
+```bash
+npm install @candycode/elements
+```
+
+```bash
+yarn add @candycode/elements
+```
+
 Run `npm install @candycode/elements` or `yarn add @candycode/elements` in an existing React project. Continue following instructions for one or more of the following component APIs to assemble your own custom React components with their own unique appearance and behavior.
 
 # Carousel
@@ -433,9 +447,9 @@ Use of the assembled **&lt;Disclosure&gt;** component requires the following pee
 - `react`
 </details>
 
-# Future development
+# Roadmap and contributing
 
-The library is currently in active development. Existing components will receive additional functionality. New components will include:
+The library is currently in very active development. Existing components are receiving additional functionality. New components will include:
 
 - &lt;Accordion&gt; (in development)
 - &lt;Lightbox&gt;
@@ -445,4 +459,3 @@ The library is currently in active development. Existing components will receive
 - &lt;Slide&gt;
 - &lt;Tabs&gt;
 - &lt;Wobble&gt;
-
