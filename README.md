@@ -360,12 +360,10 @@ Use of the assembled **&lt;Carousel&gt;** component requires the following peer 
 
 - `classnames`
 - `jotai`
-- `react-dom`
 - `react-intersection-observer`
 - `react-spring`
 - `react-use-gesture`
 - `react-use-measure`
-- `react`
 </details>
 
 # Disclosure
@@ -443,10 +441,8 @@ export const FAQ = () => {
 Use of the assembled **&lt;Disclosure&gt;** component requires the following peer dependencies.
 
 - `jotai`
-- `react-dom`
 - `react-spring`
 - `react-use-measure`
-- `react`
 </details>
 
 # Contributing and roadmap
