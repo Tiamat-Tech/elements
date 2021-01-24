@@ -17,11 +17,13 @@
 
 # Overview
 
-The `@candycode/elements` library consists of atomic components used to assemble custom React component libraries with animations and interactivity powered by `react-spring` and `react-use-gesture`.
+The `@candycode/elements` library consists of atomic components used to assemble custom React components with animations and interactivity powered by `react-spring` and `react-use-gesture` respectively.
 
-Note that peer dependencies must be installed separately. This library is intended for use in projects that already have `react-spring` and related packages installed for other purposes.
+See [this CodeSandbox example](https://codesandbox.io/s/candycodeelements-demo-60m25?file=/src/app.js) for a quick demonstration of how several different custom &lt;Carousel&gt; components can be assembled using the same atomic components from this package, each having their own unique appearance and behavior.
 
-Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance.
+Note that peer dependencies are not bundled with this library and must be installed separately. This library is intended for use in React projects that already have `react-spring` and related packages installed for other purposes.
+
+Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance and please ⭐ [this project on GitHub](https://github.com/cndycd/elements) if you enjoy using it. Thanks! 🥰
 
 <a href="https://discord.candycode.xyz/">
   <img alt="Discord" src="https://discord.com/assets/fc0b01fe10a0b8c602fb0106d8189d9b.png" height="64">
@@ -29,8 +31,7 @@ Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance
 
 
 # Installation
-1. Run `npm install @candycode/elements` or `yarn add @candycode/elements`.
-2. Continue following instructions for one or more of the following component APIs.
+Run `npm install @candycode/elements` or `yarn add @candycode/elements` in an existing React project. Then continue following instructions for one or more of the following component APIs.
 
 
 # Carousel
