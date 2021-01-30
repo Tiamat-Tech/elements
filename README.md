@@ -38,12 +38,12 @@ Feel free to [join us on Discord](https://discord.candycode.xyz/) for assistance
 # Installation
 ### yarn
 ```bash
-yarn add @candycode/elements react-spring@next jotai
+yarn add @candycode/elements react-spring@next react-use-gesture react-use-measure jotai
 ```
 
 ### npm
 ```bash
-npm install @candycode/elements react-spring@next jotai
+npm install @candycode/elements react-spring@next react-use-gesture react-use-measure jotai
 ```
 
 After installing the package (and peer dependencies), follow instructions for one or more of the below component APIs to assemble your own custom, interactive React components, each with their own unique appearance and behavior. Some components require basic styles or additional peer dependencies so be careful to check the "supporting styles" and "Node dependencies" sections for the chosen component.
