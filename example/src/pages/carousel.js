@@ -1,16 +1,13 @@
 import React from 'react';
 
-import { Head } from '~components/head';
-import { Intro } from '~components/intro';
+import { Layout } from '~components/layout';
 import { BasicCarousel } from '~components/basic-carousel';
 import { CarouselWithDrawer } from '~components/carousel-with-drawer';
 import { SlowCarousel } from '~components/slow-carousel';
 
 const Demo = () => {
   return (
-    <>
-      <Head />
-      <Intro />
+    <Layout>
       <div className="wrapper">
         <h2 className="header">Basic carousel</h2>
         <p className="body">This carousel uses basic mouse and touch gestures.</p>
@@ -166,7 +163,7 @@ const Demo = () => {
           </div>
         </SlowCarousel>
       </div>
-    </>
+    </Layout>
   );
 };
 

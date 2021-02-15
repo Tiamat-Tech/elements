@@ -1,14 +1,11 @@
 import React from 'react';
 
-import { Head } from '~components/head';
-import { Intro } from '~components/intro';
+import { Layout } from '~components/layout';
 import { Disclosure } from '~components/basic-disclosure';
 
 const Demo = () => {
   return (
-    <>
-      <Head />
-      <Intro />
+    <Layout>
       <div className="wrapper">
         <h2 className="header">Basic disclosure</h2>
         <p className="body">This disclosure opens and closes on mouse and touch events.</p>
@@ -39,7 +36,7 @@ const Demo = () => {
           </Disclosure.Panel>
         </Disclosure>
       </div>
-    </>
+    </Layout>
   );
 };
 

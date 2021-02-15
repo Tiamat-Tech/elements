@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import GitHubButton from 'react-github-btn';
 
 export const Intro = () => {
   return (
     <div className="wrapper">
-      <a href="https://candycode.co/">
+      <Link to="/">
         <img
           src="https://storage.googleapis.com/candycode/candycode.svg"
           style={{ height: 48 }}
           alt="candycode"
         />
-      </a>
+      </Link>
       <p className="body">
         The{' '}
         <a href="https://github.com/cndycd/elements" className="font-bold text-white">
