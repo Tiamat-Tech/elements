@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { Provider, Button, Panel } from '../../../src/disclosure';
 
 export const Disclosure = ({ children, ...rest }) => {
@@ -6,17 +6,12 @@ export const Disclosure = ({ children, ...rest }) => {
 };
 
 const CustomButton = ({ children, ...rest }) => {
-  const [isOpen] = useState(false);
-  const ref = useRef(null);
-
   return (
     <Button
-      ref={ref}
       className="flex justify-between w-full mt-1 p-4 bg-gray-800 font-bold text-left"
       {...rest}
     >
       <div>{children}</div>
-      <div>{!isOpen ? '+' : '-'}</div>
     </Button>
   );
 };

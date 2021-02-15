@@ -10,7 +10,6 @@ const App = () => {
   const wrapperClasses = 'max-w-xl mx-auto my-16';
   const headerClasses = 'font-bold text-lg';
   const bodyClasses = 'block mb-1 text-sm text-gray-300';
-  const noteClasses = 'mt-1 text-xs';
   const slideClasses = 'flex w-full h-full justify-center';
   const imageClasses = 'object-contain p-8';
 
