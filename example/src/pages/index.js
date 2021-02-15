@@ -201,9 +201,6 @@ const App = () => {
             />
           </div>
         </SlowCarousel>
-        <p className={noteClasses}>
-          open <code>./carousels/slow-carousel.js</code> to see the source code
-        </p>
       </div>
 
       <div className={wrapperClasses}>
