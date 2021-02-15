@@ -96,10 +96,10 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
         }
       };
 
-      const handleStartPress = () => {
-        if (currentSlide === 0) return;
-        setCurrentSlide(0);
-      };
+      // const handleStartPress = () => {
+      //   if (currentSlide === 0) return;
+      //   setCurrentSlide(0);
+      // };
 
       const handleBackPress = () => {
         if (currentSlide === 0) return;
@@ -111,10 +111,10 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
         setCurrentSlide(currentSlide + 1);
       };
 
-      const handleEndPress = () => {
-        if (currentSlide === lastSlide) return;
-        setCurrentSlide(lastSlide);
-      };
+      // const handleEndPress = () => {
+      //   if (currentSlide === lastSlide) return;
+      //   setCurrentSlide(lastSlide);
+      // };
 
       const handleExpandPress = () => {
         if (!allowExpansion) return;
