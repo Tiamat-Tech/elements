@@ -7,7 +7,7 @@ import { BasicCarousel, CarouselWithDrawer, SlowCarousel } from '~components/car
 import { Disclosure } from '~components/disclosures';
 
 const App = () => {
-  const wrapperClasses = 'max-w-lg m-16';
+  const wrapperClasses = 'max-w-xl mx-auto my-16';
   const headerClasses = 'font-bold text-lg';
   const bodyClasses = 'block mb-1 text-sm text-gray-300';
   const noteClasses = 'mt-1 text-xs';
@@ -94,9 +94,6 @@ const App = () => {
             />
           </div>
         </BasicCarousel>
-        <p className={noteClasses}>
-          open <code>./carousels/basic-carousel.js</code> to see the source code
-        </p>
       </div>
 
       <div className={wrapperClasses}>
@@ -148,9 +145,6 @@ const App = () => {
             />
           </div>
         </CarouselWithDrawer>
-        <p className={noteClasses}>
-          open <code>./carousels/carousel-with-drawer.js</code> to see the source code
-        </p>
       </div>
 
       <div className={wrapperClasses}>
@@ -241,9 +235,6 @@ const App = () => {
             </div>
           </Disclosure.Panel>
         </Disclosure>
-        <p className={noteClasses}>
-          open <code>./disclosures/basic-disclosure.js</code> to see the source code
-        </p>
         <div className="h-64" />
         <a href="https://candycode.co/" target="_blank" rel="noreferrer">
           <span role="img" aria-label="cupcake">
