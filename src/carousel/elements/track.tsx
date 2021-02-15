@@ -132,7 +132,7 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
           break;
         case 'Home':
           // @TODO must prevent a 'Home' press from also scrolling up the page
-          handleStartPress();
+          // handleStartPress();
           break;
         case 'ArrowLeft':
           handleBackPress();
@@ -166,7 +166,7 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
           break;
         case 'End':
           // @TODO must prevent an 'End' press from also scrolling down the page
-          handleEndPress();
+          // handleEndPress();
           break;
         case 'KeyE':
           handleExpandPress();
