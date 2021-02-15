@@ -27,6 +27,27 @@ code {
   outline: 0 !important;
 }
 
+/* Demo styles */
+.wrapper {
+  @apply max-w-xl mx-auto my-16;
+}
+
+.header {
+  @apply font-bold text-lg;
+}
+
+.body {
+  @apply block mb-1 text-sm text-gray-300;
+}
+
+.slide {
+  @apply flex w-full h-full justify-center;
+}
+
+.image {
+  @apply object-contain p-8;
+}
+
 /* Basic carousel functionality (required) */
 .carousel {
   position: relative;
