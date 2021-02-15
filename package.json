@@ -108,13 +108,5 @@
     "react-use-gesture": "^9.0.0",
     "react-use-measure": "^2.0.0"
   },
-  "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,json}": "prettier --write"
-  }
+  "private": true
 }
