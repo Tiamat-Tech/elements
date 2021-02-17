@@ -10,7 +10,7 @@ const Demo = () => {
   return (
     <Layout>
       <div className="wrapper">
-        <div class="flex space-x-8">
+        <div className="flex space-x-8">
           <div>
             <Link to="/carousel" className={buttonClasses}>
               Carousel

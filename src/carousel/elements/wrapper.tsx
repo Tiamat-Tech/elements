@@ -95,6 +95,7 @@ export const Wrapper = ({ className = '', children, ...rest }: Props) => {
         aspectRatioClassName,
         allowGestures && 'carousel--gestures',
         allowExpansion ? (isExpanded ? 'carousel--expanded' : 'carousel--collapsed') : null,
+        allowFullscreen ? isFullscreen && 'carousel--fullscreen' : null,
         className,
       )}
       role="group"

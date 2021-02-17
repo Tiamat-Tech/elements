@@ -41,11 +41,11 @@ code {
 }
 
 .slide {
-  @apply flex w-full h-full justify-center;
+  @apply flex justify-center;
 }
 
 .image {
-  @apply object-contain p-8;
+  @apply max-w-full max-h-screen object-contain p-8;
 }
 
 /* Basic carousel functionality (required) */

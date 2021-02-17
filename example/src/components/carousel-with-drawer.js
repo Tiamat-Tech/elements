@@ -23,7 +23,7 @@ export const CarouselWithDrawer = ({ children, ...rest }) => {
       allowFullscreen={true}
       {...rest}
     >
-      <Wrapper>
+      <Wrapper className="group">
         <Track>
           {children.length ? (
             children.map((child, index) => <Slide key={index}>{child}</Slide>)
@@ -31,7 +31,7 @@ export const CarouselWithDrawer = ({ children, ...rest }) => {
             <Slide>{children}</Slide>
           )}
         </Track>
-        <Drawer className="bg-black bg-opacity-50 text-white">
+        <Drawer className="bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-700">
           <Start className="p-2" />
           <Backward className="p-2">Prev</Backward>
           <Expand className="p-2" />
