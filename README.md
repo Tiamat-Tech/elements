@@ -429,12 +429,9 @@ export const FAQ = () => {
 The library is currently in very active development. Existing components are receiving additional functionality. New components will include:
 
 - &lt;Accordion&gt; (in development)
-- &lt;Lightbox&gt;
 - &lt;Modal&gt;
 - &lt;Reveal&gt;
-- &lt;Screen&gt;
 - &lt;Slide&gt;
-- &lt;Tabs&gt;
 - &lt;Wobble&gt;
 
 We are also seeking additional contributors. Feel free to [join us on Discord](https://discord.candycode.xyz/) to discuss opportunities for further development.
