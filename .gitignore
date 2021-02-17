@@ -1,4 +1,6 @@
 node_modules
 dist
 .eslintcache
+example/.cache
+example/public
 package-lock.json
