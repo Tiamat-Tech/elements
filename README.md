@@ -432,6 +432,7 @@ The library is currently in very active development. Existing components are rec
 - &lt;Modal&gt;
 - &lt;Reveal&gt;
 - &lt;Slide&gt;
+- &lt;Toggle&gt; (in development)
 - &lt;Wobble&gt;
 
 We are also seeking additional contributors. Feel free to [join us on Discord](https://discord.candycode.xyz/) to discuss opportunities for further development.
