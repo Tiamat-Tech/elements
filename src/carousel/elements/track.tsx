@@ -9,7 +9,6 @@ import {
   config as defaultConfigs,
   SpringValues,
   SpringStartFn,
-  SpringStopFn,
 } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
@@ -54,7 +53,7 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
     transform: `translate3d(calc(-${currentSlide * 100}% + ${0}px),0,0)`,
     cursor: allowGestures ? 'grab' : 'default',
     config: animationConfig,
-  })) as [SpringValues<any>, SpringStartFn<any>, SpringStopFn<any>];
+  })) as [SpringValues<any>, SpringStartFn<any>];
 
   // Drag gestures functionality
   const bind = useDrag(({ down, dragging, movement: [mx] }) => {

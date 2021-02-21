@@ -47,6 +47,12 @@
       "require": "./disclosure.cjs.js",
       "node": "./disclosure.cjs.js",
       "types": "./disclosure.d.ts"
+    },
+    "./reveal": {
+      "import": "./reveal.js",
+      "require": "./reveal.cjs.js",
+      "node": "./reveal.cjs.js",
+      "types": "./reveal.d.ts"
     }
   },
   "sideEffects": false,
@@ -59,7 +65,7 @@
     "eslint:ci": "eslint '{src}/**/*.{js,ts,jsx,tsx}'",
     "prepare": "yarn build",
     "pretest": "tsc --noEmit",
-    "copy": "shx cp dist/index.d.ts dist/index.cjs.d.ts && shx cp dist/carousel.d.ts dist/carousel.cjs.d.ts && shx cp dist/disclosure.d.ts dist/disclosure.cjs.d.ts && copyfiles -f package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.scripts=undefined, this.devDependencies=undefined, this.private=false; this.husky = undefined, this['lint-staged']=undefined\""
+    "copy": "shx cp dist/index.d.ts dist/index.cjs.d.ts && shx cp dist/carousel.d.ts dist/carousel.cjs.d.ts && shx cp dist/disclosure.d.ts dist/disclosure.cjs.d.ts && shx cp dist/reveal.d.ts dist/reveal.cjs.d.ts && copyfiles -f package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.scripts=undefined, this.devDependencies=undefined, this.private=false; this.husky = undefined, this['lint-staged']=undefined\""
   },
   "dependencies": {
     "classnames": "^2.2.6",

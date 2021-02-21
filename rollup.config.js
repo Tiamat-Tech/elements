@@ -109,5 +109,10 @@ export default () => {
     createESMConfig('src/disclosure.ts', 'dist/disclosure.js'),
     createIIFEConfig('src/disclosure.ts', 'dist/disclosure.iife.js'),
     createCommonJSConfig('src/disclosure.ts', 'dist/disclosure.cjs.js'),
+
+    // Reveal
+    createESMConfig('src/reveal.ts', 'dist/reveal.js'),
+    createIIFEConfig('src/reveal.ts', 'dist/reveal.iife.js'),
+    createCommonJSConfig('src/reveal.ts', 'dist/reveal.cjs.js'),
   ];
 };

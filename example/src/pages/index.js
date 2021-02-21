@@ -26,6 +26,11 @@ const Demo = () => {
               Disclosure
             </Link>
           </div>
+          <div>
+            <Link to="/toggle" className={buttonClasses}>
+              Toggle
+            </Link>
+          </div>
         </div>
       </div>
     </Layout>
