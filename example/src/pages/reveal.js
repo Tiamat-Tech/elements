@@ -9,7 +9,7 @@ const Demo = () => {
       <div className="wrapper">
         <h2 className="header">Basic reveal</h2>
         <p className="body">This toggle switches state based on on mouse and touch events.</p>
-        <div className="mt-16 space-y-16 overflow-hidden">
+        <div className="max-w-xs mt-16 space-y-16 overflow-hidden">
           <Reveal>
             <div className="slide bg-green-200">
               <img
