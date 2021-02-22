@@ -32,6 +32,11 @@ const Demo = () => {
             </Link>
           </div>
           <div>
+            <Link to="/reveal" className={buttonClasses}>
+              Reveal
+            </Link>
+          </div>
+          <div>
             <Link to="/wobble" className={buttonClasses}>
               Wobble
             </Link>
