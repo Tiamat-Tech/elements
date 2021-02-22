@@ -26,7 +26,10 @@ export const Wobble = ({
   rotation = 0,
   scale = 1,
   timing = 150,
-  springConfig = 'wobbly',
+  springConfig = {
+    tension: 300,
+    friction: 10,
+  },
   children,
   ...rest
 }: Props) => {
