@@ -14,13 +14,19 @@ const Demo = () => {
         <p className="body">This wobble animation activates on hover events.</p>
         <div className="mt-8 space-x-8">
           <Wobble>
-            <div className={buttonClasses}>🍰</div>
+            <span className={buttonClasses} role="img" aria-label="example">
+              🍰
+            </span>
           </Wobble>
           <Wobble>
-            <div className={buttonClasses}>🍬</div>
+            <span className={buttonClasses} role="img" aria-label="example">
+              🍬
+            </span>
           </Wobble>
           <Wobble>
-            <div className={buttonClasses}>😍</div>
+            <span className={buttonClasses} role="img" aria-label="example">
+              😍
+            </span>
           </Wobble>
         </div>
       </div>
