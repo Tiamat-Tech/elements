@@ -43,7 +43,7 @@ export const Track = ({ className = '', children, ...rest }: Props) => {
     allowFullscreen,
   } = useAtomValue(configAtom);
 
-  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), [
+  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs, true), [
     springConfig,
   ]);
 

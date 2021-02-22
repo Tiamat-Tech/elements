@@ -17,7 +17,7 @@ export const Panel = ({ children, ...rest }: Props) => {
 
   const { uid, springConfig } = useAtomValue(configAtom);
 
-  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), [
+  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs, true), [
     springConfig,
   ]);
 

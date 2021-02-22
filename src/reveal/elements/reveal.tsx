@@ -31,7 +31,7 @@ export const Reveal = ({
     triggerOnce: true,
   });
 
-  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs), [
+  const animationConfig = useMemo(() => getAnimationConfig(springConfig, defaultConfigs, true), [
     springConfig,
   ]);
 

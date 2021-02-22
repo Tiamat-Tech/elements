@@ -1,13 +1,13 @@
-export const getAnimationConfig = (spring: any, defaultSprings: any) => {
+export const getAnimationConfig = (spring: any, defaultSprings: any, clamp: boolean) => {
   if (typeof spring === 'string') {
     return {
       ...defaultSprings[spring],
-      clamp: true,
+      clamp: clamp,
     };
   } else {
     return {
       ...spring,
-      clamp: true,
+      clamp: clamp,
     };
   }
 };

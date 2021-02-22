@@ -31,6 +31,11 @@ const Demo = () => {
               Toggle
             </Link>
           </div>
+          <div>
+            <Link to="/wobble" className={buttonClasses}>
+              Wobble
+            </Link>
+          </div>
         </div>
       </div>
     </Layout>
