@@ -6,9 +6,9 @@ import { useSpring, animated, config as defaultConfigs, SpringValues } from 'rea
 import { getAnimationConfig } from '../../utilities/get-animation-config';
 
 type Props = {
-  big: boolean;
-  delay: number;
-  threshold: number;
+  big?: boolean;
+  delay?: number;
+  threshold?: number;
   springConfig?: 'default' | 'gentle' | 'wobbly' | 'stiff' | 'slow' | 'molasses' | SpringConfig;
   children: React.ReactNode;
 };
@@ -49,8 +49,8 @@ export const Reveal = ({
   }) as SpringValues<any>;
 
   return (
-    <animated.div ref={ref} style={animation} {...rest}>
-      {children}
-    </animated.div>
+    <div ref={ref} {...rest}>
+      <animated.div style={animation}>{children}</animated.div>
+    </div>
   );
 };

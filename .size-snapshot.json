@@ -1,8 +1,8 @@
 {
   "carousel.js": {
-    "bundled": 14479,
-    "minified": 7509,
-    "gzipped": 2081,
+    "bundled": 14494,
+    "minified": 7514,
+    "gzipped": 2087,
     "treeshaked": {
       "rollup": {
         "code": 491,
@@ -14,14 +14,14 @@
     }
   },
   "carousel.iife.js": {
-    "bundled": 17179,
-    "minified": 6660,
-    "gzipped": 2031
+    "bundled": 17194,
+    "minified": 6665,
+    "gzipped": 2035
   },
   "carousel.cjs.js": {
-    "bundled": 15407,
-    "minified": 8348,
-    "gzipped": 2239
+    "bundled": 15422,
+    "minified": 8353,
+    "gzipped": 2244
   },
   "index.js": {
     "bundled": 74,
@@ -96,9 +96,9 @@
     "gzipped": 462
   },
   "disclosure.js": {
-    "bundled": 2037,
-    "minified": 1326,
-    "gzipped": 585,
+    "bundled": 2052,
+    "minified": 1331,
+    "gzipped": 588,
     "treeshaked": {
       "rollup": {
         "code": 177,
@@ -110,19 +110,19 @@
     }
   },
   "disclosure.iife.js": {
-    "bundled": 2692,
-    "minified": 1096,
-    "gzipped": 573
+    "bundled": 2707,
+    "minified": 1101,
+    "gzipped": 575
   },
   "disclosure.cjs.js": {
-    "bundled": 2407,
-    "minified": 1639,
-    "gzipped": 696
+    "bundled": 2422,
+    "minified": 1644,
+    "gzipped": 702
   },
   "reveal.js": {
-    "bundled": 1010,
-    "minified": 654,
-    "gzipped": 388,
+    "bundled": 1173,
+    "minified": 740,
+    "gzipped": 425,
     "treeshaked": {
       "rollup": {
         "code": 71,
@@ -134,13 +134,13 @@
     }
   },
   "reveal.iife.js": {
-    "bundled": 1297,
-    "minified": 554,
-    "gzipped": 391
+    "bundled": 1484,
+    "minified": 644,
+    "gzipped": 426
   },
   "reveal.cjs.js": {
-    "bundled": 1149,
-    "minified": 788,
-    "gzipped": 443
+    "bundled": 1324,
+    "minified": 886,
+    "gzipped": 481
   }
 }
