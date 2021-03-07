@@ -6,6 +6,7 @@ import { useSpring, animated, config as defaultConfigs, SpringValues } from 'rea
 import { getAnimationConfig } from '../../utilities/get-animation-config';
 
 type Props = {
+  big: boolean;
   delay: number;
   threshold: number;
   springConfig?: 'default' | 'gentle' | 'wobbly' | 'stiff' | 'slow' | 'molasses' | SpringConfig;
@@ -19,8 +20,9 @@ type SpringConfig = {
 };
 
 export const Reveal = ({
+  big = false,
   delay = 200,
-  threshold = 0.25,
+  threshold = 0.1,
   springConfig = 'default',
   children,
   ...rest
@@ -35,9 +37,14 @@ export const Reveal = ({
     springConfig,
   ]);
 
+  const outOfViewTransform = useMemo(
+    () => (big ? 'translate3d(0,1000px,0)' : 'translate3d(0,100%,0)'),
+    [big],
+  );
+
   const animation = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translate3d(0,0,0),' : 'translate3d(0,50%,0)',
+    transform: inView ? 'translate3d(0,0,0),' : outOfViewTransform,
     config: animationConfig,
   }) as SpringValues<any>;
 
