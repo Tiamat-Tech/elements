@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useMemo } from 'react';
+import cx from 'classnames';
 import { useInView } from 'react-intersection-observer';
 import { useSpring, animated, config as defaultConfigs, SpringValues } from 'react-spring';
 
@@ -10,6 +11,7 @@ type Props = {
   delay?: number;
   threshold?: number;
   springConfig?: 'default' | 'gentle' | 'wobbly' | 'stiff' | 'slow' | 'molasses' | SpringConfig;
+  className?: string;
   children: React.ReactNode;
 };
 
@@ -24,6 +26,7 @@ export const Reveal = ({
   delay = 200,
   threshold = 0.1,
   springConfig = 'default',
+  className = '',
   children,
   ...rest
 }: Props) => {
@@ -49,7 +52,7 @@ export const Reveal = ({
   }) as SpringValues<any>;
 
   return (
-    <div ref={ref} {...rest}>
+    <div ref={ref} className={cx('reveal', className)} {...rest}>
       <animated.div style={animation}>{children}</animated.div>
     </div>
   );

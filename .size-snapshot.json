@@ -120,27 +120,27 @@
     "gzipped": 702
   },
   "reveal.js": {
-    "bundled": 1173,
-    "minified": 740,
-    "gzipped": 425,
+    "bundled": 1260,
+    "minified": 807,
+    "gzipped": 459,
     "treeshaked": {
       "rollup": {
-        "code": 71,
-        "import_statements": 71
+        "code": 90,
+        "import_statements": 90
       },
       "webpack": {
-        "code": 1121
+        "code": 1173
       }
     }
   },
   "reveal.iife.js": {
-    "bundled": 1484,
-    "minified": 644,
-    "gzipped": 426
+    "bundled": 1761,
+    "minified": 779,
+    "gzipped": 486
   },
   "reveal.cjs.js": {
-    "bundled": 1324,
-    "minified": 886,
-    "gzipped": 481
+    "bundled": 1609,
+    "minified": 1102,
+    "gzipped": 573
   }
 }

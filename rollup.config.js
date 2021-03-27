@@ -3,7 +3,6 @@ import path from 'path';
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
-import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 
 const { root } = path.parse(process.cwd());
 const external = (id) => !id.startsWith('.') && !id.startsWith(root);
@@ -48,8 +47,7 @@ const createESMConfig = (input, output) => {
       typescript({
         cacheDir: '.rollup.tscache',
       }),
-      babel(getBabelOptions({ node: 12 })),
-      sizeSnapshot(),
+      babel(getBabelOptions({ node: 14 })),
     ],
   };
 };
@@ -59,12 +57,7 @@ const createCommonJSConfig = (input, output) => {
     input,
     output: { file: output, format: 'cjs', exports: 'named' },
     external,
-    plugins: [
-      resolve({ extensions }),
-      typescript(),
-      babel(getBabelOptions(browsers)),
-      sizeSnapshot(),
-    ],
+    plugins: [resolve({ extensions }), typescript(), babel(getBabelOptions(browsers))],
   };
 };
 
@@ -81,12 +74,7 @@ const createIIFEConfig = (input, output, globalName) => {
       },
     },
     external,
-    plugins: [
-      resolve({ extensions }),
-      typescript(),
-      babel(getBabelOptions(browsers)),
-      sizeSnapshot(),
-    ],
+    plugins: [resolve({ extensions }), typescript(), babel(getBabelOptions(browsers))],
   };
 };
 
